@@ -1,4 +1,4 @@
-    #!/usr/bin/perl 
+#!/usr/bin/perl 
 use strict;
 use warnings;
 use Bio::DB::GenBank;
@@ -30,16 +30,15 @@ while(<QUERY>) {
 
     my $targetdir = File::Spec->catfile($basedir,$family,$speciesnospaces);
     mkpath($targetdir);
-    opendir(DIR => $targetdir) || die "Cannot open $targetdir";
-    my @not;
-    
-    for my $p ( readdir(DIR) ) {
-	if( $p =~ /(\S+)\.gbk\.gz/ ) {
-	    push @not, sprintf("NOT %s[ACCN]",$1);
-	}
-    }
-    my @qstring;
-    my $keep;
+#    opendir(DIR => $targetdir) || die "Cannot open $targetdir";
+#    my @not;
+#    my %seen;    
+#    for my $p ( readdir(DIR) ) {
+#	if( $p =~ /(\S+)\.gbk\.gz/ ) {
+#	    push @not, sprintf("NOT %s[ACCN]",$1);
+#	}
+#    }
+    my %acc_query;
     for my $pair ( split(/;/,$accessions) ) {
         my ($start,$finish) = split(/-/,$pair);
         my ($s_letter,$s_number, $f_letter,$f_number);
@@ -51,6 +50,7 @@ while(<QUERY>) {
             warn("Cannot process accession pair $pair\n");
             next;
         }
+	$acc_query{$s_letter}->{nl} = $nl;
         if( $finish ) {
             if( $finish =~ /^([A-Za-z_]+)(\d+)/ ) {
                 ($f_letter,$f_number) = ($1,$2);
@@ -62,30 +62,52 @@ while(<QUERY>) {
                 warn("Accession set does not match in $pair ($f_letter, $s_letter)\n");
                 next;
             }
-            push @qstring, sprintf("%s:%s[ACCN]",$start,$finish);
             for(my $i = $s_number; $i <= $f_number; $i++) {
-                my $acc = sprintf("%s%0".$nl."d",$s_letter,$i);
-                if( -f File::Spec->catfile($basedir,$species,"$acc.gbk.gz")) {
-                    push @not, sprintf("NOT %s[ACCN]",$acc);
-                } else {
-                    $keep++;
+		my $acc = sprintf("%s%0".$nl."d",$s_letter,$i);
+                if( ! -f File::Spec->catfile($targetdir,"$acc.gbk.gz")) {
+		    $acc_query{$s_letter}->{n}->{$i}++;
                 }
             }
-
         } else {
-            next if -f File::Spec->catfile($basedir,$species,"$start.gbk.gz");
-            push @qstring, sprintf("%s[ACCN]",$start);
-            $keep++;
+            next if -f File::Spec->catfile($targetdir,"$start.gbk.gz");
+	    $acc_query{$s_letter}->{n}->{$s_number}++;
         }
     }
-    next unless (@qstring && $keep);
-    my $qstring = join(" OR ", @qstring) . " " . join(" ",@not);
+    next unless keys %acc_query;
+    my @qstring;
+    for my $l ( keys %acc_query ) {
+	my @nums = sort { $a <=> $b } map { int($_) } keys %{$acc_query{$l}->{n}};
+	my @collapsed = collapse_nums(@nums);
+	my $nl = $acc_query{$l}->{nl};
+	for my $nm ( @collapsed ) {
+	    if( $nm =~ /[-]/ ) {		
+		my ($from,$to) = split('-',$nm);
+		$from = sprintf("%s%0".$nl."d",$l,$from);
+		$to = sprintf("%s%0".$nl."d",$l,$to);
+		push @qstring,sprintf("%s:%s[ACCN]",$from,$to)
+	    } else {
+		my $nm2 = sprintf("%s%0".$nl."d",$l,$nm);
+		push @qstring,sprintf("%s[ACCN]",$nm2);
+	    }
+	}
+    }
+    next unless (@qstring);
+    my $qstring = join(" OR ", @qstring); #  . " " . join(" ",@not);
+    warn("query for $species\n") if $DEBUG;
     warn("qstring is $qstring\n") if $DEBUG;
-    my $query = Bio::DB::Query::GenBank->new(-db=>'nucleotide',
+    my $query = Bio::DB::Query::GenBank->new(-db      => 'nucleotide',
                                              -verbose => $DEBUG,
-                                             -query=>$qstring,
+                                             -query   => $qstring,
                                              );
-    my $stream = $gb->get_Stream_by_query($query);
+    my $stream;
+    eval { 
+	$stream = $gb->get_Stream_by_query($query);
+    };
+    if( $@ ) {
+	warn($qstring,"\n");
+	warn($@);
+	next;
+    }
 
     while (my $seq = $stream->next_seq) {
         # do something with the sequence object
@@ -100,3 +122,33 @@ while(<QUERY>) {
 	}
     }
 }
+
+sub collapse_nums {
+#------------------
+# This is probably not the slickest connectivity algorithm, but will do for now.
+    my @a = @_;
+    my ($from, $to, $i, @ca, $consec);
+
+    $consec = 0;
+    for($i=0; $i < @a; $i++) {
+	not $from and do{ $from = $a[$i]; next; };
+	if($a[$i] == $a[$i-1]+1) {
+	    $to = $a[$i];
+	    $consec++;
+	} else {
+	    if($consec == 1) { $from .= ",$to"; }
+	    else { $from .= $consec>1 ? "\-$to" : ""; }
+	    push @ca, split(',', $from);
+	    $from =  $a[$i];
+	    $consec = 0;
+	    $to = undef;
+	}
+    }
+    if(defined $to) {
+	if($consec == 1) { $from .= ",$to"; }
+	else { $from .= $consec>1 ? "\-$to" : ""; }
+    }
+    push @ca, split(',', $from) if $from;
+    @ca;
+}
+
