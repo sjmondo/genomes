@@ -17,7 +17,7 @@ my $base = 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
 my $SLEEP_TIME = 2;
 my $cache_dir = "eutils_".$ENV{USER}.".cache";
 my $cache_filehandle;
-my $cache_keep_time = '1 day';
+my $cache_keep_time = '2 day';
 
 my $force = 0;
 my $debug = 0;
