@@ -21,7 +21,9 @@
 "Ascosphaera apis","ARSEF 7405",Ascosphaeraceae,Broad/GB,CH980625-CH981371,,WGS
 "Aspergillus fumigatus",Af293,Aspergillaceae,AspGD,NC_007201;NC_007200;NC_007199;NC_007198;NC_007197;NC_007196;NC_007195;NC_007194;NC_007194-NC_007201,,RefSeq
 "Aspergillus niger","CBS 513.88",Aspergillaceae,JGI,,,RefSeq
-"Penicillium chrysogenum",,Aspergillaceae,DSM/GB,CM002798;CM002799;CM002800;CM002801;CM002802;CM002798-CM002802;KI963886-KI963917,,WGS
+"Penicillium chrysogenum",P2niaD18,Aspergillaceae,GB,CM002798-CM002802,,WGS
+"Penicillium chrysogenum",NCPC10086,Aspergillaceae,GB,KI963886-KI963917,,WGS
+"Penicillium chrysogenum",Wisconsin 54-1255,Aspergillaceae,GB,AM920436;AM920416-AM920464,,WGS
 "Fibulorhizoctonia sp.","CBS 109695",Atheliaceae,JGI,,,
 "Piloderma croceum","F 1598",Atheliaceae,JGI,,,
 "Atractiellales sp.",,Atractiellaceae,JGI,,,
