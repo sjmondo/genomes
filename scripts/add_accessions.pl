@@ -5,8 +5,10 @@ use warnings;
 use LWP::Simple;
 use Encode;
 use Cache::File;
-use Bio::DB::GenBank;
-use Bio::DB::FileCache;
+use Bio::SeqIO;
+use IO::String;
+#use Bio::DB::GenBank;
+#use Bio::DB::FileCache;
 use XML::Simple;
 use Text::CSV_XS qw(csv);
 use File::Spec;
@@ -17,11 +19,9 @@ use Env qw(USER);
 my $out = Bio::SeqIO->new(-format => 'genbank');
 
 my $SLEEP_TIME = 2;
-my $cache_dir = "/tmp/eutils_".$ENV{USER};
+my $cache_dir = "eutils_".$ENV{USER}.".cache";
 my $cache_filehandle;
 my $cache_keep_time = '1 day';
-
-my $path = "/tmp/seqdb_".$ENV{USER};
 
 my $base = 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
 
@@ -35,6 +35,7 @@ GetOptions(
     'debug|v!'  => \$debug,
     'runonce!'  => \$runonce,
     'retmax:i'  => \$retmax,
+    'i|db:s'    => \$dbfile,
     'f|force!'  => \$force, # force downloads even if file exists
     'cache!'    => \$use_cache,
     );
@@ -45,24 +46,28 @@ if( $use_cache ) {
     &init_cache();
 }
 
-my $seq_cachedb = Bio::DB::FileCache->new( -seqdb   => Bio::DB::GenBank->new(-verbose => $debug),
-					   -file    => $path,
-					   -keep    => 1,
-					   -verbose => $debug,
-    );
-
-my $db = 'genome';
-
 # Read whole file in memory as array of arrays
 my $csv = Text::CSV_XS->new ({ binary => 1, auto_diag => 1 });
 open my $fh, "<:encoding(utf8)", $dbfile or die "$dbfile: $!";
 my $xs = XML::Simple->new;
-while (my $row = $csv->getline ($fh)) {
-    next if $row->[0] =~ /^\#/;
+while (my $row = $csv->getline ($fh)) {    
+
+    if( $row->[0] =~ /^\#/ || ( $row->[4] && ! $force) ) {
+	$csv->print(\*STDOUT, $row);
+	print "\n";
+	next;
+    }
+    $row->[4] = '' if $force;
+
     my $query = $row->[0];
     if ( $row->[1] ) {
 	$query .= " ".$row->[1];
     }
+    my %notes;
+    if( $row->[6] ) {
+	%notes = map { $_ => 1 } split(/;/,$row->[6]);
+    }
+    my $db = 'genome';
     my $url = sprintf("esearch.fcgi?db=%s&term=%s&rettype=acc&retmax=%d&usehistory=y",
 		      $db,$query,$retmax);
 
@@ -111,22 +116,64 @@ while (my $row = $csv->getline ($fh)) {
 	    my $id = $link->{Id};
 	    push @nucl_ids, $id;
 	}
+
+	if( @nucl_ids ) {
+	    $notes{RefSeq}++;
+	} else {
+	    $url = sprintf('elink.fcgi?dbfrom=genome&db=nuccore&id=%d&term=wgs[prop]',$id);    
+	    # post the elink URL
+	    $output = get_web_cached($base,$url);    
+	    warn($output) if $debug;
+	    my $simplesum;
+	    eval {
+		$simplesum = $xs->XMLin($output);
+	    };
+	    if( $@ ) {
+		delete_cache($base,$url);
+		next;
+	    }
+	    my $doc = $simplesum->{LinkSet};
+	    my $ls = $doc->{LinkSetDb}->{Link};
+	    if( ref($ls) =~ /HASH/ ) {
+		$ls = [$ls];
+	    }
+	    for my $link ( @$ls ) {
+		my $id = $link->{Id};
+		push @nucl_ids, $id;
+	    }
+	    if( @nucl_ids ) {
+		$notes{WGS}++;
+	    }
+	    warn("nucl_ids are @nucl_ids\n") if $debug;
+	}
+
 	for my $gi ( @nucl_ids ) {
 	    $url = sprintf('efetch.fcgi?retmode=text&rettype=gb&db=nuccore&tool=bioperl&id=%s',$gi);       
 	    $output = get_web_cached($base,$url);
 	    warn($output) if $debug;
 	    my $ios = IO::String->new($output);
-	    my (@acc,$src);
+	    my (@acc,@seqacc,$src);
+	    my $i = 0;
+	    my $skip = 0;
 	    while(<$ios>) {
-		if( /SOURCE\s+(.+)/ ) {
+		if( /ORGANISM\s+(.+)/ ) {
 		    $src = $1;
 		} elsif(/WGS_SCAFLD\s+(\S+)/ ) {
 		    push @acc, $1;
+		} elsif(/^ACCESSION\s+(\S+)/) {
+		    push @seqacc, $1;
+		} elsif( /^DEFINITION|SOURCE/ && /mitochondrion/ ) {
+		    $skip =1;
 		}
+		last if $i++ > 10000;
 	    }
-	    if( $src ne $query ) {
-		#warn("$src not $query\n");
+	    next if $skip;
+	    if( $src ne $query && $row->[1] ) {
+		warn("$src not $query\n");
 	    } else {
+		if( ! @acc ) { 
+		    @acc = @seqacc;
+		}
 		if( $row->[4] ) { 
 		    $row->[4] = join(";",$row->[4],@acc);
 		} else {
@@ -135,7 +182,9 @@ while (my $row = $csv->getline ($fh)) {
 	    }
 	}
     }
+    $row->[6] = join(";",sort keys %notes);
     $csv->print(\*STDOUT,$row);
+    print "\n";
     last if $runonce;
 }
 
