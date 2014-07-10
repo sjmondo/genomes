@@ -6,6 +6,8 @@ use Bio::DB::Query::GenBank;
 use File::Path;
 use Getopt::Long;
 use File::Spec;
+use Text::CSV_XS qw(csv);
+
 my $DEBUG = 0;
 my $basedir = 'download';
 my $force;
@@ -17,13 +19,12 @@ GetOptions(
 mkdir($basedir) unless -d $basedir;
 my $ncbi_id_file = shift || 'lib/accessions.csv';
 my $gb = Bio::DB::GenBank->new(-verbose => $DEBUG);
-open(QUERY, $ncbi_id_file) || die $!;
 
-
-while(<QUERY>) {
-    next if /^\#/ || /^\s+$/ || /^Species/;
-    chomp;
-    my ($species,$strain,$family,$source,$accessions,$pmid) = split(/,/,$_);
+my $csv = Text::CSV_XS->new ({ binary => 1, auto_diag => 1 });
+open my $fh, "<:encoding(utf8)", $ncbi_id_file or die "$ncbi_id_file: $!";
+while (my $row = $csv->getline ($fh)) {    
+    next if $row->[0] =~ /^(\#|\s+|Species)/;
+    my ($species,$strain,$family,$source,$accessions,$pmid) = @$row;
     next if ! $accessions;
     my $speciesnospaces = $species;
     $speciesnospaces =~ s/[\s\/#]/_/g;
