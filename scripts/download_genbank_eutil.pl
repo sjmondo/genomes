@@ -151,9 +151,6 @@ while (my $row = $csv->getline ($fh)) {
 		last;
 	    }	    
 	}
-#	if( $output =~ /ACCESSION\s+(\S+)/ ) {
-#	    $acc = $1;
-#	} 
 	unless( $acc ) {
 	    warn("no Accession for $id\n");
 	    $acc = $id;
