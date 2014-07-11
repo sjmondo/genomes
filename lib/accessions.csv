@@ -62,7 +62,7 @@
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,AFTOL,,,
 "Fellomyces polyborus",,Cuniculitremaceae,Dikaryome,,,
-"Cyphellophora europaea","CBS 101466",Cyphellophoraceae,Broad/GB,KB822711-KB822725;KI635846-KI635849,,WGS
+"Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS
 "Calocera cornea",,Dacrymycetaceae,JGI,,,
 "Dacryopinax sp.","DJM-731 SS1",Dacrymycetaceae,GB,JH795855-JH795953,22745431,WGS
 "Cladosporium sphaerospermum","UM 843",Davidiellaceae,GB,AIIA01000001-AIIA01014813,22544899,WGS
@@ -81,7 +81,6 @@
 "Aureobasidium pullulans var. pullulans",,Dothioraceae,JGI,,,
 "Blumeria graminis f. sp. hordei",DH14,Erysiphaceae,GB,HF938118-HF944960,21148392,RefSeq
 "Erysiphe pisi",,Erysiphaceae,GB,CACM01000001-CACM01035300,,"WGS;Note=no annotation"
-"Rhodotorula minuta",,Erythrobasidiaceae,Dikaryome,,,
 "Exidia glandulosa",,Exidiaceae,JGI,,,
 "Exobasidium vaccinii",MPITM,Exobasidiaceae,JGI,,,
 "Fistulina hepatica",,Fistulinaceae,JGI,,,
@@ -146,7 +145,7 @@
 "Lichtheimia hyalospora",,Lichtheimiaceae,JGI,,,
 "Lophiostoma macrostomum",,Lophiostomataceae,JGI,,,
 "Gaeumannomyces graminis var. tritici",R3-111a-1,Magnaporthaceae,GB,GL385395-GL385911,,WGS
-"Magnaporthe oryzae",70-15,Magnaporthaceae,Broad/GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,,RefSeq
+"Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,,RefSeq
 "Malassezia globosa",,Malasseziaceae,GB,NW_001849832-NW_001849898,18000048,RefSeq
 "Moniliophthora perniciosa",FA553,Marasmiaceae,GB,NW_002479998-NW_002505053,,RefSeq
 "Melampsora laricis-populina",,Melampsoraceae,GB,NW_006768765-NW_006769226,21536894,RefSeq
@@ -157,7 +156,7 @@
 "Phlebia brevispora","HHB-7030 SS6",Meruliaceae,JGI,,,
 "Clavispora lusitaniae","ATCC 42720",Metschnikowiaowiaceae,GB,NW_003101571-NW_003101579,,RefSeq
 "Metschnikowia fructicola",277,Metschnikowiaceae,GB,ANFW00000000,,NoAnnot;WGS
-"Microbotryum violaceum","p1A1 Lamole",Microbotryaceae,Broad/GB,GL541643-GL542873,,WGS
+"Microbotryum violaceum","p1A1 Lamole",Microbotryaceae,GB,GL541643-GL542873,,WGS
 "Anthonospora locustae",,Microsporidia,JGI,,,
 "Meira geulakonigae",,Mikronegeriaceae,Dikaryome,,,
 "Mixia osmundae","IAM 14324",Mixiaceae,JGI,KL411542-KL411697;BABT00000000,,WGS
@@ -181,7 +180,7 @@
 "Amorphotheca resinae",,Myxotrichaceae,JGI,,,
 "Oidiodendron maius",Zn,Myxotrichaceae,JGI,,,
 "Fusarium fujikuroi",B14,Nectriaceae,GB,KB205952-KB206026,,WGS
-"Fusarium graminearum",,Nectriaceae,Broad/GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,,RefSeq
+"Fusarium graminearum",,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,,RefSeq
 "Ilyonectria europaea",PMI-82,Nectriaceae,JGI,,,
 "Nectria haematococca","FGSC 9596",Nectriaceae,JGI,NW_003315673-NW_003315881,19714214,"mating population VI"
 "Orpinomyces sp.",C1A,Neocallimastigaceae,GB,ASRE00000000,,"Discuss with collaborators to get annotation;WGS"
@@ -189,8 +188,8 @@
 "Neolecta irregularis",,Neolectaceae,UCR,,,
 "Gymnopus luxurians",,Omphalotaceae,JGI,,,
 "Omphalotus olearius",,Omphalotaceae,GB,JH814812-JH815182,,WGS
-"Coccidioides immitis",RS,Onygenaceae,Broad/GB,NW_001509356-NW_001509365,,RefSeq
-"Uncinocarpus reesii",1704,Onygenaceae,Broad/GB,NW_003052457-NW_003052500,,RefSeq
+"Coccidioides immitis",RS,Onygenaceae,GB,NW_001509356-NW_001509365,,RefSeq
+"Uncinocarpus reesii",1704,Onygenaceae,GB,NW_003052457-NW_003052500,,RefSeq
 "Ophiocordyceps sinensis",CO18,Ophiocordycipitaceae,GB,KE652172-KE662774,,WGS
 "Tolypocladium inflatum","NRRL 8044",Ophiocordycipitaceae,GB,AOHE01000001-AOHE01000194,23818858,"WGS;Note=no annotation"
 "Grosmannia clavigera",kw1407,Ophiostomataceae,GB,GL629720-GL630008;GG742440-GG743882,21262841,WGS
@@ -267,8 +266,8 @@
 "Schizosaccharomyces octosporus",yFS286,Schizosaccharomycetaceae,GB,KE503206-KE503210,21511999,RefSeq
 "Schizosaccharomyces pombe",,Schizosaccharomycetaceae,GB,NC_003421-NC_001326,11859360,RefSeq
 "Scleroderma citrinum","Foug A",Sclerodermataceae,JGI,,,
-"Botrytis cinerea",,Sclerotiniaceae,Broad/GB,NW_001813983-NW_001814571,,RefSeq
-"Sclerotinia sclerotiorum",,Sclerotiniaceae,Broad/GB,NW_001820797-NW_001820835,,RefSeq
+"Botrytis cinerea",,Sclerotiniaceae,GB,NW_001813983-NW_001814571,,RefSeq
+"Sclerotinia sclerotiorum",,Sclerotiniaceae,GB,NW_001820797-NW_001820835,,RefSeq
 "Piriformospora indica","DSM 11827",Sebacinaceae,JGI,CAFZ00000000,,"WGS;from MPI"
 "Sebacina vermifera","MAFF 305830",Sebacinaceae,JGI,,,
 "Serpula lacrymans",S7.3,Serpulaceae,JGI,NW_006763290-NW_006763335,21764756,RefSeq
