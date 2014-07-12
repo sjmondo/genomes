@@ -73,23 +73,33 @@ while (my $row = $csv->getline ($fh)) {
 
     warn "url is $url\n" if $debug;
     my $output = get_web_cached($base,$url);
-    my ($web,$key,$count);
-    
-    if( $output =~ /<WebEnv>(\S+)<\/WebEnv>/) {
-	$web = $1;
-    }
-    if ($output =~ /<QueryKey>(\d+)<\/QueryKey>/) {
-	$key = $1;
-    }
-    if( $output =~ /<Count>(\d+)<\/Count>/) {
-	$count = $1;
-    }
+#    my ($web,$key,$count);   
+#    if( $output =~ /<WebEnv>(\S+)<\/WebEnv>/) {
+#	$web = $1;
+#    }
+#    if ($output =~ /<QueryKey>(\d+)<\/QueryKey>/) {
+#	$key = $1;
+#    }
+#    if( $output =~ /<Count>(\d+)<\/Count>/) {
+#	$count = $1;
+#    }
     
     my @ids;
     while ($output =~ /<Id>(\d+?)<\/Id>/sg) {
 	push(@ids, $1);
     }
-    
+
+    if( ! @ids ) {
+	$query = $row->[0];
+	$url = sprintf("esearch.fcgi?db=%s&term=%s&rettype=acc&retmax=%d&usehistory=y",
+		       $db,$query,$retmax);
+
+	warn "url is $url\n" if $debug;
+	$output = get_web_cached($base,$url);
+	while ($output =~ /<Id>(\d+?)<\/Id>/sg) {
+	    push(@ids, $1);
+	}
+    }
     warn "processing ", scalar @ids," project IDs for $query\n";
     
     for my $id ( @ids ) {    
@@ -147,6 +157,9 @@ while (my $row = $csv->getline ($fh)) {
 	    warn("nucl_ids are @nucl_ids\n") if $debug;
 	}
 
+	unless( @nucl_ids ) {
+	    warn("no IDs for GenomeProject $id\n");
+	}
 	for my $gi ( @nucl_ids ) {
 	    $url = sprintf('efetch.fcgi?retmode=text&rettype=gb&db=nuccore&tool=bioperl&id=%s',$gi);       
 	    $output = get_web_cached($base,$url);
