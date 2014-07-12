@@ -138,9 +138,11 @@ while (my $row = $csv->getline ($fh)) {
 	$ids = [$ids];
     }
     for my $id ( @$ids ) {
+	next if ! $id;
 	$url = sprintf('efetch.fcgi?retmode=text&rettype=gbwithparts&db=nuccore&tool=bioperl&id=%s',$id);
 	#delete_cache($base,$url);
-	$output = get_web_cached($base,$url);
+	sleep $SLEEP_TIME;
+	$output = get($base.$url);
 	my $acc;
 	my $io = IO::String->new($output);
 	while(<$io>) {
