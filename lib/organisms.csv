@@ -244,8 +244,8 @@
 "Wilcoxina mikolae","CBS 423.85",Pyronemataceae,JGI,,,
 "Ramaria rubella",UT-36052-T,Ramariaceae,JGI,,,R.acris
 "Rhizopus delemar","RA 99-880",Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,19578406,WGS
-"Rhizopus microsporus var. chinensis","CCTCC M201021",Rhizopodaceae,JGI,ANKS01000001-ANKS01003431,23516228,WGS
-"Rhizopus microsporus var. microsporus",,Rhizopodaceae,JGI,,,
+"Rhizopus microsporus var. chinensis","CCTCC M201021",Rhizopodaceae,GB,ANKS01000001-ANKS01003431,23516228,WGS
+"Rhizopus microsporus var. microsporus",,Rhizopodaceae,GB,JNEJ01000001-JNEJ01005266,,"Note=no annotation"
 "Rhizopus oryzae",99-892,Rhizopodaceae,GB,KK997910-KK998760,,RefSeq
 "Rickenella mellea",,Rickenellaceae,JGI,,,
 "Rozella allomycis",CSF55,Rozellaceae,GB,KE560349-KE561407,23932404,RefSeq
