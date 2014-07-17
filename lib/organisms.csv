@@ -166,8 +166,7 @@
 "Mortierella alpina","ATCC 32222",Mortierellaceae,GB,ADAG00000000,,WGS
 "Mortierella elongata",,Mortierellaceae,JGI,,,
 "Mortierella verticillata",,Mortierellaceae,Broad,,,
-"Mucor circinelloides f. circinelloides 1006PhL",,Mucoraceae,GB,KE123896-KE124365,,WGS
-"Mucor circinelloides","B8987",Mucoraceae,GB,JNDM01000001-JNDM01002210,,"Note=no annotation;WGS"
+"Mucor circinelloides f. circinelloides",1006PhL,Mucoraceae,GB,KE123896-KE124365,,WGS
 "Mucor circinelloides","CBS277.49",Mucoraceae,JGI,,,
 "Umbelopsis ramanniana","NRRL 5844",Mucoraceae,JGI,,,
 "Cercospora zeae-maydis",,Mycosphaerellaceae,JGI,,,
