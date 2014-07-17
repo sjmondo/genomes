@@ -157,7 +157,7 @@
 "Clavispora lusitaniae","ATCC 42720",Metschnikowiaowiaceae,GB,NW_003101571-NW_003101579,,RefSeq
 "Metschnikowia fructicola",277,Metschnikowiaceae,GB,ANFW00000000,,NoAnnot;WGS
 "Microbotryum violaceum","p1A1 Lamole",Microbotryaceae,GB,GL541643-GL542873,,WGS
-"Anthonospora locustae",,Microsporidia,JGI,,,
+"Anthonospora locustae",,Microsporidia,,,,
 "Meira geulakonigae",,Mikronegeriaceae,Dikaryome,,,
 "Mixia osmundae","IAM 14324",Mixiaceae,JGI,KL411542-KL411697;BABT00000000,,WGS
 "Monascus purpureus",,Monascaceae,JGI,,,
@@ -166,7 +166,9 @@
 "Mortierella alpina","ATCC 32222",Mortierellaceae,GB,ADAG00000000,,WGS
 "Mortierella elongata",,Mortierellaceae,JGI,,,
 "Mortierella verticillata",,Mortierellaceae,Broad,,,
-"Mucor circinelloides f. circinelloides 1006PhL",,Mucoraceae,JGI,JNDM00000000;KE123896-KE124365,,WGS
+"Mucor circinelloides f. circinelloides 1006PhL",,Mucoraceae,GB,KE123896-KE124365,,WGS
+"Mucor circinelloides","B8987",Mucoraceae,GB,JNDM01000001-JNDM01002210,,"Note=no annotation;WGS"
+"Mucor circinelloides","CBS277.49",Mucoraceae,JGI,,,
 "Umbelopsis ramanniana","NRRL 5844",Mucoraceae,JGI,,,
 "Cercospora zeae-maydis",,Mycosphaerellaceae,JGI,,,
 "Dothistroma septosporum",NZE10,Mycosphaerellaceae,JGI,KB446535-KB446554,,WGS
