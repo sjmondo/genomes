@@ -37,7 +37,7 @@ GetOptions(
     'b|basedir:s'          => \$basedir);
 
 mkdir($basedir) unless -d $basedir;
-my $ncbi_id_file = shift || 'lib/accessions.csv';
+my $ncbi_id_file = shift || 'lib/organisms.csv';
 
 my $db = 'nuccore';
 $SLEEP_TIME = 0 if $debug; # let's not wait when we are debugging

@@ -30,7 +30,7 @@ my $debug = 0;
 my $retmax = 1000;
 my $runonce = 0;
 my $use_cache = 1;
-my $dbfile = 'lib/accessions.csv';
+my $dbfile = 'lib/genomes.csv';
 GetOptions(
     'debug|v!'  => \$debug,
     'runonce!'  => \$runonce,

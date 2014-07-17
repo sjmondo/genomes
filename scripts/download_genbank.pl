@@ -17,7 +17,7 @@ GetOptions(
     'b|basedir:s'          => \$basedir);
 
 mkdir($basedir) unless -d $basedir;
-my $ncbi_id_file = shift || 'lib/accessions.csv';
+my $ncbi_id_file = shift || 'lib/organisms.csv';
 my $gb = Bio::DB::GenBank->new(-verbose => $DEBUG);
 
 my $csv = Text::CSV_XS->new ({ binary => 1, auto_diag => 1 });
