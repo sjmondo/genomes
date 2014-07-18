@@ -2,7 +2,7 @@
 "Agaricus bisporus var. bisporus",H97,Agaricaceae,GB,NW_006267344-NW_006267372,23045686,RefSeq
 "Leucoagaricus gongylophorus",Ac12,Agaricaceae,GB,ANIS00000000,23584789,"WGS;Note=no annotation"
 "Macrolepiota fuliginosa",,Agaricaceae,JGI,,,
-"Agaricostilbum haphaenes","CBS 175.79",Agaricostilbaceae,JGI,,,
+"Agaricostilbum hyphaenes","ATCC MYA-4628",Agaricostilbaceae,JGI,,,"Note=altstrain=CBS 175.79"
 "Ajellomyces capsulatus",NAm1,Ajellomycetaceae,GB,NW_001813703-NW_001813982,,RefSeq
 "Paracoccidioides brasiliensis",,Ajellomycetaceae,GB,NC_007935,22046142,RefSeq
 "Amanita muscaria",Koide,Amanitaceae,JGI,,,
@@ -57,7 +57,7 @@
 "Cortinarius glaucopus","AT 2004 276",Cortinariaceae,JGI,,,
 "Hebeloma cylindrosporum",h7,Cortinariaceae,JGI,,,
 "Caliciopsis orientalis",,Coryneliaceae,AFTOL,,,
-"Cronartium quercuum f. sp. Fusiforme",G11,Cronartiaceae,JGI,,,
+"Cronartium quercuum f. sp. fusiforme",G11,Cronartiaceae,JGI,,,
 "Cryphonectria parasitica",EP155,Cryphonectriaceae,JGI,,,
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,AFTOL,,,
@@ -78,7 +78,7 @@
 "Didymella exigua","CBS 183.55",Didymellaceae,JGI,,,
 "Galactomyces geotrichum",,Dipodascaceae,CRG,,,
 "Yarrowia lipolytica",CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
-"Aureobasidium pullulans var. pullulans",,Dothioraceae,JGI,,,
+"Aureobasidium pullulans","EXF-150",Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
 "Blumeria graminis f. sp. hordei",DH14,Erysiphaceae,GB,HF938118-HF944960,21148392,RefSeq
 "Erysiphe pisi",,Erysiphaceae,GB,CACM01000001-CACM01035300,,"WGS;Note=no annotation"
 "Exidia glandulosa",,Exidiaceae,JGI,,,
@@ -96,7 +96,7 @@
 "Glonium stellatum",,Gloniaceae,AFTOL,,,
 "Ophiognomonia clavigignenti-juglandacearum",,Gnomoniaceae,GB,AEGN00000000,21676199,"WGS;Note=This is a pooled library of multiple strains"
 "Gonapodya prolifera",,Gonapodyaceae,JGI,,,
-"Gymnascella aurrantica",,Gymnascaceae,JGI,,,
+"Gymnascella aurantiaca","NRRL 5967",Gymnascaceae,JGI,,,
 "Gymnascella citrina",,Gymnascaceae,JGI,,,
 "Ascocoryne sarcoides","NRRL 50072",Helotiaceae,GB,KB205939-KB205951,22396667,WGS
 "Cadophora sp.",DSE1049,Helotiaceae,JGI,,,
@@ -180,11 +180,11 @@
 "Myriangium duriaei","CBS 260.36",Myriangiaceae,JGI,,,
 "Amorphotheca resinae",,Myxotrichaceae,JGI,,,
 "Oidiodendron maius",Zn,Myxotrichaceae,JGI,,,
-"Fusarium fujikuroi",B14,Nectriaceae,GB,KB205952-KB206026,,WGS
-"Fusarium graminearum",,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,,RefSeq
-"Ilyonectria europaea",PMI-82,Nectriaceae,JGI,,,
+"Fusarium graminearum",PH-1,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,17823352,RefSeq
+"Fusarium fujikuroi",B14,Nectriaceae,GB,KB205952-KB206026,23472226,WGS
+"Fusarium fujikuroi",IMI58289,Nectriaceae,GB,HF679023-HF679034,23825955,WGS
 "Nectria haematococca","FGSC 9596",Nectriaceae,GB,NW_003315673-NW_003315881,19714214,"mating population VI"
-"Orpinomyces sp.",C1A,Neocallimastigaceae,GB,ASRE00000000,,"Discuss with collaborators to get annotation;WGS"
+"Orpinomyces sp.",C1A,Neocallimastigaceae,GB,ASRE01000001-ASRE01032574,23709508,"Discuss with collaborators to get annotation;WGS"
 "Piromyces sp.",E2,Neocallimastigaceae,JGI,,,
 "Neolecta irregularis",,Neolectaceae,UCR,,,
 "Gymnopus luxurians",,Omphalotaceae,JGI,,,
