@@ -9,7 +9,7 @@ use File::Spec;
 
 
 my $url_base = 'http://genome.jgi.doe.gov';
-my $outdir = 'downloads';
+my $outdir = 'download';
 
 my $genome_file = 'lib/organisms.csv';
 # data fields
@@ -58,6 +58,7 @@ while (my $row = $csv->getline ($fh)) {
 
 open(my $curl_cmds => ">$download_cmds") || die $!;
 
+my %sanity;
 #warn(Dumper($fungi));
 warn("types are: ", join(",", keys %$folder),"\n") if $debug;
 my %data;
@@ -82,8 +83,9 @@ while( my ($type,$d) = each %$folder ) {
 		    my $fullurl = sprintf("%s%s",$url_base,
 					   $file->{url});
 		    $file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
+		    my $filename = $file->{filename};
 		    my @label_spl = split(/\s+/,$file->{label});
-
+		    my $version = $label_spl[-1];
 		    my $name;
 		    if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
 			$name = join(" ", $label_spl[0],$label_spl[1],
@@ -94,24 +96,30 @@ while( my ($type,$d) = each %$folder ) {
 				     $label_spl[4]);
 		    } else {
 			$name = join(" ", $label_spl[0],$label_spl[1]);
-		    }
+		    }		    
 		    if( ! exists $orgs{$name} ) {
 			#warn("cannot find '$name' in the query file\n");
 			next;
 		    }
-		    
+		    next if $filename =~ /MitoScaffold|Mitochondria|mito\.scaffolds/;
 		    if( $jgi_targets{$name} ) {
 			my $family = $orgs{$name}->{family};
 			my $oname = $name;
 			$oname =~ s/\s+/_/g;
-			$oname =~ s/\.$//g; # remove trailing periods for things that are like XX sp. 	
-			my $outfile = File::Spec->catfile($outdir,$family,$oname,"$oname.assembly.fasta.gz");
+			$oname =~ s/\.//g;
+#			$oname =~ s/\.$//g; # remove trailing periods for things that are like XX sp. 				
+			my $oname_labeled;
+			if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
+			    $oname_labeled = "$oname.$prefix.$version.assembly.fasta.gz";
+			} else {
+			    $oname_labeled = "$oname.$prefix.assembly.fasta.gz";
+			}
+			my $outfile = File::Spec->catfile($outdir,$family,$oname,$oname_labeled);
 
 			print join("\t", "Genome",$prefix,
 				   $outfile,
 				   map { $file->{$_} || ''} @data_fields),"\n";
-
-
+			$sanity{$outfile}++;
 			if( ! -f $outfile ) {
 			    print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
 			}
@@ -134,8 +142,9 @@ while( my ($type,$d) = each %$folder ) {
 			my $fullurl = sprintf("%s%s",$url_base,
 					      $file->{url});
 			$file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
+			my $filename = $file->{filename};
 			my @label_spl = split(/\s+/,$file->{label});
-			
+			my $version = $label_spl[-1];
 			my $name;
 			if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
 			    $name = join(" ", $label_spl[0],$label_spl[1],
@@ -159,18 +168,28 @@ while( my ($type,$d) = each %$folder ) {
 			    $oname =~ s/\s+/_/g;
 			    $oname =~ s/\.$//; # remove trailing periods for things that are like XX sp. 
 			    my $outfile = File::Spec->catdir($outdir,$family,$oname);
-			    next if $fullurl =~ /\.tar.gz$/ || $fullurl =~ /ESTs/; # skip the compiled set of all gene modules (tar.gz) or the EST fastas
-			    if( $fullurl =~ /\.gff/ ) {
-				$outfile = File::Spec->catfile($outfile,"$oname.gff3.gz");
-			    } elsif( $fullurl =~ /\.aa\./) {
-				$outfile = File::Spec->catfile($outfile,"$oname.aa.fasta.gz");
-			    } elsif( $fullurl =~ /CDS/ ) {
-				$outfile = File::Spec->catfile($outfile,"$oname.CDS.fasta.gz");
+			    next if( $filename =~ /\.tar.gz$/ || 
+				     $filename =~ /ESTs|unsupported_short/); 
+# skip the compiled set of all gene modules (tar.gz) or the EST fastas
+
+			    my $oname_labeled = "$oname.$prefix";
+			    if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
+				$oname_labeled .= ".$version";
+			    }
+
+			    if( $filename =~ /\.gff/ ) {
+				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
+			    } elsif( $filename =~ /\.aa\./ || 
+				     $filename =~ /filtered_proteins|GeneCatalog\_?\d+\.proteins/) {
+				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
+			    } elsif( $filename =~ /CDS/ ) {
+				$outfile = File::Spec->catfile($outfile,"$oname_labeled.CDS.fasta.gz");
 			    }
 			    print join("\t",  $ftype,$prefix,$outfile,
 				       map { $file->{$_} || ''} 
 				       @data_fields),"\n";
 			
+			    $sanity{$outfile}++;
 			    if( ! -f $outfile ) {
 				print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
 			    }
@@ -183,6 +202,11 @@ while( my ($type,$d) = each %$folder ) {
     }
 }
 
+for my $outfile ( keys %sanity ) {
+    if( $sanity{$outfile} > 1 ) {
+	warn("$outfile seen more than once, will be overwritten\n");
+    }
+}
 my @missing;
 for my $name ( sort keys %jgi_targets ) {
     if( $jgi_targets{$name} == 1 ) {
