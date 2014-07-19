@@ -132,16 +132,16 @@
 "Sporobolomyces linderae","CBS 7893",Agaricostilbomycetes,JGI,,,
 "Sporobolomyces roseus",,Sporidiobolales,JGI,,,
 "Symbiotaphrina kochii",,Pezizomycotina,JGI,,,
-"Thermomyces lanuginosus",SSBP,Eurotiales,GB,ANHP01000001-ANHP01000311,23788551,WGS
+"Thermomyces lanuginosus",SSBP,Eurotiales,GB,ANHP01000001-ANHP01000311,23788551,"Note=no annotation;WGS"
 "Tritirachium sp.","CBS 265.96",Tritirachiaceae,JGI,,,
 "Wallemia ichthyophaga",EXF-994,Wallemiales,GB,KE007224-KE007305,,WGS
-"Wallemia sebi",,Wallemiales,JGI,NW_006531958-NW_006532013,,RefSeq
-"Jaapia argillacea",,Jaapiaceae,GB,KL197709-KL198003,24958869,WGS
+"Wallemia sebi","CBS 633.66",Wallemiales,GB,NW_006531958-NW_006532013,22326418,RefSeq
+"Jaapia argillacea","MUCL 33604",Jaapiaceae,GB,KL197709-KL198003,24958869,WGS
 "Coemansia reversa","NRRL 1564",Kickxellaceae,JGI,,,
 "Podospora anserina","S mat+",Lasiosphaeriaceae,Genoscope,,,
 "Lentithecium fluviatile",,Lentitheciaceae,JGI,,,
 "Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,FP929064-FP929139,21326234,
-"Lichtheimia corymbifera",,Lichtheimiaceae,CRG,JNEE01000001-JNEE01001626,,WGS
+"Lichtheimia corymbifera","008-049",Lichtheimiaceae,CRG,JNEE01000001-JNEE01001626,,"WGS;Note=no annotation"
 "Lichtheimia hyalospora",,Lichtheimiaceae,JGI,,,
 "Lophiostoma macrostomum",,Lophiostomataceae,JGI,,,
 "Gaeumannomyces graminis var. tritici",R3-111a-1,Magnaporthaceae,GB,GL385395-GL385911,,WGS
@@ -311,7 +311,7 @@
 "Pseudozyma antarctica",T-34,Ustilaginaceae,GB,DF196767-DF196793,23558529,WGS
 "Sporisorium reilianum",SRZ2,Ustilaginaceae,GB,FQ311430-FQ311474,21148393,WGS
 "Ustilago maydis",521,Ustilaginaceae,MIPS,NW_100966-NW_101210;NW_101212-NW_101215;NW_101217-NW_101241;NC_008368,17080091,"RefSeq;Note=update annotation may be at MIPS"
-"Daldinia eschscholzii",UM1020,Xylariaceae,GB,AIID01000001-AIID01011382,22544898,WGS
+"Daldinia eschscholzii",UM1020,Xylariaceae,GB,AIID01000001-AIID01011382,22544898,"Note=no annotation;WGS"
 "Hypoxylon sp.",CI-4A,Xylariaceae,JGI,,,
 "Xylaria hypoxylon",,Xylariaceae,AFTOL,,,
 "Xylona heveae",,Xylonaceae,JGI,,,
