@@ -4,10 +4,7 @@ use Bio::SeqIO;
 use Getopt::Long;
 use Bio::SeqFeature::Tools::Unflattener;
 
-# generate an Unflattener object
-my $unflattener = Bio::SeqFeature::Tools::Unflattener->new;
-$unflattener->error_threshold(1);
-
+my $force = 0;
 use constant MRNA => 'mRNA';
 use constant GENE => 'gene';
 use constant CDS  => 'CDS';
@@ -23,6 +20,7 @@ my $debug = 0;
 GetOptions(
     'v|debug|verbose!' => \$debug,
     'fasta!' => $write_fasta_separate,
+    'force!' => \$force,
     'd|dir:s' => \$dir,
     'o|out:s' => \$odir,
     's|src:s' => \$SRC,
@@ -30,6 +28,7 @@ GetOptions(
 
 opendir(DIR, $dir) || die $!;
 
+my $ran_count = 0;
 for my $family ( readdir(DIR) ) {    
     next if $family =~ /^\./;
     next unless -d "$dir/$family";
@@ -38,13 +37,16 @@ for my $family ( readdir(DIR) ) {
 	next if $species =~ /^\./;
 	my $gbkdir = "$dir/$family/$species/gbk";
 	next unless -d $gbkdir;
+	next if ( -f "$odir/GFF/$species.gff3" && ! $force);
 
 	opendir(GBKFILES, $gbkdir);
 	my $cdsnum = 1;
 	my $first = 1;
 	my (@ALL,$outfh,$outfa,@seqs);
 	for my $file ( readdir(GBKFILES)) {
+	    next if $file =~ /^\./;
 	    next unless $file =~ /(\S+)\.gb[sk]/;
+	    $ran_count++;
 	    if( $first ) {
 		warn("species is $species\n");
 		open($outfh, ">$odir/GFF/$species.gff3") || die $!;
@@ -64,12 +66,17 @@ for my $family ( readdir(DIR) ) {
 		open($fh => "<$gbkdir/$file") || die $!;
 	    }	    
 
-	    warn("$file\n");
+	    #warn("$file\n");
 	    my $seqio = Bio::SeqIO->new(-format => 'genbank',
 					-fh     => $fh);
 
+
 	    my %genes;
+	    # generate an Unflattener object
+	    my $unflattener = Bio::SeqFeature::Tools::Unflattener->new;
+	    $unflattener->error_threshold(1);
 	    while( my $seq = $seqio->next_seq ) {
+
 		my @top_sfs = $seq->get_SeqFeatures;
 		unless( $seq->length > MIN_LENGTH &&
 			grep { $_->primary_tag eq 'gene' } @top_sfs) {
@@ -88,9 +95,15 @@ for my $family ( readdir(DIR) ) {
 					   $seq->seq_version)),"\n";
 
 		# get top level unflattended SeqFeatureI objects
+		eval {
 		$unflattener->unflatten_seq(-seq=>$seq,
 #					-group_tag=>'locus_tag',
 					    -use_magic=>1);
+		}; 
+		if( $@ ) {
+			warn("error on seq $gbkdir/$file\n");
+			die;
+		}
 		# $out->write_seq($seq);
 		my $i = 0;
 
@@ -276,6 +289,14 @@ for my $family ( readdir(DIR) ) {
 			$mrnact++;
 		    }
 		}
+		
+	    }
+	    if ( my @ps = $unflattener->get_problems ) {
+		warn("Problems in file: $file \n");
+		for my $p ( @ps ) {
+		    warn("Severity: ",$p->[0], "\n",
+			 $p->[1],"\n");
+		}
 	    }
 	}
 	for my $feature ( @ALL ) {
@@ -299,10 +320,8 @@ for my $family ( readdir(DIR) ) {
 				      -fh     => $outfh);
 	    $out->write_seq(@seqs);
 	}
-	last if $debug;
     }
-    $unflattener->report_problems;
-    last if $debug;
+    last if $debug && $ran_count;
 }
 
 

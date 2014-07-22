@@ -14,7 +14,7 @@ use Bio::SeqIO;
 use IO::String;
 
 my $base = 'http://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
-my $SLEEP_TIME = 2;
+my $SLEEP_TIME = 1;
 my $cache_dir = "eutils_".$ENV{USER}.".cache";
 my $cache_filehandle;
 my $cache_keep_time = '2 day';
@@ -41,7 +41,7 @@ mkdir($basedir) unless -d $basedir;
 my $ncbi_id_file = shift || 'lib/organisms.csv';
 
 my $db = 'nuccore';
-$SLEEP_TIME = 0 if $debug; # let's not wait when we are debugging
+#$SLEEP_TIME = 0 if $debug; # let's not wait when we are debugging
 if( $use_cache ) {
     &init_cache();
 }
@@ -52,9 +52,10 @@ while (my $row = $csv->getline ($fh)) {
     next if $row->[0] =~ /^(\#|\s+|Species)/;
     my ($species,$strain,$family,$source,$accessions,$pmid) = @$row;
     next if ! $accessions;
+    next if $source ne 'GB';
     my $speciesnospaces = $species;
     $speciesnospaces =~ s/[\s\/#]/_/g;
-
+    warn("processing $speciesnospaces\n");
     my $targetdir = File::Spec->catfile($basedir,$family,$speciesnospaces,"gbk");
     next if( $fast && -d $targetdir );
     mkpath($targetdir);
@@ -86,9 +87,9 @@ while (my $row = $csv->getline ($fh)) {
 		my $acc = sprintf("%s%0".$nl."d",$s_letter,$i);
                 if( ! -f File::Spec->catfile($targetdir,"$acc.gbk.gz")) {
 		    $acc_query{$s_letter}->{n}->{$i}++;
-		    warn("$acc.gbk.gz missing going to request it\n") if $debug;
+		    # warn("$acc.gbk.gz missing going to request it\n") if $debug;
                 } else {
-		    warn("I see $acc.gb.gz, skipping\n") if $debug;
+		    # warn("I see $acc.gb.gz, skipping\n") if $debug;
 		}
             }
         } else {
@@ -100,7 +101,7 @@ while (my $row = $csv->getline ($fh)) {
     my @qstring;
     for my $l ( keys %acc_query ) {
 	my @nums = sort { $a <=> $b } map { int($_) } keys %{$acc_query{$l}->{n}};
-	my @collapsed = collapse_nums(@nums);
+	my @collapsed = collapse_nums(@nums);    
 	my $nl = $acc_query{$l}->{nl};
 	for my $nm ( @collapsed ) {
 	    if( $nm =~ /[-]/ ) {		
@@ -114,53 +115,58 @@ while (my $row = $csv->getline ($fh)) {
 	    }
 	}
     }
-    next unless (@qstring);
-    my $qstring = join(" OR ", @qstring); #  . " " . join(" ",@not);
-    warn("query for $species\n") if $debug;
-    warn("qstring is $qstring\n") if $debug;
+    while ( @qstring ) { 
 
-    my $url = sprintf('esearch.fcgi?db=nuccore&tool=bioperl&retmax=%d&term=%s',$retmax,$qstring);
-    #delete_cache($base,$url);
-    my $output = get($base.$url);
-    my $simplesum;
-    eval {
-	$simplesum = $xs->XMLin($output);
-    };
-    if( $@ ) {
-	    delete_cache($base,$url);
-	    next;
-    }
-    my $ids = $simplesum->{IdList}->{Id};
-    if( ref($ids) !~ /ARRAY/ ) {
-	$ids = [$ids];
-    }
-    for my $id ( @$ids ) {
-	next if ! $id;
-	$url = sprintf('efetch.fcgi?retmode=text&rettype=gbwithparts&db=nuccore&tool=bioperl&retmax=%d&id=%s',$retmax,$id);
-	sleep $SLEEP_TIME;
-	if( $output = get($base.$url) ) {
-	    my $acc;
-	    my $io = IO::String->new($output);
-	    while(<$io>) {
-		if( /^ACCESSION\s+(\S+)/ ) {
-		    $acc = $1;
-		    last;
-		} elsif(/^FEATURES/) {
-		    last;
-		}	    
+	for my $set ( [splice(@qstring,0,100)] ) {
+	    my $qstring = join(" OR ", @$set); #  . " " . join(" ",@not);
+	    warn("query for $species\n") if $debug;
+	    warn("qstring is $qstring\n") if $debug;
+
+	    my $url = sprintf('esearch.fcgi?db=nuccore&tool=bioperl&retmax=%d&term=%s',$retmax,$qstring);
+	    #delete_cache($base,$url);
+	    my $output = get($base.$url);
+	    my $simplesum;
+	    eval {
+		$simplesum = $xs->XMLin($output);
+	    };
+	    if( $@ ) {
+		delete_cache($base,$url);
+		next;
 	    }
-	    unless( $acc ) {
-		warn("no Accession for $id\n");
-		$acc = $id;
+	    my $ids = $simplesum->{IdList}->{Id};
+	    if( ref($ids) !~ /ARRAY/ ) {
+		$ids = [$ids];
 	    }
-	    my $targetfile = File::Spec->catfile($targetdir,"$acc.gbk.gz");
-	    open(my $ofh => "| gzip -c > $targetfile") || die $!;
-	    print $ofh $output;
+	    for my $id ( @$ids ) {
+		next if ! $id;
+		$url = sprintf('efetch.fcgi?retmode=text&rettype=gbwithparts&db=nuccore&tool=bioperl&retmax=%d&id=%s',$retmax,$id);
+		sleep $SLEEP_TIME;
+		if( $output = get($base.$url) ) {
+		    my $acc;
+		    my $io = IO::String->new($output);
+		    while(<$io>) {
+			if( /^ACCESSION\s+(\S+)/ ) {
+			    $acc = $1;
+			    last;
+			} elsif(/^FEATURES/) {
+			    last;
+			}	    
+		    }
+		    unless( $acc ) {
+			warn("no Accession for $id\n");
+			$acc = $id;
+		    }
+		    my $targetfile = File::Spec->catfile($targetdir,"$acc.gbk.gz");
+		    open(my $ofh => "| gzip -c > $targetfile") || die $!;
+		    print $ofh $output;
+		}
+	    }
 	}
 #	last if $runonce;
     }
     last if $runonce;
 }
+
 
 sub collapse_nums {
 #------------------

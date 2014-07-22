@@ -180,9 +180,9 @@ while( my ($type,$d) = each %$folder ) {
 			    if( $filename =~ /\.gff/ ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
 			    } elsif( $filename =~ /\.aa\./ || 
-				     $filename =~ /filtered_proteins|GeneCatalog\_?\d+\.proteins/) {
+				     $filename =~ /filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
-			    } elsif( $filename =~ /CDS/ ) {
+			    } elsif( $filename =~ /CDS/i ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.CDS.fasta.gz");
 			    }
 			    print join("\t",  $ftype,$prefix,$outfile,
