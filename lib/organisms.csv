@@ -98,7 +98,7 @@
 "Gonapodya prolifera",,Gonapodyaceae,JGI,,,
 "Gymnascella aurantiaca","NRRL 5967",Gymnascaceae,JGI,,,
 "Gymnascella citrina",,Gymnascaceae,JGI,,,
-"Ascocoryne sarcoides","NRRL 50072",Helotiaceae,GB,KB205939-KB205951,22396667,WGS
+"Ascocoryne sarcoides","NRRL 50072",Helotiaceae,JGI,KB205939-KB205951,22396667,WGS
 "Cadophora sp.",DSE1049,Helotiaceae,JGI,,,
 "Glarea lozoyensis",74030,Helotiaceae,GB,NW_007360983-NW_007361004,22302591,RefSeq
 "Meliniomyces bicolor",E,Helotiaceae,JGI,,,
@@ -233,7 +233,7 @@
 "Polyporus arcularius",,Polyporaceae,JGI,,,
 "Trametes versicolor","FP-101664 SS1",Polyporaceae,GB,NW_007360321-NW_007360603,22745431,RefSeq
 "Trichaptum abietinum",,Polyporaceae,JGI,,,
-"Wolfiporia cocos","MD-104 SS10",Polyporaceae,GB,KB467831-KB468178,22745431,WGS
+"Wolfiporia cocos","MD-104 SS10",Polyporaceae,JGI,KB467831-KB468178,22745431,WGS
 "Protomyces inouyei",,Protomycetaceae,AFTOL,,,
 "Saitoella complicata","NRRL Y-17804",Protomycetaceae,JGI,,,"WGS;Note=use JGI assembly instead"
 "Coprinopsis cinerea",okayama7#130,Psathyrellaceae,GB,NW_003307477-NW_003307544,20547848,RefSeq
@@ -241,13 +241,13 @@
 "Puccinia graminis f. sp. tritici","CRL 75-36-700-3",Pucciniaceae,GB,NW_003526549-NW_003526939;NW_003533879-NW_003533880,21536894,RefSeq
 "Puccinia striiformis f. sp. tritici",PST-130,Pucciniaceae,JGI,,,
 "Punctularia strigosozonata",,Punctulariaceae,GB,NW_006767433-NW_006767627,22745431,RefSeq
-"Pyronema omphalodes","CBS 100304",Pyronemataceae,GB,,,
+"Pyronema omphalodes","CBS 100304",Pyronemataceae,GB,CATG01000000,,
 "Wilcoxina mikolae","CBS 423.85",Pyronemataceae,JGI,,,
 "Ramaria rubella",UT-36052-T,Ramariaceae,JGI,,,R.acris
 "Rhizopus delemar","RA 99-880",Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,19578406,WGS
 "Rhizopus microsporus var. chinensis","CCTCC M201021",Rhizopodaceae,GB,ANKS01000001-ANKS01003431,23516228,WGS
-"Rhizopus microsporus var. microsporus",,Rhizopodaceae,GB,JNEJ01000001-JNEJ01005266,,"Note=no annotation"
-"Rhizopus oryzae",99-892,Rhizopodaceae,GB,KK997910-KK998760,,RefSeq
+"Rhizopus microsporus var. microsporus",,Rhizopodaceae,skip,JNEJ01000001-JNEJ01005266,,"Note=no annotation"
+"Rhizopus oryzae",99-892,Rhizopodaceae,skip,KK997910-KK998760,,RefSeq
 "Rickenella mellea",,Rickenellaceae,JGI,,,
 "Rozella allomycis",CSF55,Rozellaceae,GB,KE560349-KE561407,23932404,RefSeq
 "Saccharata proteae","CBS 121410",Saccharataceae,JGI,,,
