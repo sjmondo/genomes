@@ -140,12 +140,12 @@
 "Coemansia reversa","NRRL 1564",Kickxellaceae,JGI,,,
 "Podospora anserina","S mat+",Lasiosphaeriaceae,Genoscope,,,
 "Lentithecium fluviatile",,Lentitheciaceae,JGI,,,
-"Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,FP929064-FP929139,21326234,
-"Lichtheimia corymbifera","008-049",Lichtheimiaceae,CRG,JNEE01000001-JNEE01001626,,"WGS;Note=no annotation"
+"Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,NW_003533803-NW_003533878,21326234
+"Lichtheimia corymbifera","FSU 9682",Lichtheimiaceae,GB,CBTN010000001-CBTN010000209,25121733,"WGS"
 "Lichtheimia hyalospora",,Lichtheimiaceae,JGI,,,
 "Lophiostoma macrostomum",,Lophiostomataceae,JGI,,,
 "Gaeumannomyces graminis var. tritici",R3-111a-1,Magnaporthaceae,GB,GL385395-GL385911,,WGS
-"Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,,RefSeq
+"Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,15846337,RefSeq
 "Malassezia globosa",,Malasseziaceae,GB,NW_001849832-NW_001849898,18000048,RefSeq
 "Moniliophthora perniciosa",FA553,Marasmiaceae,JGI,NW_002479998-NW_002505053,,RefSeq
 "Melampsora laricis-populina",,Melampsoraceae,GB,NW_006768765-NW_006769226,21536894,RefSeq
@@ -155,7 +155,7 @@
 "Ceriporiopsis subvermispora",B,Meruliaceae,GB,KB445791-KB446530,22434909,WGS
 "Phlebia brevispora","HHB-7030 SS6",Meruliaceae,JGI,,,
 "Clavispora lusitaniae","ATCC 42720",Metschnikowiaowiaceae,GB,NW_003101571-NW_003101579,,RefSeq
-"Metschnikowia fructicola",277,Metschnikowiaceae,GB,ANFW00000000,,NoAnnot;WGS
+"Metschnikowia fructicola",277,Metschnikowiaceae,GB,ANFW01000001-ANFW01008430,23496978,"Note=NoAnnot;WGS"
 "Microbotryum violaceum","p1A1 Lamole",Microbotryaceae,GB,GL541643-GL542873,,WGS
 "Anthonospora locustae",,Microsporidia,,,,
 "Meira geulakonigae",,Mikronegeriaceae,Dikaryome,,,
