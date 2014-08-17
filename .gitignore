@@ -1,3 +1,6 @@
 *~
 *.swp
 download
+junk
+*.cache
+.JGI_cookie
