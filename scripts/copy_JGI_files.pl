@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 my $debug =0;
-my $debug_one = 1;
+my $debug_one = 0;
 my $force = 0;
 my $dir = shift || "download";
 my $p_odir = shift || 'final_combine/pep';
