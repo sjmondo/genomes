@@ -143,6 +143,11 @@ while( my ($type,$d) = each %$folder ) {
 					      $file->{url});
 			$file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
 			my $filename = $file->{filename};
+
+			next if( $filename =~ /\.tar.gz$/ || 
+				 $filename =~ /ESTs|unsupported_short/); 
+# skip the compiled set of all gene modules (tar.gz) or the EST fastas
+			
 			my @label_spl = split(/\s+/,$file->{label});
 			my $version = $label_spl[-1];
 			my $name;
@@ -168,9 +173,6 @@ while( my ($type,$d) = each %$folder ) {
 			    $oname =~ s/\s+/_/g;
 			    $oname =~ s/\.$//; # remove trailing periods for things that are like XX sp. 
 			    my $outfile = File::Spec->catdir($outdir,$family,$oname);
-			    next if( $filename =~ /\.tar.gz$/ || 
-				     $filename =~ /ESTs|unsupported_short/); 
-# skip the compiled set of all gene modules (tar.gz) or the EST fastas
 
 			    my $oname_labeled = "$oname.$prefix";
 			    if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
@@ -179,12 +181,16 @@ while( my ($type,$d) = each %$folder ) {
 
 			    if( $filename =~ /\.gff/ ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
+				#warn("outfile is $outfile\n");
 			    } elsif( $filename =~ /\.aa\./ || 
 				     $filename =~ /filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
-			    } elsif( $filename =~ /CDS/i ) {
+			    } elsif( $filename =~ /[_\.]CDS/i ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.CDS.fasta.gz");
+			    } else {
+				warn("WARNING: unmatched filename is $filename\n");
 			    }
+			    
 			    print join("\t",  $ftype,$prefix,$outfile,
 				       map { $file->{$_} || ''} 
 				       @data_fields),"\n";
@@ -194,7 +200,9 @@ while( my ($type,$d) = each %$folder ) {
 				print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
 			    }
 			    $jgi_targets{$name} = 2;
-			}	
+			} else {
+			   # warn("skipping $name not an intending JGI to be the target source\n");
+			}
 		    }		    
 		}
 	    }
