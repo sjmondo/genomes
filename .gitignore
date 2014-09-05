@@ -4,3 +4,5 @@ download
 junk
 *.cache
 .JGI_cookie
+jgi_download_curl.sh
+gbk2files.log
