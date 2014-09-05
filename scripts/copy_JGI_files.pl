@@ -28,6 +28,7 @@ for my $f ( readdir(DIR) ) {
 		open(my $in => "zcat $dir/$f/$sp/$file |") || die $!;
 		open(my $out => ">$g_odir/$stem")|| die $!;
 		while(<$in>) {
+		    last if /##FASTA/;
 		    if( ! /^\#/ ) {
 			chomp;
 			my @row = split(/\t/,$_);
