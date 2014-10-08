@@ -1,6 +1,6 @@
 #Species,Strain,Family,Source,Accession,PMID,Notes
-"Agaricus bisporus var. bisporus",H97,Agaricaceae,GB,NW_006267344-NW_006267372,23045686,RefSeq
-"Leucoagaricus gongylophorus",Ac12,Agaricaceae,GB,ANIS00000000,23584789,"WGS;Note=no annotation"
+"Agaricus bisporus var. bisporus",H97,Agaricaceae,JGI,NW_006267344-NW_006267372,23045686,RefSeq
+"Leucoagaricus gongylophorus",Ac12,Agaricaceae,JGI,ANIS00000000,23584789,"WGS;Note=no annotation"
 "Macrolepiota fuliginosa",,Agaricaceae,JGI,,,
 "Agaricostilbum hyphaenes","ATCC MYA-4628",Agaricostilbaceae,JGI,,,"Note=altstrain=CBS 175.79"
 "Histoplasma capsulatum","NAm1",Ajellomycetaceae,GB,NW_001813703-NW_001813982,19717792,
@@ -78,8 +78,8 @@
 "Didymella exigua","CBS 183.55",Didymellaceae,JGI,,,
 "Galactomyces geotrichum",,Dipodascaceae,CRG,,,
 "Yarrowia lipolytica",CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
-"Aureobasidium pullulans","EXF-150",Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
-"Blumeria graminis f. sp. hordei",DH14,Erysiphaceae,Authors,HF938118-HF944960,21148392,RefSeq
+"Aureobasidium pullulans var. pullulans","EXF-150",Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
+"Blumeria graminis f.sp. hordei",DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
 "Erysiphe pisi",,Erysiphaceae,SKIP,CACM01000001-CACM01035300,,"WGS;Note=no annotation"
 "Exidia glandulosa",,Exidiaceae,JGI,,,
 "Exobasidium vaccinii",MPITM,Exobasidiaceae,JGI,,,
@@ -166,7 +166,6 @@
 "Mortierella alpina","ATCC 32222",Mortierellaceae,GB,ADAG00000000,,WGS
 "Mortierella elongata",,Mortierellaceae,JGI,,,
 "Mortierella verticillata",,Mortierellaceae,Broad,,,
-"Mucor circinelloides f. circinelloides",1006PhL,Mucoraceae,SKIP,KE123896-KE124365,,WGS
 "Mucor circinelloides","CBS277.49",Mucoraceae,JGI,,,
 "Umbelopsis ramanniana","NRRL 5844",Mucoraceae,JGI,,,
 "Cercospora zeae-maydis",,Mycosphaerellaceae,JGI,,,
