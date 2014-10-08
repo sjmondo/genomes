@@ -19,8 +19,8 @@ my $odir = 'final_combine';
 my $debug = 0;
 GetOptions(
     'v|debug|verbose!' => \$debug,
-    'fasta!' => $write_fasta_separate,
-    'force!' => \$force,
+    'fasta!'  => \$write_fasta_separate,
+    'force!'  => \$force,
     'd|dir:s' => \$dir,
     'o|out:s' => \$odir,
     's|src:s' => \$SRC,
@@ -52,7 +52,7 @@ for my $family ( readdir(DIR) ) {
 		open($outfh, ">$odir/GFF/$species.gff3") || die $!;
 		if( $write_fasta_separate ) {
 		    $outfa = Bio::SeqIO->new(-format => 'fasta', 
-					     -file =>">$odir/DNA/$species.fasta");
+					     -file   => ">$odir/DNA/$species.fasta");
 		}
 		print $outfh "##gff-version 3\n";
 		print $outfh "#date ". localtime(time)."\n";
@@ -60,7 +60,7 @@ for my $family ( readdir(DIR) ) {
 	    $first = 0;
 
 	    my $fh;
-	    if( $file =~ /\.gz/) {
+	    if( $file =~ /\.gz$/) {
 		open($fh => "zcat $gbkdir/$file |") || die $!;
 	    } else {
 		open($fh => "<$gbkdir/$file") || die $!;
@@ -70,14 +70,14 @@ for my $family ( readdir(DIR) ) {
 	    my $seqio = Bio::SeqIO->new(-format => 'genbank',
 					-fh     => $fh);
 
-
 	    my %genes;
 	    # generate an Unflattener object
 	    my $unflattener = Bio::SeqFeature::Tools::Unflattener->new;
 	    $unflattener->error_threshold(1);
 	    while( my $seq = $seqio->next_seq ) {
-
+		warn("seq is ", $seq->display_id, " len=", $seq->length,"\n");
 		my @top_sfs = $seq->get_SeqFeatures;
+		warn("n # features ", scalar @top_sfs, "\n");
 		unless( $seq->length > MIN_LENGTH &&
 			grep { $_->primary_tag eq 'gene' } @top_sfs) {
 		    next;
@@ -96,9 +96,9 @@ for my $family ( readdir(DIR) ) {
 
 		# get top level unflattended SeqFeatureI objects
 		eval {
-		$unflattener->unflatten_seq(-seq=>$seq,
+		    $unflattener->unflatten_seq( -seq       => $seq,
 #					-group_tag=>'locus_tag',
-					    -use_magic=>1);
+						 -use_magic => 1);
 		}; 
 		if( $@ ) {
 			warn("error on seq $gbkdir/$file\n");
@@ -134,7 +134,6 @@ for my $family ( readdir(DIR) ) {
 		    }
 		    $pname = $genexrefs{GeneID} if( exists $genexrefs{'GeneID'} && 
 						    ! defined $pname);
-
 		    unless( defined $pname ) {
 			warn("cannot find pname in ", $f->gff_string, "\n");
 			last;
@@ -204,7 +203,6 @@ for my $family ( readdir(DIR) ) {
 			if( @alias ) {
 			    $x->[8]->{'Alias'} = join(",", @alias);
 			}
-
 			my (@exon_a,@cds_a);
 			for my $CDS ( $mRNA->get_SeqFeatures ) {
 			    if( $CDS->primary_tag eq 'CDS' ) {
@@ -288,8 +286,7 @@ for my $family ( readdir(DIR) ) {
 			push @ALL, @exon_a, @cds_a;
 			$mrnact++;
 		    }
-		}
-		
+		}		
 	    }
 	    if ( my @ps = $unflattener->get_problems ) {
 		warn("Problems in file: $file \n");
@@ -299,6 +296,7 @@ for my $family ( readdir(DIR) ) {
 		}
 	    }
 	}
+	warn("all are ", scalar @ALL,"\n");
 	for my $feature ( @ALL ) {
 	    my $lastcol = pop @$feature;
 	    my @lastcol_n;

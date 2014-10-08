@@ -15,7 +15,7 @@ my $genome_file = 'lib/organisms.csv';
 # data fields
 my @data_fields = qw(label filename md5 timestamp); # removed 'url' as it was redundant here
 my $download_cmds = "jgi_download_curl.sh";
-my $cookie_file = '.JGI_cookie';
+my $cookie_file = '.JGI_cookies';
 my $debug = 0;
 my $infile;  # input file with XML
 GetOptions(
@@ -119,7 +119,7 @@ while( my ($type,$d) = each %$folder ) {
 			print join("\t", "Genome",$prefix,
 				   $outfile,
 				   map { $file->{$_} || ''} @data_fields),"\n";
-			$sanity{$outfile}++;
+			push @{$sanity{$outfile}}, $filename;
 			if( ! -f $outfile ) {
 			    print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
 			}
@@ -131,8 +131,9 @@ while( my ($type,$d) = each %$folder ) {
     } elsif( $type eq 'Annotation' ) {
 	my $asm = $d->{folder};
 	while( my ($k,$n) = each %$asm ) {
+	    #warn("keys are $k\n");
 	    if( $k eq 'Filtered Models ("best")' ) {
-		for my $ftype ( qw(Proteins CDS) ) {
+		for my $ftype ( qw(Proteins CDS Transcripts) ) {
 		    my $f = $n->{'folder'}->{$ftype};
 		    for my $file_obj ( 
 			sort { $a->[0] cmp $b->[0] }
@@ -145,7 +146,8 @@ while( my ($type,$d) = each %$folder ) {
 			my $filename = $file->{filename};
 
 			next if( $filename =~ /\.tar.gz$/ || 
-				 $filename =~ /ESTs|unsupported_short/); 
+				 $filename =~ /ESTs|unsupported_short/ ||
+				 $filename =~ /\.nt\.fasta/ );
 # skip the compiled set of all gene modules (tar.gz) or the EST fastas
 			
 			my @label_spl = split(/\s+/,$file->{label});
@@ -161,7 +163,7 @@ while( my ($type,$d) = each %$folder ) {
 			} else {
 			    $name = join(" ", $label_spl[0],$label_spl[1]);
 			}
-			warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
+			#warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
 			if( ! exists $orgs{$name} ) {
 			    #warn("cannot find '$name' in the query file\n");
 			    next;
@@ -178,30 +180,43 @@ while( my ($type,$d) = each %$folder ) {
 			    if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
 				$oname_labeled .= ".$version";
 			    }
+			    #warn("$filename for $oname_labeled\n");
 
 			    if( $filename =~ /\.gff/ ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
-				#warn("outfile is $outfile\n");
+				#warn("GFF outfile is $outfile\n");
 			    } elsif( $filename =~ /\.aa\./ || 
-				     $filename =~ /filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) {
+				     $filename =~ /FilteredModels\d*\.aa|best_proteins|filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) 
+			    {				
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
-			    } elsif( $filename =~ /[_\.]CDS/i ) {
+				if ( exists $sanity{$outfile} ) { 
+				    warn("(AA) $filename second time around for $outfile (previous @{$sanity{$outfile}})\n");
+				    next;
+				}
+			    } elsif( $filename =~ /[_\.](CDS|transcripts)/i ||
+				     $filename =~ /best_transcripts|filtered_transcripts|_transcripts|FilteredModels\d*\.na|geneCatalog_CDS_\d+/){ 
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.CDS.fasta.gz");
+				if (exists $sanity{$outfile} ) {
+				    warn("(CDS) $filename second time around for $outfile (previous @{$sanity{$outfile}}\n");
+				    # deal with mis-placed or missing CDS sections that are listed as transcript sections
+				    next;
+				}
 			    } else {
 				warn("WARNING: unmatched filename is $filename\n");
+				next;
 			    }
 			    
 			    print join("\t",  $ftype,$prefix,$outfile,
 				       map { $file->{$_} || ''} 
 				       @data_fields),"\n";
 			
-			    $sanity{$outfile}++;
+			    push @{$sanity{$outfile}}, $filename;
 			    if( ! -f $outfile ) {
 				print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
 			    }
 			    $jgi_targets{$name} = 2;
 			} else {
-			   # warn("skipping $name not an intending JGI to be the target source\n");
+			    # warn("skipping $name not an intending JGI to be the target source\n");
 			}
 		    }		    
 		}
@@ -211,7 +226,7 @@ while( my ($type,$d) = each %$folder ) {
 }
 
 for my $outfile ( keys %sanity ) {
-    if( $sanity{$outfile} > 1 ) {
+    if( scalar @{$sanity{$outfile}} > 1) {
 	warn("$outfile seen more than once, will be overwritten\n");
     }
 }

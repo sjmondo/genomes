@@ -7,6 +7,8 @@ my $force = 0;
 my $dir = shift || "download";
 my $p_odir = shift || 'final_combine/pep';
 my $g_odir = shift || 'final_combine/GFF';
+my $d_odir = shift || 'final_combine/DNA';
+my $c_odir = shift || 'final_combine/CDS';
 opendir(DIR, $dir) || die $!;
 for my $f ( readdir(DIR) ) {
     next if $f =~ /^\./;
@@ -22,11 +24,21 @@ for my $f ( readdir(DIR) ) {
 		next if -f "$p_odir/$stem";
 		print("zcat $dir/$f/$sp/$file | ",
 		      'perl -p -e \'s/^>(\w+)\|(\S+)\|(\d+)\|(\S+)/>$2|$2_$3 $4/\' > ',"$p_odir/$stem\n");
+            } elsif ( $file =~ /(\S+\.CDS\.fasta).gz$/) {
+		my $stem = $1;
+                next if -f "$c_odir/$stem";
+                print("zcat $dir/$f/$sp/$file | ",
+                      'perl -p -e \'s/^>(\w+)\|(\S+)\|(\d+)\|(\S+)/>$2|$2_$3 $4/\' > ',"$c_odir/$stem\n");
+	    } elsif ( $file =~ /(\S+\.assembly\.fasta).gz$/) {
+		my $stem = $1;
+		$stem =~ s/\.assembly//;
+		next if -f "$d_odir/$stem";
+		print("zcat $dir/$f/$sp/$file > $d_odir/$stem\n");
 	    } elsif ( $file =~ /(\S+\.gff3).gz$/) {
 		my $stem = $1;
 		next if !$force && -f "$g_odir/$stem";
-		open(my $in => "zcat $dir/$f/$sp/$file |") || die $!;
-		open(my $out => ">$g_odir/$stem")|| die $!;
+		open(my $in => "zcat $dir/$f/$sp/$file |") || die "cannot open $dir/$f/$sp/$file: $!";
+		open(my $out => ">$g_odir/$stem")|| die "cannot open $g_odir/$stem: $!";
 		while(<$in>) {
 		    last if /##FASTA/;
 		    if( ! /^\#/ ) {

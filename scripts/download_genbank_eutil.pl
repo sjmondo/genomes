@@ -51,8 +51,10 @@ open my $fh, "<:encoding(utf8)", $ncbi_id_file or die "$ncbi_id_file: $!";
 while (my $row = $csv->getline ($fh)) {    
     next if $row->[0] =~ /^(\#|\s+|Species)/;
     my ($species,$strain,$family,$source,$accessions,$pmid) = @$row;
-    next if ! $accessions;
+    next if ! $accessions;    
     next if $source ne 'GB';
+    warn("family is $family species is $species\n");
+
     my $speciesnospaces = $species;
     $speciesnospaces =~ s/[\s\/#]/_/g;
     warn("processing $speciesnospaces\n");
