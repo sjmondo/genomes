@@ -4,11 +4,12 @@
 "Macrolepiota fuliginosa",,Agaricaceae,JGI,,,
 "Agaricostilbum hyphaenes","ATCC MYA-4628",Agaricostilbaceae,JGI,,,"Note=altstrain=CBS 175.79"
 "Histoplasma capsulatum","NAm1",Ajellomycetaceae,GB,NW_001813703-NW_001813982,19717792,
-"Paracoccidioides brasiliensis",Pb03,Ajellomycetaceae,JGI,NC_007935,22046142,RefSeq
+"Paracoccidioides brasiliensis",Pb03,Ajellomycetaceae,GB,NC_007935,22046142,RefSeq
 "Amanita muscaria",Koide,Amanitaceae,JGI,,,
 "Amanita thiersii",Skay4041,Amanitaceae,JGI,,,
 "Plicaturopsis crispa",,Amylocorticiaceae,JGI,,,
 "Conidiobolus coronatus","NRRL 28638",Ancylistaceae,JGI,,,
+"Conidiobolus thromboides","FSU 785",Ancylistaceae,JGI,,,
 "Apiospora montagnei","NRRL 25634",Apiosporaceae,JGI,,,
 "Aplosporella prunicola","CBS 121.167",Aplosporellaceae,JGI,,,
 "Archaerhizomyces finlayi",,Archaeorhizomycetaceae,AFTOL,,,
@@ -138,6 +139,8 @@
 "Wallemia sebi","CBS 633.66",Wallemiales,GB,NW_006531958-NW_006532013,22326418,RefSeq
 "Jaapia argillacea","MUCL 33604",Jaapiaceae,GB,KL197709-KL198003,24958869,WGS
 "Coemansia reversa","NRRL 1564",Kickxellaceae,JGI,,,
+"Martensiomyces pterosporus","CBS 209.56",Kickxellaceae,JGI,,,
+"Ramicandelaber brevisporus","CBS 109374",Kickxellaceae,JGI,,,
 "Podospora anserina","S mat+",Lasiosphaeriaceae,Genoscope,,,
 "Lentithecium fluviatile",,Lentitheciaceae,JGI,,,
 "Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,NW_003533803-NW_003533878,21326234,
@@ -315,3 +318,4 @@
 "Xylaria hypoxylon",,Xylariaceae,AFTOL,,,
 "Xylona heveae",,Xylonaceae,JGI,,,
 "Zopfia rhizophila",,Zopfiaceae,JGI,,,
+"Tothia fuscella","CBS 130266",Venturiaceae,JGI,,,
