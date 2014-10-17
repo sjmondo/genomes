@@ -11,7 +11,7 @@
 "Plicaturopsis crispa",,Amylocorticiaceae,JGI,,,
 "Conidiobolus coronatus","NRRL 28638",Ancylistaceae,JGI,,,
 "Conidiobolus thromboides","FSU 785",Ancylistaceae,JGI,,,
-"Conidiobolus incongruus",B7586,Ancylistaceae,GB,JNEM00000000,,
+"Conidiobolus incongruus",B7586,Ancylistaceae,GB,JNEM01000001-JNEM01017076,,
 "Apiospora montagnei","NRRL 25634",Apiosporaceae,JGI,,,
 "Aplosporella prunicola","CBS 121.167",Aplosporellaceae,JGI,,,
 "Archaerhizomyces finlayi",,Archaeorhizomycetaceae,AFTOL,,,
@@ -30,7 +30,7 @@
 "Atractiellales sp.",,Atractiellaceae,JGI,,,
 "Aulographum hederae",,Aulographaceae,JGI,,,
 "Auricularia subglabra",,Auriculariaceae,JGI,,,
-"Basidiobolus meristosporus",B9252,Basidiobolaceae,GB,JNEO01000000,,
+"Basidiobolus meristosporus",B9252,Basidiobolaceae,GB,JNEO01000001-JNEO01020930,,
 "Allomyces macrogynus","ATCC 38327",Blastocladiaceae,Broad,,,RefSeq
 "Boletus edulis",,Boletaceae,JGI,,,
 "Heterobasidion irregulare","TC 32-1",Bondarzewiaceae,GB,KI925454-KI925468,22463738,WGS
@@ -68,8 +68,8 @@
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,AFTOL,,,
 "Fellomyces polyborus",,Cuniculitremaceae,Dikaryome,,,
-"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB,JNEG01000000,,
-"Cunninghamella elegans",B9769,Cunninghamellaceae,GB,JNDR00000000,,
+"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB,JNEG01000001-JNEG01000883,,
+"Cunninghamella elegans",B9769,Cunninghamellaceae,GB,JNDR01000001-JNDR01001380,,
 "Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS
 "Calocera cornea",,Dacrymycetaceae,JGI,,,
 "Dacryopinax sp.","DJM-731 SS1",Dacrymycetaceae,GB,JH795855-JH795953,22745431,WGS
@@ -139,9 +139,9 @@
 "Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,NW_003533803-NW_003533878,21326234,
 "Lichtheimia corymbifera","FSU 9682",Lichtheimiaceae,GB,CBTN010000001-CBTN010000209,25121733,WGS
 "Lichtheimia hyalospora",,Lichtheimiaceae,JGI,,,
-"Lichtheimia ramosa",B5399,Lichtheimiaceae,GB,JNDO00000000,,
-"Rhizomucor miehei",CAU432,Lichtheimiaceae,GB,AGBC00000000,24746234,
-"Rhizomucor variabilis",B7584,Lichtheimiaceae,GB,JNES00000000,,
+"Lichtheimia ramosa",B5399,Lichtheimiaceae,GB,JNDO01000001-JNDO01003968,,
+"Rhizomucor miehei",CAU432,Lichtheimiaceae,GB,KK099955-KK100222,24746234,WGS
+"Rhizomucor variabilis",B7584,Lichtheimiaceae,GB,JNES01000001-JNES01000967,,
 "Lophiostoma macrostomum",,Lophiostomataceae,JGI,,,
 "Gaeumannomyces graminis var. tritici",R3-111a-1,Magnaporthaceae,GB,GL385395-GL385911,,WGS
 "Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,15846337,RefSeq
@@ -169,15 +169,15 @@
 "Mortierella verticillata","NRRL 6337",Mortierellaceae,GB,AEVJ01000000,,
 "Mucor circinelloides",CBS277.49,Mucoraceae,JGI,,,
 "Umbelopsis ramanniana","NRRL 5844",Mucoraceae,JGI,,,
-"Cokeromyces recurvatus",B5483,Mucoraceae,GB,JNEH00000000,,
-"Mucor racemosus",B9645,Mucoraceae,GB,JNEI00000000,,
-"Mucor indicus",B7402,Mucoraceae,GB,JNEK00000000,,
-"Mucor irregularis",B50,Mucoraceae,GB,AZYI00000000,,
-"Mucor ramosissimus",97-1192,Mucoraceae,GB,JNEF00000000,,
-"Mucor velutinosus",B5328,Mucoraceae,GB,JNDK00000000,,
-"Umbelopsis isabellina",B7317,Mucoraceae,GB,JNEQ00000000,24578268,
-"Apophysomyces elegans",B7760,Mucoraceae,GB,JNDQ00000000,,
-"Apophysomyces trapeziformis",B9324,Mucoraceae,GB,JNDP00000000,,
+"Cokeromyces recurvatus",B5483,Mucoraceae,GB,JNEH01000001-JNEH01002637,,
+"Mucor racemosus",B9645,Mucoraceae,GB,JNEI01000001-JNEI01006360,,
+"Mucor indicus",B7402,Mucoraceae,GB,JNEK01000001-JNEK01003117,,
+"Mucor irregularis",B50,Mucoraceae,GB,AZYI01000001-AZYI01001059,,
+"Mucor ramosissimus",97-1192,Mucoraceae,GB,JNEF01000001-JNEF01004566,,
+"Mucor velutinosus",B5328,Mucoraceae,GB,JNDK01000001-JNDK01002411,,
+"Umbelopsis isabellina",B7317,Mucoraceae,GB,JNEQ01000001-JNEQ01000058,24578268,
+"Apophysomyces elegans",B7760,Mucoraceae,GB,JNDQ01000001-JNDQ01001528,,
+"Apophysomyces trapeziformis",B9324,Mucoraceae,GB,JNDP01000001-JNDP01001400,,
 "Cercospora zeae-maydis",,Mycosphaerellaceae,JGI,,,
 "Dothistroma septosporum",NZE10,Mycosphaerellaceae,GB,KB446535-KB446554,23236275,WGS
 "Mycosphaerella fijiensis",,Mycosphaerellaceae,GB,NW_006921532-NW_006921587,23236275,RefSeq
@@ -185,7 +185,7 @@
 "Cladosporium fulvum","CBS 131901",Mycosphaerellaceae,JGI,JH931634-JH932271,,WGS
 "Sphaerulina musiva",SO2202,Mycosphaerellaceae,GB,KB456260-KB456331,,WGS
 "Zasmidium cellare","ATCC 36951",Mycosphaerellaceae,JGI,,,
-"Zymoseptoria pseudotritici",STIR04_4.3.1,Mycosphaerellaceae,GB,AFIR00000000,,WGS
+"Zymoseptoria pseudotritici",STIR04_4.3.1,Mycosphaerellaceae,GB,AFIR01000001-AFIR01001069,,WGS
 "Myriangium duriaei","CBS 260.36",Myriangiaceae,JGI,,,
 "Amorphotheca resinae",,Myxotrichaceae,JGI,,,
 "Oidiodendron maius",Zn,Myxotrichaceae,JGI,,,
@@ -259,7 +259,7 @@
 "Rhizopus microsporus var. chinensis","CCTCC M201021",Rhizopodaceae,GB,ANKS01000001-ANKS01003431,23516228,WGS
 "Rhizopus microsporus var. microsporus",,Rhizopodaceae,skip,JNEJ01000001-JNEJ01005266,,"Note=no annotation"
 "Rhizopus oryzae",99-892,Rhizopodaceae,skip,KK997910-KK998760,,RefSeq
-"Rhizopus stolonifer",B9770,Rhizopodaceae,GB,JNDS00000000,,
+"Rhizopus stolonifer",B9770,Rhizopodaceae,GB,JNDS01000001-JNDS01005567,,
 "Rickenella mellea",,Rickenellaceae,JGI,,,
 "Rozella allomycis",CSF55,Rozellaceae,GB,KE560349-KE561407,23932404,RefSeq
 "Saccharata proteae","CBS 121410",Saccharataceae,JGI,,,
@@ -276,7 +276,7 @@
 "Ogataea parapolymorpha",DL-1,Saccharomycetales,GB,CM002300-CM002306,24279325,WGS
 "Nakaseomyces bacillisporus",,Saccharomycodaceae,Genoscope,,,
 "Nakaseomyces delphensis",,Saccharomycodaceae,Genoscope,,,
-"Saksenaea vasiformis",B4078,Saksenaeaceae,GB,JNDT00000000,,
+"Saksenaea vasiformis",B4078,Saksenaeaceae,GB,JNDT01000001-JNDT01002417,,
 "Schizophyllum commune",H4-8,Schizophyllaceae,GB,NW_003315637-NW_003315672,,RefSeq
 "Schizopora paradoxa",KUC8140,Schizoporaceae,JGI,,,
 "Schizosaccharomyces octosporus",yFS286,Schizosaccharomycetaceae,GB,KE503206-KE503210,21511999,RefSeq
