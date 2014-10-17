@@ -163,7 +163,7 @@ while( my ($type,$d) = each %$folder ) {
 			} else {
 			    $name = join(" ", $label_spl[0],$label_spl[1]);
 			}
-			#warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
+			warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
 			if( ! exists $orgs{$name} ) {
 			    #warn("cannot find '$name' in the query file\n");
 			    next;
@@ -187,7 +187,8 @@ while( my ($type,$d) = each %$folder ) {
 				#warn("GFF outfile is $outfile\n");
 			    } elsif( $filename =~ /\.aa\./ || 
 				     $filename =~ /FilteredModels\d*\.aa|best_proteins|filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) 
-			    {				
+			    {
+				warn"$filename";
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
 				if ( exists $sanity{$outfile} ) { 
 				    warn("(AA) $filename second time around for $outfile (previous @{$sanity{$outfile}})\n");
