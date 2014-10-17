@@ -5,6 +5,8 @@ use Bio::SeqIO;
 use File::Copy qw(move);
 use Getopt::Long;
 
+# remove_empty --- drop empty sequences from a fasta file
+
 my $min_length = 0;
 
 my $ext = 'fasta';
