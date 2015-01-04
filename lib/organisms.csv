@@ -1,6 +1,7 @@
 #Species,Strain,Family,Source,Accession,PMID,Notes
 "Agaricus bisporus var. bisporus",H97,Agaricaceae,JGI,NW_006267344-NW_006267372,23045686,RefSeq
-"Leucoagaricus gongylophorus",Ac12,Agaricaceae,JGI,ANIS00000000,23584789,"WGS;Note=no annotation"
+"Leucoagaricus gongylophorus",Ac12,Agaricaceae,JGI,,23584789,"WGS;Note=no annotation"
+"Leucoagaricus gongylophorus",Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,"WGS;Note=no annotation"
 "Macrolepiota fuliginosa",,Agaricaceae,JGI,,,
 "Agaricostilbum hyphaenes","ATCC MYA-4628",Agaricostilbaceae,JGI,,,"Note=altstrain=CBS 175.79"
 "Sporobolomyces linderae","CBS 7893",Agaricostilbomycetes,JGI,,,
@@ -11,7 +12,7 @@
 "Plicaturopsis crispa",,Amylocorticiaceae,JGI,,,
 "Conidiobolus coronatus","NRRL 28638",Ancylistaceae,JGI,,,
 "Conidiobolus thromboides","FSU 785",Ancylistaceae,JGI,,,
-"Conidiobolus incongruus",B7586,Ancylistaceae,GB,JNEM01000001-JNEM01017076,,
+"Conidiobolus incongruus",B7586,Ancylistaceae,GB-WGS,JNEM00000000,,
 "Apiospora montagnei","NRRL 25634",Apiosporaceae,JGI,,,
 "Aplosporella prunicola","CBS 121.167",Aplosporellaceae,JGI,,,
 "Archaerhizomyces finlayi",,Archaeorhizomycetaceae,AFTOL,,,
@@ -21,19 +22,19 @@
 "Trichophyton rubrum","CBS 118892",Arthrodermataceae,GB,NW_003456394-NW_003456429,19457268,RefSeq
 "Ascobolus immersus",RN42,Ascobolaceae,JGI,,,
 "Ascoidea rubescens","NRRL Y17699",Ascoideaceae,JGI,,,
-"Ascosphaera apis","ARSEF 7405",Ascosphaeraceae,Authors,CH980625-CH981371,17069642,WGS
+"Ascosphaera apis","ARSEF 7405",Ascosphaeraceae,GB-WGS,AARE00000000,17069642,WGS
 "Aspergillus fumigatus",Af293,Aspergillaceae,AspGD,NC_007194-NC_007201,16372009,RefSeq
 "Aspergillus niger","CBS 513.88",Aspergillaceae,GB,NC_007445;NT_166518-NT_166539,17259976,RefSeq
-"Penicillium chrysogenum","Wisconsin 54-1255",Aspergillaceae,GB,AM920416-AM920464,18820685,WGS
+"Penicillium chrysogenum","Wisconsin 54-1255",Aspergillaceae,GB,AM920416-AM920464,18820685,
 "Fibulorhizoctonia sp.","CBS 109695",Atheliaceae,JGI,,,
 "Piloderma croceum","F 1598",Atheliaceae,JGI,,,
 "Atractiellales sp.",,Atractiellaceae,JGI,,,
 "Aulographum hederae",,Aulographaceae,JGI,,,
 "Auricularia subglabra",,Auriculariaceae,JGI,,,
-"Basidiobolus meristosporus",B9252,Basidiobolaceae,GB,JNEO01000001-JNEO01020930,,
+"Basidiobolus meristosporus",B9252,Basidiobolaceae,GB-WGS,JNEO00000000,,
 "Allomyces macrogynus","ATCC 38327",Blastocladiaceae,Broad,,,RefSeq
 "Boletus edulis",,Boletaceae,JGI,,,
-"Heterobasidion irregulare","TC 32-1",Bondarzewiaceae,GB,KI925454-KI925468,22463738,WGS
+"Heterobasidion irregulare","TC 32-1",Bondarzewiaceae,GB-WGS,KI925454-KI925468,22463738,
 "Botryobasidium botryosum","FD-172 SS1",Botryobasidiaceae,GB,KL198016-KL198349,24958869,WGS
 "Botryosphaeria dothidea",,Botryosphaeriaceae,JGI,,,
 "Macrophomina phaseolina",MS6,Botryosphaeriaceae,GB,AHHD00000000,,WGS
@@ -44,7 +45,7 @@
 "Acidomyces richmondensis",,Capnodiales,JGI,,,
 "Catenaria anguillulae",PL171,Catenariaceae,JGI,,,
 "Rhizoctonia solani","AG-1 IA",Ceratobasidiaceae,GB,KB317696-KB320343,,WGS
-"Ceratocystis fimbriata","CBS 114723",Ceratocystidaceae,SKIP,APWK02000001-APWK02001185,,"WGS;Note=no annotation"
+"Ceratocystis fimbriata","CBS 114723",Ceratocystidaceae,GB-WGS,APWK00000000,,"WGS;Note=no annotation"
 "Chaetomium globosum","CBS 148.51",Chaetomiaceae,GB,NT_165976-NT_165989;NT_166001-NT_166004;NT_166006-NT_166024,,RefSeq
 "Myceliophthora thermophila","ATCC 42464",Chaetomiaceae,GB,NC_016472-NC_016478,21964414,RefSeq
 "Thielavia terrestris",,Chaetomiaceae,GB,NC_016457-NC_016462,21964414,RefSeq
@@ -53,7 +54,7 @@
 "Naiadella fluitans","ATCC 64713",Cintractiellaceae,JGI,,,
 "Cladonia grayi",Cgr/DA2myc/ss,Cladoniaceae,JGI,,,
 "Claviceps purpurea",20.1,Clavicipitaceae,GB,CAGA01000001-CAGA01000191,23468653,WGS
-"Epichloe festucae",Fl1,Clavicipitaceae,SKIP,JH158803-JH158942,,"WGS;Note=no annotation"
+"Epichloe festucae",Fl1,Clavicipitaceae,GB-WGS,AFRX00000000,,"WGS;Note=no annotation"
 "Metarhizium anisopliae","ARSEF 23",Clavicipitaceae,GB,NW_006916915-NW_006917090,21253567,RefSeq
 "Coniochaeta ligniaria",,Coniochaetaceae,AFTOL,,,
 "Coniophora puteana",,Coniophoraceae,GB,NW_006913053-NW_006913262,22745431,RefSeq
@@ -69,12 +70,12 @@
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,AFTOL,,,
 "Fellomyces polyborus",,Cuniculitremaceae,Dikaryome,,,
-"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB,JNEG01000001-JNEG01000883,,
-"Cunninghamella elegans",B9769,Cunninghamellaceae,GB,JNDR01000001-JNDR01001380,,
+"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB-WGS,JNEG00000000,,
+"Cunninghamella elegans",B9769,Cunninghamellaceae,GB-WGS,JNDR00000000,,
 "Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS
 "Calocera cornea",,Dacrymycetaceae,JGI,,,
 "Dacryopinax sp.","DJM-731 SS1",Dacrymycetaceae,GB,JH795855-JH795953,22745431,WGS
-"Cladosporium sphaerospermum","UM 843",Davidiellaceae,GB,AIIA02000001-AIIA02000877,22544899,WGS
+"Cladosporium sphaerospermum","UM 843",Davidiellaceae,GB,KL650041-KL650157,22544899,WGS
 "Debaryomyces hansenii","CBS 767",Debaryomycetaceae,GB,NC_006043-NC_006049;NC_010166,15229592,RefSeq
 "Lodderomyces elongisporus","NRRL YB-4239",Debaryomycetaceae,GB,NW_001813675-NW_001813702,19465905,RefSeq
 "Meyerozyma guilliermondii","ATCC 6260",Debaryomycetaceae,GB,NW_001809792-NW_001809800,19465905,RefSeq
@@ -89,9 +90,9 @@
 "Yarrowia lipolytica",CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
 "Aureobasidium pullulans var. pullulans",EXF-150,Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
 "Blumeria graminis f.sp. hordei",DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
-"Erysiphe pisi",,Erysiphaceae,SKIP,CACM01000001-CACM01035300,,"WGS;Note=no annotation"
+"Erysiphe pisi",,Erysiphaceae,GB-WGS,CACM00000000,,"WGS;Note=no annotation"
 "Rhodotorula minuta","MCA 4210",Erythrobasidiaceae,JGI,,,
-"Thermomyces lanuginosus",SSBP,Eurotiales,SKIP,ANHP01000001-ANHP01000311,23788551,"Note=no annotation;WGS"
+"Thermomyces lanuginosus",SSBP,Eurotiales,GB-WGS,ANHP00000000,23788551,"Note=no annotation;WGS"
 "Exidia glandulosa",,Exidiaceae,JGI,,,
 "Exobasidium vaccinii",MPITM,Exobasidiaceae,JGI,,,
 "Fistulina hepatica",,Fistulinaceae,JGI,,,
@@ -105,7 +106,7 @@
 "Glomerella cingulata",23,Glomerellaceae,JGI,,,"Colletotrichum gloeosporoides"
 "Cenococcum geophilum",1.58,Gloniaceae,JGI,,,
 "Glonium stellatum",,Gloniaceae,AFTOL,,,
-"Ophiognomonia clavigignenti-juglandacearum",,Gnomoniaceae,GB,AEGN00000000,21676199,"WGS;Note=This is a pooled library of multiple strains"
+"Ophiognomonia clavigignenti-juglandacearum",,Gnomoniaceae,GB-WGS,AEGN00000000,21676199,"WGS;Note=This is a pooled library of multiple strains"
 "Gonapodya prolifera",,Gonapodyaceae,JGI,,,
 "Gymnascella aurantiaca","NRRL 5967",Gymnascaceae,JGI,,,
 "Gymnascella citrina",,Gymnascaceae,JGI,,,
@@ -140,9 +141,9 @@
 "Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,NW_003533803-NW_003533878,21326234,
 "Lichtheimia corymbifera","FSU 9682",Lichtheimiaceae,GB,CBTN010000001-CBTN010000209,25121733,WGS
 "Lichtheimia hyalospora",,Lichtheimiaceae,JGI,,,
-"Lichtheimia ramosa",B5399,Lichtheimiaceae,GB,JNDO01000001-JNDO01003968,,
-"Rhizomucor miehei",CAU432,Lichtheimiaceae,GB,KK099955-KK100222,24746234,WGS
-"Rhizomucor variabilis",B7584,Lichtheimiaceae,GB,JNES01000001-JNES01000967,,
+"Lichtheimia ramosa",B5399,Lichtheimiaceae,GB-WGS,JNDO00000000,,
+"Rhizomucor miehei",CAU432,Lichtheimiaceae,GB-WGS,AGBC00000000,24746234,WGS
+"Rhizomucor variabilis",B7584,Lichtheimiaceae,GB-WGS,JNES00000000,,
 "Lophiostoma macrostomum",,Lophiostomataceae,JGI,,,
 "Gaeumannomyces graminis var. tritici",R3-111a-1,Magnaporthaceae,GB,GL385395-GL385911,,WGS
 "Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,15846337,RefSeq
@@ -170,15 +171,15 @@
 "Mortierella verticillata","NRRL 6337",Mortierellaceae,GB,AEVJ01000000,,
 "Mucor circinelloides",CBS277.49,Mucoraceae,JGI,,,
 "Umbelopsis ramanniana","NRRL 5844",Mucoraceae,JGI,,,
-"Cokeromyces recurvatus",B5483,Mucoraceae,GB,JNEH01000001-JNEH01002637,,
-"Mucor racemosus",B9645,Mucoraceae,GB,JNEI01000001-JNEI01006360,,
-"Mucor indicus",B7402,Mucoraceae,GB,JNEK01000001-JNEK01003117,,
-"Mucor irregularis",B50,Mucoraceae,GB,AZYI01000001-AZYI01001059,,
-"Mucor ramosissimus",97-1192,Mucoraceae,GB,JNEF01000001-JNEF01004566,,
-"Mucor velutinosus",B5328,Mucoraceae,GB,JNDK01000001-JNDK01002411,,
-"Umbelopsis isabellina",B7317,Mucoraceae,GB,JNEQ01000001-JNEQ01000058,24578268,
-"Apophysomyces elegans",B7760,Mucoraceae,GB,JNDQ01000001-JNDQ01001528,,
-"Apophysomyces trapeziformis",B9324,Mucoraceae,GB,JNDP01000001-JNDP01001400,,
+"Cokeromyces recurvatus",B5483,Mucoraceae,GB-WGS,JNEH00000000,,
+"Mucor racemosus",B9645,Mucoraceae,GB-WGS,JNEI00000000,,
+"Mucor indicus",B7402,Mucoraceae,GB-WGS,JNEK00000000,,
+"Mucor irregularis",B50,Mucoraceae,GB-WGS,AZYI00000000,,
+"Mucor ramosissimus",97-1192,Mucoraceae,GB-WGS,JNEF00000000,,
+"Mucor velutinosus",B5328,Mucoraceae,GB-WGS,JNDK00000000,,
+"Umbelopsis isabellina",B7317,Mucoraceae,GB-WGS,JNEQ00000000,24578268,
+"Apophysomyces elegans",B7760,Mucoraceae,GB-WGS,JNDQ00000000,,
+"Apophysomyces trapeziformis",B9324,Mucoraceae,GB-WGS,JNDP00000000,,
 "Cercospora zeae-maydis",,Mycosphaerellaceae,JGI,,,
 "Dothistroma septosporum",NZE10,Mycosphaerellaceae,GB,KB446535-KB446554,23236275,WGS
 "Mycosphaerella fijiensis",,Mycosphaerellaceae,GB,NW_006921532-NW_006921587,23236275,RefSeq
@@ -218,7 +219,7 @@
 "Phanerochaete chrysosporium",,Phanerochaetaceae,JGI,,15122302,
 "Phlebiopsis gigantea",,Phanerochaetaceae,JGI,,,
 "Phycomyces blakesleeanus","NRRL 1555",Phycomycetaceae,JGI,,,
-"Guignardia citricarpa",CGMCC3.14348,Phyllostictaceae,GB,AOTE01000001-AOTE01006716,,WGS
+"Guignardia citricarpa",CGMCC3.14348,Phyllostictaceae,GB-WGS,AOTE00000000,,WGS
 "Armillaria mellea","DSM 3731",Physalacriaceae,JGI,,,
 "Cylindrobasidium torrendii",,Physalacriaceae,JGI,,,
 "Pichia kudriavzevii",M12,Pichiaceae,GB,ALNQ01000001-ALNQ01000621,23027839,WGS
@@ -227,8 +228,8 @@
 "Acremonium alcalophilum",,Plectosphaerellaceae,JGI,,,
 "Verticillium dahliae",JR2,Plectosphaerellaceae,JGI,CM001863-CM001870;KE108823-KE108829,23685541,RefSeq
 "Pleomassaria siparia",,Pleomassariaceae,JGI,,,
-"Alternaria arborescens","EGS 39-128",Pleosporaceae,GB,AIIC01000001-AIIC01000820,22559316,WGS
-"Alternaria brassicicola","ATCC 96836",Pleosporaceae,JGI,ACIW01000001-ACIW01003280,,"WGS;Note=paper nearing submission"
+"Alternaria arborescens","EGS 39-128",Pleosporaceae,GB,AIIC00000000,22559316,WGS
+"Alternaria brassicicola","ATCC 96836",Pleosporaceae,JGI,ACIW00000000,,"WGS;Note=paper nearing submission"
 "Cochliobolus heterostrophus",C5,Pleosporaceae,GB,KB445569-KB445636,23236275,WGS
 "Pyrenochaeta sp.","UM 256",Pleosporaceae,GB,KB820869-KB820893,23723391,WGS
 "Pyrenophora tritici-repentis",,Pleosporaceae,GB,NW_001939244-NW_001939290;NW_002475730,23316438,RefSeq
@@ -252,15 +253,15 @@
 "Puccinia graminis f. sp. tritici","CRL 75-36-700-3",Pucciniaceae,GB,NW_003526549-NW_003526939;NW_003533879-NW_003533880,21536894,RefSeq
 "Puccinia striiformis f. sp. tritici",PST-130,Pucciniaceae,JGI,,,
 "Punctularia strigosozonata",,Punctulariaceae,GB,NW_006767433-NW_006767627,22745431,RefSeq
-"Pyronema omphalodes","CBS 100304",Pyronemataceae,GB,CATG01000000,,
+"Pyronema omphalodes","CBS 100304",Pyronemataceae,GB-WGS,CATG00000000,,
 "Wilcoxina mikolae","CBS 423.85",Pyronemataceae,JGI,,,
 "Ramaria rubella",UT-36052-T,Ramariaceae,JGI,,,R.acris
 "Homoloaphlyctis polyrhiza","JEL 142",Rhizophydiales,GB,JH392917-JH393256,22072962,WGS
 "Rhizopus delemar","RA 99-880",Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,19578406,WGS
 "Rhizopus microsporus var. chinensis","CCTCC M201021",Rhizopodaceae,GB,ANKS01000001-ANKS01003431,23516228,WGS
-"Rhizopus microsporus var. microsporus",,Rhizopodaceae,skip,JNEJ01000001-JNEJ01005266,,"Note=no annotation"
-"Rhizopus oryzae",99-892,Rhizopodaceae,skip,KK997910-KK998760,,RefSeq
-"Rhizopus stolonifer",B9770,Rhizopodaceae,GB,JNDS01000001-JNDS01005567,,
+"Rhizopus microsporus var. microsporus",,Rhizopodaceae,GB-WGS,JNEJ00000000,,"Note=no annotation"
+"Rhizopus oryzae",99-892,Rhizopodaceae,GB-WGS,JNEB00000000,,WGS
+"Rhizopus stolonifer",B9770,Rhizopodaceae,GB-WGS,JNDS00000000,,WGS
 "Rickenella mellea",,Rickenellaceae,JGI,,,
 "Rozella allomycis",CSF55,Rozellaceae,GB,KE560349-KE561407,23932404,RefSeq
 "Saccharata proteae","CBS 121410",Saccharataceae,JGI,,,
@@ -271,13 +272,13 @@
 "Komagataella pastoris",GS115,Saccharomycetaceae,GB,NC_012963-NC_012966,21575661,RefSeq
 "Saccharomyces cerevisiae",S288C,Saccharomycetaceae,GB,NC_001133-NC_001148;NC_001224,8849441,RefSeq
 "Tetrapisispora phaffii","CBS 4417",Saccharomycetaceae,GB,NC_016520-NC_016535,,RefSeq
-"Torulaspora delbrueckii",,Saccharomycetaceae,GB,NC_016501-NC_016508,22123960,RefSeq
+"Torulaspora delbrueckii",CBS 1146,Saccharomycetaceae,GB,NC_016501-NC_016508,22123960,RefSeq
 "Zygosaccharomyces rouxii",,Saccharomycetaceae,GB,NC_012990-NC_012996,19525356,RefSeq
 "Candida albicans",SC5314,Saccharomycetales,GB,NC_002653;NW_139421-NW_139833,15123810,RefSeq
 "Ogataea parapolymorpha",DL-1,Saccharomycetales,GB,CM002300-CM002306,24279325,WGS
 "Nakaseomyces bacillisporus",,Saccharomycodaceae,Genoscope,,,
 "Nakaseomyces delphensis",,Saccharomycodaceae,Genoscope,,,
-"Saksenaea vasiformis",B4078,Saksenaeaceae,GB,JNDT01000001-JNDT01002417,,
+"Saksenaea vasiformis",B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,
 "Schizophyllum commune",H4-8,Schizophyllaceae,GB,NW_003315637-NW_003315672,,RefSeq
 "Schizopora paradoxa",KUC8140,Schizoporaceae,JGI,,,
 "Schizosaccharomyces octosporus",yFS286,Schizosaccharomycetaceae,GB,KE503206-KE503210,21511999,RefSeq
@@ -285,7 +286,7 @@
 "Scleroderma citrinum","Foug A",Sclerodermataceae,JGI,,,
 "Botrytis cinerea",,Sclerotiniaceae,GB,NW_001813983-NW_001814571,,RefSeq
 "Sclerotinia sclerotiorum",,Sclerotiniaceae,GB,NW_001820797-NW_001820835,,RefSeq
-"Piriformospora indica","DSM 11827",Sebacinaceae,GB,CAFZ01000001-CAFZ01001884,,"WGS;Note=no annotation, check MPI"
+"Piriformospora indica","DSM 11827",Sebacinaceae,GB-WGS,CAFZ00000000,,"WGS;Note=no annotation, check MPI"
 "Sebacina vermifera","MAFF 305830",Sebacinaceae,JGI,,,
 "Serpula lacrymans",S7.3,Serpulaceae,GB,NW_006763290-NW_006763335,21764756,RefSeq
 "Neurospora crassa",OR74A,Sordariaceae,GB,NW_001849581-NW_001849831,12712197,RefSeq
@@ -301,8 +302,8 @@
 "Hypholoma sublateritium",,Strophariaceae,JGI,,,
 "Suillus brevipes",,Suillaceae,JGI,,,
 "Suillus luteus",UH-Slu-Lm8-n1,Suillaceae,JGI,,,
-"Syncephalastrum monosporum",B8922,Syncephalastraceae,GB,JNEN00000000,,
-"Syncephalastrum racemosum",B6101,Syncephalastraceae,GB,JNDN00000000,,
+"Syncephalastrum monosporum",B8922,Syncephalastraceae,GB-WGS,JNEN00000000,,
+"Syncephalastrum racemosum",B6101,Syncephalastraceae,GB-WGS,JNDN00000000,,
 "Taphrina deformans",,Taphrinaceae,GB,HE965032-HE965425,,WGS
 "Xanthoria parietina",46-1,Teloschistaceae,JGI,,,
 "Baudoinia compniacensis","UAMH 10762",Teratosphaeriaceae,GB,NW_006911257-NW_006911275,23236275,RefSeq;alt_strain=4089826
