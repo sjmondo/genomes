@@ -1,14 +1,31 @@
 #Species,Strain,Family,Source,Accession,PMID,Notes
-"Cyberlindnera jadinii","NBRC 0988",Phaffomycetaceae,GB,DG000065-DG000077,22629373,RefSeq
-"Daldinia eschscholzii",UM1020,Xylariaceae,GB,AIID01000001-AIID01011382,22544898,"Note=no annotation;WGS"
-"Passalora fulva","CBS 131901",Mycosphaerellaceae,GB,JH931634-JH932271,,WGS
-"Mucor circinelloides f. circinelloides",1006PhL,Mucoraceae,SKIP,KE123896-KE124365,,WGS
-#"Leucoagaricus gongylophorus",Ac12,Agaricaceae,JGI,,23584789,"WGS;Note=no annotation;skip"
-#"Leucoagaricus gongylophorus",Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,"WGS;Note=no annotation;skip"
-"Conidiobolus incongruus",B7586,Ancylistaceae,GB-WGS,JNEM00000000,,
-"Ophiocordyceps sinensis",CO18,Ophiocordycipitaceae,GB,KE652172-KE662774,,"WGS;Poor assembly"
-"Ophiostoma novo-ulmi subsp. novo-ulmi",H327,Ophiostomataceae,GB,CM001753;CM001753;KB209920-KB209927,,"WGS;Poor assembly"
-#"Trichoderma reesei",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
-"Trichoderma reesei",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
-"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB-WGS,JNEG00000000,,
-"Cunninghamella elegans",B9769,Cunninghamellaceae,GB-WGS,JNDR00000000,,
+Cyberlindnera jadinii,NBRC 0988,Phaffomycetaceae,GB,DG000065-DG000077,22629373,RefSeq
+Daldinia eschscholzii,UM1020,Xylariaceae,GB,AIID01000001-AIID01011382,22544898,Note=no annotation;WGS
+Passalora fulva,CBS 131901,Mycosphaerellaceae,GB,JH931634-JH932271,,WGS
+Mucor circinelloides f. circinelloides,1006PhL,Mucoraceae,SKIP,KE123896-KE124365,,WGS
+"#""Leucoagaricus gongylophorus""",Ac12,Agaricaceae,JGI,,23584789,WGS;Note=no annotation;skip
+"#""Leucoagaricus gongylophorus""",Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,WGS;Note=no annotation;skip
+Conidiobolus incongruus,B7586,Ancylistaceae,GB-WGS,JNEM00000000,,
+Ophiocordyceps sinensis,CO18,Ophiocordycipitaceae,GB,KE652172-KE662774,,WGS;Poor assembly
+Ophiostoma novo-ulmi subsp. novo-ulmi,H327,Ophiostomataceae,GB,CM001753;CM001753;KB209920-KB209927,,WGS;Poor assembly
+"#""Trichoderma reesei""",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
+Trichoderma reesei,QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
+Cunninghamella bertholletiae,175,Cunninghamellaceae,GB-WGS,JNEG00000000,,
+Cunninghamella elegans,B9769,Cunninghamellaceae,GB-WGS,JNDR00000000,,
+Alternaria brassicicola,ATCC 96836,Pleosporaceae,JGI,ACIW00000000,,WGS;Note=paper nearing submission
+Antrodia sinuosa,,Polyporaceae,JGI,,,
+Apophysomyces elegans,B7760,Mucoraceae,GB-WGS,JNDQ00000000,,
+Apophysomyces trapeziformis,B9324,Mucoraceae,GB-WGS,JNDP00000000,,
+Arthroderma gypseum,CBS 118893,Arthrodermataceae,GB,NW_003345183-NW_003345201,22951933,RefSeq
+Ascoidea rubescens,NRRL Y17699,Ascoideaceae,JGI,,,
+Aspergillus niger,CBS 513.88,Aspergillaceae,GB,NC_007445;NT_166518-NT_166539,17259976,RefSeq
+Basidiobolus meristosporus,B9252,Basidiobolaceae,GB-WGS,JNEO00000000,,
+Ceriporiopsis subvermispora,B,Meruliaceae,GB,KB445791-KB446530,22434909,WGS
+Cercospora zeae-maydis,,Mycosphaerellaceae,JGI,,,
+Cerrena unicolor,,Polyporaceae,JGI,,,
+Cladophialophora yegresii,CBS 114405,Herpotrichiellaceae,GB,NW_006913045-NW_006913052,,RefSeq
+Cokeromyces recurvatus,B5483,Mucoraceae,GB-WGS,JNEH00000000,,
+Coniosporium apollinis,CBS 100218,Herpotrichiellaceae,GB,JH767554-JH767722,,WGS
+Cronartium quercuum f. sp. fusiforme,G11,Cronartiaceae,JGI,,,
+Dioszegia cryoxerica,,Tremellaceae,JGI,,,
+Eurotium rubrum,CBS 135680,Trichocomaceae,GB,KK088411-KK088520,24811710,WGS
