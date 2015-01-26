@@ -8,3 +8,7 @@
 "Conidiobolus incongruus",B7586,Ancylistaceae,GB-WGS,JNEM00000000,,
 "Ophiocordyceps sinensis",CO18,Ophiocordycipitaceae,GB,KE652172-KE662774,,"WGS;Poor assembly"
 "Ophiostoma novo-ulmi subsp. novo-ulmi",H327,Ophiostomataceae,GB,CM001753;CM001753;KB209920-KB209927,,"WGS;Poor assembly"
+#"Trichoderma reesei",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
+"Trichoderma reesei",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
+"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB-WGS,JNEG00000000,,
+"Cunninghamella elegans",B9769,Cunninghamellaceae,GB-WGS,JNDR00000000,,
