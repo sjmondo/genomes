@@ -68,8 +68,6 @@
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,manual,,,
 "Fellomyces polyborus",,Cuniculitremaceae,Dikaryome,,,
-"Cunninghamella bertholletiae",175,Cunninghamellaceae,GB-WGS,JNEG00000000,,
-"Cunninghamella elegans",B9769,Cunninghamellaceae,GB-WGS,JNDR00000000,,
 "Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS
 "Calocera cornea",,Dacrymycetaceae,JGI,,,
 "Dacryopinax sp.","DJM-731 SS1",Dacrymycetaceae,GB,JH795855-JH795953,22745431,WGS
@@ -127,8 +125,6 @@
 "Leucogyrophana mollusca",KUC20120723A-06,Hygrophoropsidaceae,JGI,,,
 "Fomitiporia mediterranea",MF3/22,Hymenochaetaceae,GB,NW_006760386-NW_006761797,22745431,RefSeq
 "Trichoderma atroviride","IMI 206040",Hypocreaceae,JGI,ABDG02000001-ABDG02000029,21501500,WGS
-#"Trichoderma reesei",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
-"Trichoderma reesei",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
 "Hysterium pulicare",,Hysteriaceae,GB,AJFK01000001-AJFK01001091,23236275,WGS
 "Rhytidhysteron rufulum",,Hysteriaceae,GB,AJFL00000000,,WGS
 "Jaapia argillacea","MUCL 33604",Jaapiaceae,GB,KL197709-KL198003,24958869,WGS
