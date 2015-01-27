@@ -26,7 +26,7 @@ Aspergillus niger,ATCC 1015,Aspergillaceae,JGI,,,
 Atractiellales sp.,PMI 95,Atractiellaceae,JGI,,,
 Aulographum hederae,CBS 113979,Aulographaceae,JGI,,,
 Aureobasidium pullulans var. pullulans,EXF-150,Dothioraceae,JGI,,24984952,Note=no annotation in genbank
-Auricularia subglabra,TFB10046 SSÐ5Ê,Auriculariaceae,JGI,,,
+Auricularia subglabra,TFB10046 SS_5æ,Auriculariaceae,JGI,,,
 Auriscalpium vulgare,FP105234-Sp,Auriscalpiaceae,JGI,,,
 Backusella circina,FSU 941,Thamnidiaceae,JGI,,,
 Batrachochytrium dendrobatidis,JAM81,Chytridiomycota,JGI,NW_006281099-NW_006281225,,RefSeq
@@ -171,11 +171,6 @@ Mortierella alpina,B6842,Mortierellaceae,GB,AZCI00000000,24459263,WGS
 Mortierella elongata,,Mortierellaceae,JGI,,,
 Mortierella verticillata,NRRL 6337,Mortierellaceae,GB,AEVJ01000000,,
 Mucor circinelloides,CBS277.49,Mucoraceae,JGI,,,
-Mucor indicus,B7402,Mucoraceae,GB-WGS,JNEK00000000,,
-Mucor irregularis,B50,Mucoraceae,GB-WGS,AZYI00000000,,
-Mucor racemosus,B9645,Mucoraceae,GB-WGS,JNEI00000000,,
-Mucor ramosissimus,97-1192,Mucoraceae,GB-WGS,JNEF00000000,,
-Mucor velutinosus,B5328,Mucoraceae,GB-WGS,JNDK00000000,,
 Myceliophthora thermophila,ATCC 42464,Chaetomiaceae,GB,NC_016472-NC_016478,21964414,RefSeq
 Mycosphaerella fijiensis,,Mycosphaerellaceae,GB,NW_006921532-NW_006921587,23236275,RefSeq
 Mycosphaerella graminicola,IPO323,Mycosphaerellaceae,GB,NC_010222;NC_018198-NC_018218,21695235,RefSeq
