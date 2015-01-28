@@ -34,3 +34,40 @@ Mucor irregularis,B50,Mucoraceae,GB-WGS,AZYI00000000,,
 Mucor racemosus,B9645,Mucoraceae,GB-WGS,JNEI00000000,,
 Mucor ramosissimus,97-1192,Mucoraceae,GB-WGS,JNEF00000000,,
 Mucor velutinosus,B5328,Mucoraceae,GB-WGS,JNDK00000000,,
+Agaricostilbum hyphaenes,ATCC MYA-4628,Agaricostilbaceae,JGI,,,Note=altstrain=CBS 175.79
+Conidiobolus thromboides,FSU 785,Ancylistaceae,JGI,,,
+Macrophomina phaseolina,MS6,Botryosphaeriaceae,GB,AHHD00000000,,WGS
+Neofusicoccum parvum,UCRNP2,Botryosphaeriaceae,GB,NW_006887441-NW_006888737,,RefSeq
+Pycnoporus cinnabarinus,BRFM137,Coriolaceae,GB,CCBP010000001-CCBP010000776,24942338,WGS
+Gymnascella aurantiaca,NRRL 5967,Gymnascaceae,JGI,,,
+Chalara chalara fraxinea,KW1,Helotiales,manual,,,
+Martensiomyces pterosporus,CBS 209.56,Kickxellaceae,JGI,,,
+Ramicandelaber brevisporus,CBS 109374,Kickxellaceae,JGI,,,
+Lichtheimia ramosa,B5399,Lichtheimiaceae,GB-WGS,JNDO00000000,,
+Rhizomucor miehei,CAU432,Lichtheimiaceae,GB-WGS,AGBC00000000,24746234,WGS
+Rhizomucor variabilis,B7584,Lichtheimiaceae,GB-WGS,JNES00000000,,
+Gaeumannomyces graminis var. tritici,R3-111a-1,Magnaporthaceae,GB,GL385395-GL385911,,WGS
+Umbelopsis isabellina,B7317,Mucoraceae,GB-WGS,JNEQ00000000,24578268,
+Cladosporium fulvum,CBS 131901,Mycosphaerellaceae,JGI,JH931634-JH932271,,WGS
+Phaeosphaeria nodorum,SN15,Phaeosphaeriaceae,GB,NW_001884549-NW_001884608;NW_001884610-NW_001884618;NW_001884620-NW_001884657,18024570,RefSeq
+Guignardia citricarpa,CGMCC3.14348,Phyllostictaceae,GB-WGS,AOTE00000000,,WGS
+Setosphaeria turcica,Et28A,Pleosporaceae,GB,NW_007359914-NW_007360320,23357949;23236275,RefSeq
+Pyrenochaeta sp.,UM 256,Pleosporaceae,GB,KB820869-KB820893,23723391,WGS
+Pneumocystis murina,B123,Pneumocystidaceae,GB,AFWA01000001-AFWA01000017,,WGS
+Polyporus arcularius,,Polyporaceae,JGI,,,
+Trichaptum abietinum,,Polyporaceae,JGI,,,
+Saitoella complicata,NRRL Y-17804,Protomycetaceae,JGI,,,WGS;Note=use JGI assembly instead
+Rhizopus oryzae,99-892,Rhizopodaceae,GB-WGS,JNEB00000000,,WGS
+Rhizopus stolonifer,B9770,Rhizopodaceae,GB-WGS,JNDS00000000,,WGS
+Saksenaea vasiformis,B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,
+Syncephalastrum monosporum,B8922,Syncephalastraceae,GB-WGS,JNEN00000000,,
+Syncephalastrum racemosum,B6101,Syncephalastraceae,GB-WGS,JNDN00000000,,
+Tothia fuscella,CBS 130266,Venturiaceae,JGI,,,
+Hypoxylon sp.,CI-4A,Xylariaceae,JGI,,,
+Xylaria hypoxylon,,Xylariaceae,AFTOL,,,
+Acremonium alcalophilum,,Plectosphaerellaceae,JGI,,,
+Thielavia terrestris,,Chaetomiaceae,GB,NC_016457-NC_016462,21964414,RefSeq
+Heterogastridium pycnidioideum,ATCC MYA-4631,Heterogastridiaceae,JGI,,,
+Omphalotus olearius,,Omphalotaceae,GB,JH814812-JH815182,,WGS
+Piloderma croceum,F 1598,Atheliaceae,JGI,,,
+Rickenella mellea,,Rickenellaceae,JGI,,,
