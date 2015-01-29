@@ -3,12 +3,11 @@ Cyberlindnera jadinii,NBRC 0988,Phaffomycetaceae,GB,DG000065-DG000077,22629373,R
 Daldinia eschscholzii,UM1020,Xylariaceae,GB,AIID01000001-AIID01011382,22544898,Note=no annotation;WGS
 Passalora fulva,CBS 131901,Mycosphaerellaceae,GB,JH931634-JH932271,,WGS
 Mucor circinelloides f. circinelloides,1006PhL,Mucoraceae,SKIP,KE123896-KE124365,,WGS
-"#""Leucoagaricus gongylophorus""",Ac12,Agaricaceae,JGI,,23584789,WGS;Note=no annotation;skip
-"#""Leucoagaricus gongylophorus""",Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,WGS;Note=no annotation;skip
+Leucoagaricus gongylophorus,Ac12,Agaricaceae,JGI,,23584789,WGS;Note=no annotation;skip
+Leucoagaricus gongylophorus,Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,WGS;Note=no annotation;skip
 Conidiobolus incongruus,B7586,Ancylistaceae,GB-WGS,JNEM00000000,,
 Ophiocordyceps sinensis,CO18,Ophiocordycipitaceae,GB,KE652172-KE662774,,WGS;Poor assembly
 Ophiostoma novo-ulmi subsp. novo-ulmi,H327,Ophiostomataceae,GB,CM001753;CM001753;KB209920-KB209927,,WGS;Poor assembly
-"#""Trichoderma reesei""",QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
 Trichoderma reesei,QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
 Cunninghamella bertholletiae,175,Cunninghamellaceae,GB-WGS,JNEG00000000,,
 Cunninghamella elegans,B9769,Cunninghamellaceae,GB-WGS,JNDR00000000,,
