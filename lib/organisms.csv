@@ -22,7 +22,7 @@ Penicillium chrysogenum,Wisconsin 54-1255,Aspergillaceae,GB,AM920416-AM920464,18
 Fibulorhizoctonia sp.,CBS 109695,Atheliaceae,JGI,,,
 Atractiellales sp.,PMI 95,Atractiellaceae,JGI,,,
 Aulographum hederae,CBS 113979,Aulographaceae,JGI,,,
-Auricularia subglabra,TFB10046 SS_5Ì_,Auriculariaceae,JGI,,,
+Auricularia subglabra,TFB10046 SS-5,Auriculariaceae,JGI,,,
 Auriscalpium vulgare,FP105234-Sp,Auriscalpiaceae,JGI,,,
 Clavicorona pyxidata,HHB10654,Auriscalpiaceae,JGI,,,
 Allomyces macrogynus,ATCC 38327,Blastocladiaceae,Broad,,,RefSeq
@@ -135,7 +135,7 @@ Metschnikowia fructicola,277,Metschnikowiaceae,GB,ANFW01000001-ANFW01008430,2349
 Clavispora lusitaniae,ATCC 42720,Metschnikowiaowiaceae,GB,NW_003101571-NW_003101579,,RefSeq
 Microbotryum violaceum,p1A1 Lamole,Microbotryaceae,GB,GL541643-GL542873,,WGS
 Antonospora locustae,HM-2013,Microsporidia,JGI,,,
-Encephalitozoon cuniculi ,GB-M1,Microsporidia,JGI,,,
+Encephalitozoon cuniculi,GB-M1,Microsporidia,JGI,,,
 Encephalitozoon hellem,ATCC 50504,Microsporidia,JGI,,,
 Encephalitozoon intestinalis,ATCC 50506,Microsporidia,JGI,,,
 Encephalitozoon romaleae,SJ-2008,Microsporidia,JGI,,,
@@ -291,5 +291,10 @@ Ustilago maydis,521,Ustilaginaceae,MIPS,NW_100966-NW_101210;NW_101212-NW_101215;
 Wallemia ichthyophaga,EXF-994,Wallemiales,GB,KE007224-KE007305,,WGS
 Wallemia sebi,CBS 633.66,Wallemiales,GB,NW_006531958-NW_006532013,22326418,RefSeq
 Daldinia eschscholzii,EC12,Xylariaceae,JGI,,,
+<<<<<<< Updated upstream
 Xylona heveae,TC161,Xylonaceae,JGI,,,
 Zopfia rhizophila,CBS 207.26,Zopfiaceae,JGI,,,
+=======
+Xylona heveae,,Xylonaceae,JGI,,,
+Zopfia rhizophila,,Zopfiaceae,JGI,,,
+>>>>>>> Stashed changes
