@@ -2,7 +2,7 @@
 Acremonium alcalophilum,,Plectosphaerellaceae,JGI,,,
 Agaricostilbum hyphaenes,ATCC MYA-4628,Agaricostilbaceae,JGI,,,Note=altstrain=CBS 175.79
 Alternaria brassicicola,ATCC 96836,Pleosporaceae,JGI,ACIW00000000,,WGS;Note=paper nearing submission
-Antrodia sinuosa,,Polyporaceae,JGI,,,
+Antrodia sinuosa,LB1,Polyporaceae,JGI,,,
 Apophysomyces elegans,B7760,Mucoraceae,GB-WGS,JNDQ00000000,,
 Apophysomyces trapeziformis,B9324,Mucoraceae,GB-WGS,JNDP00000000,,
 Arthroderma gypseum,CBS 118893,Arthrodermataceae,GB,NW_003345183-NW_003345201,22951933,RefSeq
@@ -11,7 +11,7 @@ Aspergillus niger,CBS 513.88,Aspergillaceae,GB,NC_007445;NT_166518-NT_166539,172
 Basidiobolus meristosporus,B9252,Basidiobolaceae,GB-WGS,JNEO00000000,,
 Cercospora zeae-maydis,,Mycosphaerellaceae,JGI,,,
 Ceriporiopsis subvermispora,B,Meruliaceae,GB,KB445791-KB446530,22434909,WGS
-Cerrena unicolor,,Polyporaceae,JGI,,,
+Cerrena unicolor,303,Polyporaceae,JGI,,,
 Chalara chalara fraxinea,KW1,Helotiales,manual,,,
 Cladophialophora yegresii,CBS 114405,Herpotrichiellaceae,GB,NW_006913045-NW_006913052,,RefSeq
 Cladosporium fulvum,CBS 131901,Mycosphaerellaceae,JGI,JH931634-JH932271,,WGS
@@ -50,7 +50,7 @@ Passalora fulva,CBS 131901,Mycosphaerellaceae,GB,JH931634-JH932271,,WGS
 ,,,,,,
 Piloderma croceum,F 1598,Atheliaceae,JGI,,,
 Pneumocystis murina,B123,Pneumocystidaceae,GB,AFWA01000001-AFWA01000017,,WGS
-Polyporus arcularius,,Polyporaceae,JGI,,,
+Polyporus arcularius,HHB13444,Polyporaceae,JGI,,,
 Pycnoporus cinnabarinus,BRFM137,Coriolaceae,GB,CCBP010000001-CCBP010000776,24942338,WGS
 Pyrenochaeta sp.,UM 256,Pleosporaceae,GB,KB820869-KB820893,23723391,WGS
 Ramicandelaber brevisporus,CBS 109374,Kickxellaceae,JGI,,,
@@ -58,15 +58,15 @@ Rhizomucor miehei,CAU432,Lichtheimiaceae,GB-WGS,AGBC00000000,24746234,WGS
 Rhizomucor variabilis,B7584,Lichtheimiaceae,GB-WGS,JNES00000000,,
 Rhizopus oryzae,99-892,Rhizopodaceae,GB-WGS,JNEB00000000,,WGS
 Rhizopus stolonifer,B9770,Rhizopodaceae,GB-WGS,JNDS00000000,,WGS
-Rickenella mellea,,Rickenellaceae,JGI,,,
+Rickenella mellea,CBS 579.87,Rickenellaceae,JGI,,,
 Saitoella complicata,NRRL Y-17804,Protomycetaceae,JGI,,,WGS;Note=use JGI assembly instead
 Saksenaea vasiformis,B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,
 Setosphaeria turcica,Et28A,Pleosporaceae,GB,NW_007359914-NW_007360320,23357949;23236275,RefSeq
 Syncephalastrum monosporum,B8922,Syncephalastraceae,GB-WGS,JNEN00000000,,
 Syncephalastrum racemosum,B6101,Syncephalastraceae,GB-WGS,JNDN00000000,,
-Thielavia terrestris,,Chaetomiaceae,GB,NC_016457-NC_016462,21964414,RefSeq
+Thielavia terrestris,NRRL 8126,Chaetomiaceae,GB,NC_016457-NC_016462,21964414,RefSeq
 Tothia fuscella,CBS 130266,Venturiaceae,JGI,,,
-Trichaptum abietinum,,Polyporaceae,JGI,,,
+Trichaptum abietinum,L-15831 ss-1,Polyporaceae,JGI,,,
 Trichoderma reesei,QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
 Umbelopsis isabellina,B7317,Mucoraceae,GB-WGS,JNEQ00000000,24578268,
 Xylaria hypoxylon,,Xylariaceae,AFTOL,,,
