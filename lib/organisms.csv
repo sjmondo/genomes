@@ -291,10 +291,5 @@ Ustilago maydis,521,Ustilaginaceae,MIPS,NW_100966-NW_101210;NW_101212-NW_101215;
 Wallemia ichthyophaga,EXF-994,Wallemiales,GB,KE007224-KE007305,,WGS
 Wallemia sebi,CBS 633.66,Wallemiales,GB,NW_006531958-NW_006532013,22326418,RefSeq
 Daldinia eschscholzii,EC12,Xylariaceae,JGI,,,
-<<<<<<< Updated upstream
 Xylona heveae,TC161,Xylonaceae,JGI,,,
 Zopfia rhizophila,CBS 207.26,Zopfiaceae,JGI,,,
-=======
-Xylona heveae,,Xylonaceae,JGI,,,
-Zopfia rhizophila,,Zopfiaceae,JGI,,,
->>>>>>> Stashed changes
