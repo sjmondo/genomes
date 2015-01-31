@@ -46,7 +46,11 @@ my $folder = $parsed->{folder}->{folder};
 my %orgs;
 my %jgi_targets;
 while (my $row = $csv->getline ($fh)) {
+    warn("name is ",$row->[0], "\n");
     next if( $row->[0] =~ /^\#/);
+    if ( ! defined $row->[3] ) {
+	warn(join(",",@$row),"\n");
+    }
     $orgs{$row->[0]} = { 'strain' => $row->[1],
 			 'family' => $row->[2],
 			 'source' => $row->[3] };
@@ -90,17 +94,19 @@ while( my ($type,$d) = each %$folder ) {
 		    if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
 			$name = join(" ", $label_spl[0],$label_spl[1],
 				     $label_spl[2],$label_spl[3]);
-		    } elsif ($file->{label} =~ /\s+f\.\s+sp\.\s+/ ) {
+		    } elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
 			$name = join(" ", $label_spl[0],$label_spl[1],
-				     $label_spl[2],$label_spl[3],
-				     $label_spl[4]);
+				     $label_spl[2],$label_spl[3]);
+			#$label_spl[4]); # we don't put strain in there
+			#warn("DNA fsp -> $name\n") if $debug; 
 		    } else {
 			$name = join(" ", $label_spl[0],$label_spl[1]);
 		    }		    
 		    if( ! exists $orgs{$name} ) {
-			#warn("cannot find '$name' in the query file\n");
+			warn("cannot find '$name' in the query file\n") if $debug;
 			next;
 		    }
+		    warn("filename is $filename\n") if $debug; 
 		    next if $filename =~ /MitoScaffold|Mitochondria|mito\.scaffolds/;
 		    if( $jgi_targets{$name} ) {
 			my $family = $orgs{$name}->{family};
@@ -156,16 +162,16 @@ while( my ($type,$d) = each %$folder ) {
 			if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
 			    $name = join(" ", $label_spl[0],$label_spl[1],
 					 $label_spl[2],$label_spl[3]);
-			} elsif ($file->{label} =~ /\s+f\.\s+sp\.\s+/ ) {
+			} elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
 			    $name = join(" ", $label_spl[0],$label_spl[1],
-					 $label_spl[2],$label_spl[3],
-					 $label_spl[4]);
+					 $label_spl[2],$label_spl[3]);
+			    #$label_spl[4]);
 			} else {
 			    $name = join(" ", $label_spl[0],$label_spl[1]);
 			}
 			warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
 			if( ! exists $orgs{$name} ) {
-			    #warn("cannot find '$name' in the query file\n");
+			    warn("cannot find '$name' in the query file\n") if $debug;
 			    next;
 			}
 			
@@ -182,13 +188,16 @@ while( my ($type,$d) = each %$folder ) {
 			    }
 			    #warn("$filename for $oname_labeled\n");
 
-			    if( $filename =~ /\.gff/ ) {
+			    if ( $filename =~ /\.tab(\.gz)?$/ ) { 
+				warn("skipping $filename\n") if $debug;
+				next;
+			    } elsif( $filename =~ /\.gff/ ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
 				#warn("GFF outfile is $outfile\n");
 			    } elsif( $filename =~ /\.aa\./ || 
-				     $filename =~ /FilteredModels\d*\.aa|best_proteins|filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) 
+				     $filename =~ /FilteredModels\d*\.(aa|proteins)|best_proteins|filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) 
 			    {
-				warn"$filename";
+				warn "$filename is proteins" if $debug;
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
 				if ( exists $sanity{$outfile} ) { 
 				    warn("(AA) $filename second time around for $outfile (previous @{$sanity{$outfile}})\n");
