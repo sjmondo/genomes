@@ -1,6 +1,7 @@
 #!env perl
 use strict;
-opendir(DIR,"final_combine/pep") || die $!;
+my $dir= shift || "final_combine/pep";
+opendir(DIR, $dir) || die "dir is $dir: $!";
 for my $file ( sort readdir(DIR) ) {
     next unless $file =~ /(\S+)\.aa\.fasta/;
     my $stem = $1;

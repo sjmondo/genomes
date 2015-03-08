@@ -160,11 +160,11 @@ for my $species ( keys %orgs ) {
 		my ($from,$to) = split('-',$nm);
 		$from = sprintf("%s%0".$nl."d",$l,$from);
 		$to = sprintf("%s%0".$nl."d",$l,$to);
-		push @qstring,sprintf("%s:%s",$from,$to)
+		push @qstring,sprintf("%s:%s[ACCN]",$from,$to)
 	    } else {
 		my $nm2 = sprintf("%s%0".$nl."d",$l,$nm);
 		warn("nm2 is $nm2\n") if $debug;
-		push @qstring, sprintf("%s",$nm2);
+		push @qstring, sprintf("%s[ACCN]",$nm2);
 	     }
 	}
     }
@@ -172,9 +172,10 @@ for my $species ( keys %orgs ) {
 	for my $set ( [splice(@qstring,0,$retmax)] ) {
 	    my $qstring = join(" OR ", @$set); #  . " " . join(" ",@not);
 	    warn("Query: $qstring for $species\n") if $debug;	    
-	    my $url = sprintf('esearch.fcgi?db=nuccore&tool=bioperl&retmax=%d&term=%s',$retmax,$qstring);
+	    my $url = sprintf('esearch.fcgi?db=nuccore&tool=bioperlUCR&retmax=%d&term=%s',$retmax,$qstring);
 	    #delete_cache($base,$url);
 	    my $output = get_web_cached($base,$url);
+	    warn("$url\n$output") if $debug;
 	    my $simplesum;
 	    eval {
 		$simplesum = $xs->XMLin($output);
@@ -187,7 +188,7 @@ for my $species ( keys %orgs ) {
 	    if( ref($ids) !~ /ARRAY/ ) {
 		$ids = [$ids];
 	    }
-	    warn("ids are @$ids\n");
+	    warn("ids are @$ids\n") if $debug;
 	    for my $id ( @$ids ) {
 		next if ! $id;
 		if( $source eq 'GB' ) {
@@ -267,6 +268,8 @@ for my $species ( keys %orgs ) {
 	} else {
 	    warn("no Targetfile $targetfile\n");
 	}
+    } elsif ( $source eq 'GB' ) {
+
     } else {
 	warn("source $source is ignored\n");
     }

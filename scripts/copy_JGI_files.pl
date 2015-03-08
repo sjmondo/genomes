@@ -1,7 +1,7 @@
-#!/usr/bin/perl
+#!env perl
 use strict;
 use warnings;
-my $debug =0;
+my $debug = 1;
 my $debug_one = 0;
 my $force = 0;
 my $dir = shift || "download";
@@ -9,9 +9,18 @@ my $p_odir = shift || 'final_combine/pep';
 my $g_odir = shift || 'final_combine/GFF';
 my $d_odir = shift || 'final_combine/DNA';
 my $c_odir = shift || 'final_combine/CDS';
+
+mkdir("final_combine") unless -d "final_combine";
+for my $d ( $p_odir, $g_odir, $d_odir, $c_odir ) {
+ mkdir($d) unless -d $d;
+}
 opendir(DIR, $dir) || die $!;
 for my $f ( readdir(DIR) ) {
     next if $f =~ /^\./;
+    if( ! -d "$dir/$f" ) {
+ 	warn("not a dir ($dir/$f)\n");
+	next;
+    }
     opendir(FAM,"$dir/$f") || die $!;
     for my $sp ( readdir(FAM) ) {
 	next if $sp =~ /^\./;
@@ -19,8 +28,10 @@ for my $f ( readdir(DIR) ) {
 	warn("sp is $dir/$f/$sp\n") if $debug;
 	opendir(SP,"$dir/$f/$sp") || die "$dir/$f/$sp $!";
 	for my $file ( readdir(SP) ) {
+		warn("file is $file\n");
 	    if( $file =~ /(\S+\.aa\.fasta).gz$/) {
 		my $stem = $1;
+		warn "stem is $stem\n";
 		next if -f "$p_odir/$stem";
 		print("zcat $dir/$f/$sp/$file | ",
 		      'perl -p -e \'s/^>(\w+)\|(\S+)\|(\d+)\|(\S+)/>$2|$2_$3 $4/\' > ',"$p_odir/$stem\n");

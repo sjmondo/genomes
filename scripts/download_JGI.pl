@@ -46,6 +46,7 @@ my $folder = $parsed->{folder}->{folder};
 my %orgs;
 my %jgi_targets;
 while (my $row = $csv->getline ($fh)) {
+    next unless( $row->[3] eq 'JGI' );
     warn("name is ",$row->[0], "\n");
     next if( $row->[0] =~ /^\#/);
     if ( ! defined $row->[3] ) {
@@ -86,17 +87,22 @@ while( my ($type,$d) = each %$folder ) {
 		    my ($prefix,$file) = @$file_obj;
 		    my $fullurl = sprintf("%s%s",$url_base,
 					   $file->{url});
+	 	    $file->{label} =~ s/f\.sp\./f. sp./;
 		    $file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
+	            $file->{label} =~ s/\s+$//;
+		    # special case
+		    $file->{label} =~ s/ \(Arxula\)//;
 		    my $filename = $file->{filename};
 		    my @label_spl = split(/\s+/,$file->{label});
 		    my $version = $label_spl[-1];
 		    my $name;
 		    if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
 			$name = join(" ", $label_spl[0],$label_spl[1],
-				     $label_spl[2],$label_spl[3]);
+				     "var.",$label_spl[3]);
 		    } elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
-			$name = join(" ", $label_spl[0],$label_spl[1],
-				     $label_spl[2],$label_spl[3]);
+			$name = join(" ", $label_spl[0],$label_spl[1],"f. sp.",
+				     $label_spl[4]);
+			warn ">>>>$name\n";
 			#$label_spl[4]); # we don't put strain in there
 			#warn("DNA fsp -> $name\n") if $debug; 
 		    } else {
@@ -113,6 +119,10 @@ while( my ($type,$d) = each %$folder ) {
 			my $oname = $name;
 			$oname =~ s/\s+/_/g;
 			$oname =~ s/\.//g;
+			if( my $str = $orgs{$name}->{strain} ) {
+			    $str =~ s/\s+/_/g;
+			    $oname .= "_" . $str;
+			}
 #			$oname =~ s/\.$//g; # remove trailing periods for things that are like XX sp. 				
 			my $oname_labeled;
 			if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
@@ -148,7 +158,11 @@ while( my ($type,$d) = each %$folder ) {
 			my ($prefix,$file) = @$file_obj;			
 			my $fullurl = sprintf("%s%s",$url_base,
 					      $file->{url});
+			$file->{label} =~ s/f\.sp\./f. sp./;
 			$file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
+			$file->{label} =~ s/\s+$//;
+			$file->{label} =~ s/ \(Arxula\)//;
+
 			my $filename = $file->{filename};
 
 			next if( $filename =~ /\.tar.gz$/ || 
@@ -160,18 +174,17 @@ while( my ($type,$d) = each %$folder ) {
 			my $version = $label_spl[-1];
 			my $name;
 			if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
-			    $name = join(" ", $label_spl[0],$label_spl[1],
-					 $label_spl[2],$label_spl[3]);
+			    $name = join(" ", $label_spl[0],$label_spl[1],"var.",
+					 $label_spl[3]);
 			} elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
-			    $name = join(" ", $label_spl[0],$label_spl[1],
-					 $label_spl[2],$label_spl[3]);
-			    #$label_spl[4]);
+			    $name = join(" ", $label_spl[0],$label_spl[1], "f. sp.",
+					 $label_spl[4]);
 			} else {
 			    $name = join(" ", $label_spl[0],$label_spl[1]);
 			}
 			warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
 			if( ! exists $orgs{$name} ) {
-			    warn("cannot find '$name' in the query file\n") if $debug;
+			    warn("cannot find '$name' in the query organisms file\n") if $debug;
 			    next;
 			}
 			
@@ -179,7 +192,12 @@ while( my ($type,$d) = each %$folder ) {
 			    my $family = $orgs{$name}->{family};
 			    my $oname = $name;
 			    $oname =~ s/\s+/_/g;
-			    $oname =~ s/\.$//; # remove trailing periods for things that are like XX sp. 
+			    $oname =~ s/\.//g;
+			    if( my $str = $orgs{$name}->{strain} ) {
+				$str =~ s/\s+/_/g;
+				$oname .= "_" . $str;
+			    }
+			    			    
 			    my $outfile = File::Spec->catdir($outdir,$family,$oname);
 
 			    my $oname_labeled = "$oname.$prefix";

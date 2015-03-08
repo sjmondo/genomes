@@ -37,7 +37,9 @@ for my $family ( readdir(DIR) ) {
 	next if $species =~ /^\./;
 	my $gbkdir = "$dir/$family/$species/gbk";
 	next unless -d $gbkdir;
-	next if ( -f "$odir/GFF/$species.gff3" && ! $force);
+	if ( -f "$odir/GFF/$species.gff3" ) {
+	    next unless $force;
+	}
 
 	opendir(GBKFILES, $gbkdir);
 	my $cdsnum = 1;
