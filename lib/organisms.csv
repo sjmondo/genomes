@@ -3,7 +3,7 @@ Agaricus bisporus var. bisporus,H97,Agaricaceae,JGI,NW_006267344-NW_006267372,23
 Macrolepiota fuliginosa,,Agaricaceae,JGI,,,
 Sporobolomyces linderae,CBS 7893,Agaricostilbomycetes,JGI,,,
 Ajellomyces capsulatus,NAm1,Ajellomycetaceae,GB,NW_001813703-NW_001813982,19717792,
-Paracoccidioides brasiliensis,Pb03,Ajellomycetaceae,GB,NC_007935,22046142,RefSeq
+Paracoccidioides brasiliensis,Pb18,Ajellomycetaceae,GB,KN275957-KN276013,22046142,RefSeq
 Amanita muscaria,Koide,Amanitaceae,JGI,,,
 Amanita thiersii,Skay4041,Amanitaceae,JGI,,,
 Plicaturopsis crispa,CBS 459.81,Amylocorticiaceae,JGI,,,
@@ -68,7 +68,7 @@ Debaryomyces hansenii,CBS 767,Debaryomycetaceae,GB,NC_006043-NC_006049;NC_010166
 Lodderomyces elongisporus,NRRL YB-4239,Debaryomycetaceae,GB,NW_001813675-NW_001813702,19465905,RefSeq
 Meyerozyma guilliermondii,ATCC 6260,Debaryomycetaceae,GB,NW_001809792-NW_001809800,19465905,RefSeq
 Millerozyma farinosa,CBS 7064,Debaryomycetaceae,GB,NC_020213-NC_020226,22384408,RefSeq
-Pichia stipitis,CBS 6054,Debaryomycetaceae,GB,NC_009068;NC_009042-NC_009048,17334359,RefSeq
+Pichia stipitis,CBS 6054,Debaryomycetaceae,JGI,NC_009068;NC_009042-NC_009048,17334359,RefSeq
 Spathaspora passalidarum,NRRL Y-27907,Debaryomycetaceae,GB,NW_006767425-NW_006767432,21788494,RefSeq
 Marssonina brunnea f. sp. multigermtubi,MB_m1,Dermateaceae,GB,NW_006763039-NW_006763127,22876864,RefSeq
 Anthostoma avocetta,NRRL 3190,Diatrypaceae,JGI,,,
@@ -77,7 +77,7 @@ Didymella exigua,CBS 183.55,Didymellaceae,JGI,,,
 Galactomyces geotrichum,CLIB 918,Dipodascaceae,CRG,,,
 Yarrowia lipolytica,CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
 Aureobasidium pullulans var. pullulans,EXF-150,Dothioraceae,JGI,,24984952,Note=no annotation in genbank
-Blumeria graminis f.sp. hordei,DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
+Blumeria graminis f. sp. hordei,DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
 Erysiphe pisi,,Erysiphaceae,GB-WGS,CACM00000000,,WGS;Note=no annotation
 Rhodotorula minuta,MCA 4210,Erythrobasidiaceae,JGI,,,
 Thermomyces lanuginosus,SSBP,Eurotiales,GB-WGS,ANHP00000000,23788551,Note=no annotation;WGS
@@ -168,7 +168,7 @@ Fusarium fujikuroi,B14,Nectriaceae,GB,KB205952-KB206026,23472226,WGS
 Fusarium fujikuroi,IMI58289,Nectriaceae,GB,HF679023-HF679034,23825955,WGS
 Fusarium graminearum,PH-1,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,17823352,RefSeq
 Nectria haematococca,FGSC 9596,Nectriaceae,GB,NW_003315673-NW_003315881,19714214,mating population VI
-Orpinomyces sp.,C1A,Neocallimastigaceae,GB,ASRE01000001-ASRE01032574,23709508,Discuss with collaborators to get annotation;WGS
+Orpinomyces sp.,C1A,Neocallimastigaceae,JGI,ASRE01000001-ASRE01032574,23709508,Discuss with collaborators to get annotation;WGS
 Piromyces sp.,E2,Neocallimastigaceae,JGI,,,
 Neolecta irregularis,,Neolectaceae,UCR,,,
 Flagelloscypha sp.,PMI 526,Niaceae,JGI,,,
@@ -179,8 +179,9 @@ Tolypocladium inflatum,NRRL 8044,Ophiocordycipitaceae,Authors,AOHE01000001-AOHE0
 Grosmannia clavigera,kw1407,Ophiostomataceae,GB,GL629720-GL630008;GG742440-GG743882,21262841,WGS
 Ophiostoma piceae,UAMH 11346,Ophiostomataceae,GB,KE148146-KE148190,23725015,WGS
 Ophiostoma piliferum,,Ophiostomataceae,manual,,,
-Arthrobotrys oligospora,ATCC 24927,Orbiliaceae,GB,JH119000-JH119214,21909256,WGS
 Patellaria atrata,CBS 101060,Patellariaceae,JGI,,,
+Arthrobotrys oligospora,ATCC 24927,Orbiliaceae,GB,JH119000-JH119214,21909256,WGS
+Arthrobotrys oligospora,ATCC 24927,Orbiliaceae,JGI,,21909256,
 Hydnomerulius pinastri,,Paxillaceae,JGI,,,
 Paxillus involutus,ATCC 200175,Paxillaceae,JGI,,,
 Symbiotaphrina kochii,250.77,Pezizomycotina,JGI,,,
@@ -277,8 +278,8 @@ Talaromyces marneffei,ATCC 18224,Trichocomaceae,GB,NC_005256;NW_002196661-NW_002
 Talaromyces stipitatus,ATCC 10500,Trichocomaceae,GB,NW_002990113-NW_002990932,,RefSeq
 Thermoascus aurantiacus,ATCC26904,Trichocomaceae,JGI,,,
 Tricholoma matsutake,945,Tricholomataceae,JGI,,,
-Blastobotrys adeninivorans,LS3,Trichomonascaceae,GB-WGS,CBZY000000000,,
 Trichosporon asahii var. asahii,CBS 8904,Trichosporonaceae,GB,JH925097;JH924904-JH925097,,WGS
+Blastobotrys adeninivorans,LS3,Trichomonascaceae,JGI,CBZY000000000,,
 Trichosporon oleaginosus,IBC0246,Trichosporonaceae,JGI,,,
 Tritirachium sp.,CBS 265.96,Tritirachiaceae,JGI,,,
 Trypethelium eluteriae,,Trypetheliaceae,JGI,,,
@@ -289,7 +290,7 @@ Pseudozyma antarctica,T-34,Ustilaginaceae,GB,DF196767-DF196793,23558529,WGS
 Sporisorium reilianum,SRZ2,Ustilaginaceae,GB,FQ311430-FQ311474,21148393,WGS
 Ustilago maydis,521,Ustilaginaceae,MIPS,NW_100966-NW_101210;NW_101212-NW_101215;NW_101217-NW_101241;NC_008368,17080091,RefSeq;Note=update annotation may be at MIPS
 Wallemia ichthyophaga,EXF-994,Wallemiales,GB,KE007224-KE007305,,WGS
-Wallemia sebi,CBS 633.66,Wallemiales,GB,NW_006531958-NW_006532013,22326418,RefSeq
+Wallemia sebi,CBS 633.66,Wallemiales,JGI,NW_006531958-NW_006532013,22326418,RefSeq
 Daldinia eschscholzii,EC12,Xylariaceae,JGI,,,
 Xylona heveae,TC161,Xylonaceae,JGI,,,
 Zopfia rhizophila,CBS 207.26,Zopfiaceae,JGI,,,
