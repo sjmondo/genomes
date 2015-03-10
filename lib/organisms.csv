@@ -180,8 +180,7 @@ Grosmannia clavigera,kw1407,Ophiostomataceae,GB,GL629720-GL630008;GG742440-GG743
 Ophiostoma piceae,UAMH 11346,Ophiostomataceae,GB,KE148146-KE148190,23725015,WGS
 Ophiostoma piliferum,,Ophiostomataceae,manual,,,
 Patellaria atrata,CBS 101060,Patellariaceae,JGI,,,
-Arthrobotrys oligospora,ATCC 24927,Orbiliaceae,GB,JH119000-JH119214,21909256,WGS
-Arthrobotrys oligospora,ATCC 24927,Orbiliaceae,JGI,,21909256,
+Arthrobotrys oligospora,ATCC 24927,Orbiliaceae,JGI,JH119000-JH119214,21909256,
 Hydnomerulius pinastri,,Paxillaceae,JGI,,,
 Paxillus involutus,ATCC 200175,Paxillaceae,JGI,,,
 Symbiotaphrina kochii,250.77,Pezizomycotina,JGI,,,
@@ -229,7 +228,7 @@ Dekkera bruxellensis,CBS 2499,Saccharomycetaceae,JGI,KB454452-KB454483,22663979,
 Kazachstania africana,CBS 2517,Saccharomycetaceae,GB,NC_018951;NC_018950;NC_018949;NC_018948;NC_018947;NC_018946;NC_018945;NC_018944;NC_018943;NC_018942;NC_018941;NC_018940,,RefSeq
 Kluyveromyces lactis,NRRL Y-1140,Saccharomycetaceae,GB,NC_006037-NC_006042,15229592,RefSeq
 Komagataella pastoris,GS115,Saccharomycetaceae,GB,NC_012963-NC_012966,21575661,RefSeq
-Saccharomyces cerevisiae,S288C,Saccharomycetaceae,GB,NC_001133-NC_001148;NC_001224,8849441,RefSeq
+Saccharomyces cerevisiae,S288C,Saccharomycetaceae,manual,NC_001133-NC_001148;NC_001224,8849441,RefSeq
 Tetrapisispora phaffii,CBS 4417,Saccharomycetaceae,GB,NC_016520-NC_016535,,RefSeq
 Torulaspora delbrueckii,CBS 1146,Saccharomycetaceae,GB,NC_016501-NC_016508,22123960,RefSeq
 Zygosaccharomyces rouxii,CBS 732,Saccharomycetaceae,GB,NC_012990-NC_012996,19525356,RefSeq
@@ -294,3 +293,7 @@ Wallemia sebi,CBS 633.66,Wallemiales,JGI,NW_006531958-NW_006532013,22326418,RefS
 Daldinia eschscholzii,EC12,Xylariaceae,JGI,,,
 Xylona heveae,TC161,Xylonaceae,JGI,,,
 Zopfia rhizophila,CBS 207.26,Zopfiaceae,JGI,,,
+Arthonia rubrocincta,,Arthoniaceae,manual,,23557360,
+Dibaeis baeomyces,,Icmadophilaceae,manual,,23557360,
+Endocarpon pallidulum,Verrucariaceae,manual,,23557360,
+Graphis scripta,,Graphidaceae,manual,,23557360,
