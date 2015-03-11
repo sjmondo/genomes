@@ -108,7 +108,7 @@ Exophiala dermatitidis,NIH/UT8656,Herpotrichiellaceae,GB,JH226130-JH226139;CM001
 Holtermanniella mycelialis,,Holtermanniales,Dikaryome,,,
 Holtermanniella takashimae,,Holtermanniales,Dikaryome,,,
 Laccaria amethystina,LaAM-08-1,Hydnangiaceae,JGI,,,
-Laccaria bicolor,S238N-H82,Hydnangiaceae,GB,NW_001889872-NW_001890536,18322534,RefSeq
+Laccaria bicolor,S238N-H82,Hydnangiaceae,JGI,,18322534,RefSeq
 Leucogyrophana mollusca,KUC20120723A-06,Hygrophoropsidaceae,JGI,,,
 Fomitiporia mediterranea,MF3/22,Hymenochaetaceae,GB,NW_006760386-NW_006761797,22745431,RefSeq
 Trichoderma atroviride,IMI 206040,Hypocreaceae,JGI,ABDG02000001-ABDG02000029,21501500,WGS
@@ -168,7 +168,7 @@ Fusarium fujikuroi,B14,Nectriaceae,GB,KB205952-KB206026,23472226,WGS
 Fusarium fujikuroi,IMI58289,Nectriaceae,GB,HF679023-HF679034,23825955,WGS
 Fusarium graminearum,PH-1,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,17823352,RefSeq
 Nectria haematococca,FGSC 9596,Nectriaceae,GB,NW_003315673-NW_003315881,19714214,mating population VI
-Orpinomyces sp.,C1A,Neocallimastigaceae,JGI,ASRE01000001-ASRE01032574,23709508,Discuss with collaborators to get annotation;WGS
+Orpinomyces sp.,C1A,Neocallimastigaceae,JGI,ASRE01000001-ASRE01032574,23709508,WGS
 Piromyces sp.,E2,Neocallimastigaceae,JGI,,,
 Neolecta irregularis,,Neolectaceae,UCR,,,
 Flagelloscypha sp.,PMI 526,Niaceae,JGI,,,
@@ -293,7 +293,8 @@ Wallemia sebi,CBS 633.66,Wallemiales,JGI,NW_006531958-NW_006532013,22326418,RefS
 Daldinia eschscholzii,EC12,Xylariaceae,JGI,,,
 Xylona heveae,TC161,Xylonaceae,JGI,,,
 Zopfia rhizophila,CBS 207.26,Zopfiaceae,JGI,,,
-Arthonia rubrocincta,,Arthoniaceae,manual,,23557360,
+Arthonia rubrocincta,Arru_GBP0182,Arthoniaceae,manual,,23557360,
 Dibaeis baeomyces,,Icmadophilaceae,manual,,23557360,
-Endocarpon pallidulum,Verrucariaceae,manual,,23557360,
-Graphis scripta,,Graphidaceae,manual,,23557360,
+Endocarpon pallidulum,Enpa,Verrucariaceae,manual,,23557360,
+Graphis scripta,CBS 132367,Graphidaceae,manual,,23557360,
+Acarospora strigata,CBS 132363,Acarosporaceae,manual,,23557360,
