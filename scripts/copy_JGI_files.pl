@@ -47,9 +47,16 @@ for my $f ( readdir(DIR) ) {
 		print("zcat $dir/$f/$sp/$file > $d_odir/$stem\n");
 	    } elsif ( $file =~ /(\S+\.gff3).gz$/) {
 		my $stem = $1;
+		my @name = split(/\./,$stem);
+	 	pop @name;
+		if( $name[-1] =~ /v\d+/ ) {
+		 pop @name;
+		}
+		my $n = pop @name;
 		next if !$force && -f "$g_odir/$stem";
 		open(my $in => "zcat $dir/$f/$sp/$file |") || die "cannot open $dir/$f/$sp/$file: $!";
 		open(my $out => ">$g_odir/$stem")|| die "cannot open $g_odir/$stem: $!";
+                my $no_ninth_name;
 		while(<$in>) {
 		    last if /##FASTA/;
 		    if( ! /^\#/ ) {
@@ -68,17 +75,24 @@ for my $f ( readdir(DIR) ) {
 				$val = "$1|$1\_$2";
 			    }
 			    $ninth{'Name'} = $val;
-			}
-			push @row, join(";", map { sprintf("%s=%s", $_,
+			    push @row, join(";", map { sprintf("%s=%s", $_,
 							   $ninth{$_}) }
 					@order);
-						       
+			} else {
+			  push @row, $last;
+			  $no_ninth_name = 1;
+			  last;
+			}
 			$_= join("\t",@row)."\n";
 		    } 
 		    print $out $_;
 		}
 		close($in);
 		close($out);
+		if( $no_ninth_name ) {
+		 warn("zcat $dir/$f/$sp/$file | perl scripts/gtf2gff3_3level.pl -p $n > $g_odir/$stem\n");
+		 `zcat $dir/$f/$sp/$file | perl scripts/gtf2gff3_3level.pl -p $n > $g_odir/$stem`;
+		}
 	    }
 	}
 #	last if $debug_one;
