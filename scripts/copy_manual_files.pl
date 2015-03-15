@@ -32,23 +32,26 @@ for my $f ( readdir(DIR) ) {
 	    if( $file =~ /((\S+)\.aa\.fasta).gz$/) {
 		my $stem = $1;
 		my $pref = &make_prefix($2);
-		warn "stem is $stem\n";
+		warn "AA stem is $stem pref is $pref\n";
 		next if -f "$p_odir/$stem";
+		
 		print("zcat $dir/$f/$sp/$file | perl -p -e 's/>/>$pref|/' > $p_odir/$stem\n");
             } elsif ( $file =~ /((\S+)\.CDS\.fasta).gz$/) {
 		my $stem = $1;
 		my $pref = &make_prefix($2);
+		warn "CDS stem is $stem pref is $pref\n";
                 next if -f "$c_odir/$stem";
 		print("zcat $dir/$f/$sp/$file | perl -p -e 's/>/>$pref|/' > $c_odir/$stem\n");
 	    } elsif ( $file =~ /((\S+)\.assembly\.fasta).gz$/) {
 		my $stem = $1;
 		my $pref = &make_prefix($2);
 		$stem =~ s/\.assembly//;
-
+		warn "ASM stem is $stem pref is $pref\n";
 		next if -f "$d_odir/$stem";
 		print("zcat $dir/$f/$sp/$file |  perl -p -e 's/>/>$pref|/' > $d_odir/$stem\n");
 	    } elsif ( $file =~ /(\S+\.gff3).gz$/) {
 		my $stem = $1;
+		warn "GFF stem is $stem\n";
 		next if !$force && -f "$g_odir/$stem";
 		open(my $in => "zcat $dir/$f/$sp/$file |") || die "cannot open $dir/$f/$sp/$file: $!";
 		open(my $out => ">$g_odir/$stem")|| die "cannot open $g_odir/$stem: $!";
@@ -82,7 +85,7 @@ for my $f ( readdir(DIR) ) {
 sub make_prefix {
     my $stem = shift @_;
     $stem =~ s/\.([_.])/$1/g;
-    $stem =~ s/\.v\d+//;
+    $stem =~ s/\.v[^\.]+$//;
     my @parts = split(/\./,$stem);
     my ($genus,$species) = split(/_/,$parts[0]);
     my $pref;
