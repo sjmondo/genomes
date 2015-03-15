@@ -147,9 +147,9 @@ while( my ($type,$d) = each %$folder ) {
     } elsif( $type eq 'Annotation' ) {
 	my $asm = $d->{folder};
 	while( my ($k,$n) = each %$asm ) {
-	    #warn("keys are $k\n");
+	    warn("keys are $k\n");
 	    if( $k eq 'Filtered Models ("best")' ) {
-		for my $ftype ( qw(Proteins CDS Transcripts) ) {
+		for my $ftype ( qw(Proteins CDS Transcripts Genes) ) {
 		    my $f = $n->{'folder'}->{$ftype};
 		    for my $file_obj ( 
 			sort { $a->[0] cmp $b->[0] }
@@ -164,7 +164,7 @@ while( my ($type,$d) = each %$folder ) {
 			$file->{label} =~ s/ \(Arxula\)//;
 
 			my $filename = $file->{filename};
-
+                        warn("Unfiltered filename is $filename\n");
 			next if( $filename =~ /\.tar.gz$/ || 
 				 $filename =~ /ESTs|unsupported_short/ ||
 				 $filename =~ /\.nt\.fasta/ );
@@ -204,14 +204,14 @@ while( my ($type,$d) = each %$folder ) {
 			    if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
 				$oname_labeled .= ".$version";
 			    }
-			    #warn("$filename for $oname_labeled\n");
+			    warn("$filename for $oname_labeled\n");
 
 			    if ( $filename =~ /\.tab(\.gz)?$/ ) { 
 				warn("skipping $filename\n") if $debug;
 				next;
 			    } elsif( $filename =~ /\.gff/ ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
-				#warn("GFF outfile is $outfile\n");
+				warn("GFF outfile is $outfile\n");
 			    } elsif( $filename =~ /\.aa\./ || 
 				     $filename =~ /FilteredModels\d*\.(aa|proteins)|best_proteins|filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) 
 			    {
