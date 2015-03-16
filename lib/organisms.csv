@@ -10,12 +10,12 @@ Plicaturopsis crispa,CBS 459.81,Amylocorticiaceae,JGI,,,
 Conidiobolus coronatus,NRRL 28638,Ancylistaceae,JGI,,,
 Apiospora montagnei,NRRL 25634,Apiosporaceae,JGI,,,
 Aplosporella prunicola,CBS 121.167,Aplosporellaceae,JGI,,,
-Archaerhizomyces finlayi,,Archaeorhizomycetaceae,manual,,,
+Archaeorhizomyces finlayi,CBS 128710,Archaeorhizomycetaceae,manual,,,
 Lepidopterella palustris,,Argynnaceae,JGI,,,
 Arthroderma benhamiae,CBS 112371,Arthrodermataceae,GB,NW_003315046-NW_003315113,21247460,RefSeq
 Trichophyton rubrum,CBS 118892,Arthrodermataceae,GB,NW_003456394-NW_003456429,19457268,RefSeq
 Ascobolus immersus,RN42,Ascobolaceae,JGI,,,
-Ascosphaera apis,ARSEF 7405,Ascosphaeraceae,GB-WGS,AARE00000000,17069642,WGS;note=CheckGW site for annotation
+Ascosphaera apis,ARSEF 7405,Ascosphaeraceae,manual,CH980625-CH981371,17069642;22747707,http://hymenopteragenome.org/beebase/?q=Aapis_data
 Aspergillus fumigatus,Af293,Aspergillaceae,GB,NC_007194-NC_007201,16372009,RefSeq
 Aspergillus niger,ATCC 1015,Aspergillaceae,JGI,,,
 Penicillium chrysogenum,Wisconsin 54-1255,Aspergillaceae,GB,AM920416-AM920464,18820685,
@@ -27,7 +27,7 @@ Auriscalpium vulgare,FP105234-Sp,Auriscalpiaceae,JGI,,,
 Clavicorona pyxidata,HHB10654,Auriscalpiaceae,JGI,,,
 Allomyces macrogynus,ATCC 38327,Blastocladiaceae,Broad,,,RefSeq
 Boletus edulis,BED1,Boletaceae,JGI,,,
-Heterobasidion annosum,TC 32-1,Bondarzewiaceae,JGI,,,
+Heterobasidion annosum,TC 32-1,Bondarzewiaceae,JGI,,22463738,
 Botryobasidium botryosum,FD-172 SS1,Botryobasidiaceae,JGI,KL198016-KL198349,24958869,WGS
 Botryosphaeria dothidea,CBS 115476,Botryosphaeriaceae,JGI,,,
 Calosphaeria pulchella,,Calosphaeriaceae,manual,,,
@@ -90,7 +90,6 @@ Ganoderma sp.,10597 SS1,Ganodermataceae,JGI,,,
 Gloeophyllum trabeum,ATCC 11539,Gloeophyllaceae,GB,NW_006920410-NW_006920851,22745431,RefSeq
 Neolentinus lepideus,HHB14362 ss-1,Gloeophyllaceae,JGI,,,
 Rhizophagus irregularis,DAOM 181602,Glomeraceae,JGI,KE392238-KE392345;KI274019-KI301949,24277808,RefSeq
-Colletotrichum florinae,,Glomerellaceae,JGI,,,need permission/access
 Colletotrichum graminicola,M1.001,Glomerellaceae,GB,GG697331-GG697984;CM001021,,WGS
 Glomerella cingulata,23,Glomerellaceae,JGI,,,Colletotrichum gloeosporoides
 Cenococcum geophilum,1.58,Gloniaceae,JGI,,,
@@ -258,7 +257,7 @@ Sporormia fimetaria,,Sporormiaceae,JGI,,,
 Stereum hirsutum,FP-91666 SS1,Stereaceae,GB,NW_006763131-NW_006763289,22745431,RefSeq
 Galerina marginata,CBS 339.88,Strophariaceae,GB,KL142367-KL142780,24958869,WGS
 Hypholoma sublateritium,,Strophariaceae,JGI,,,
-Suillus brevipes,,Suillaceae,JGI,,,
+Suillus brevipes,,Suillaceae,JGI,,25728665,
 Suillus luteus,UH-Slu-Lm8-n1,Suillaceae,JGI,,,
 Taphrina deformans,,Taphrinaceae,GB,HE965032-HE965425,,WGS
 Xanthoria parietina,46-1,Teloschistaceae,JGI,,,
@@ -298,3 +297,17 @@ Dibaeis baeomyces,,Icmadophilaceae,manual,,23557360,
 Endocarpon pallidulum,Enpa,Verrucariaceae,manual,,23557360,
 Graphis scripta,CBS 132367,Graphidaceae,manual,,23557360,
 Acarospora strigata,CBS 132363,Acarosporaceae,manual,,23557360,
+Allomyces macrogynus,ATCC 38327,Blastocladiaceae,manual,,,
+Acremonium alcalophilum,,Plectosphaerellaceae,JGI,,,
+Hymenoscyphus fraxineus,KW1,Helotiales incertae sedis,manual,,,
+Agaricostilbum haphaenes,ATCC MYA-4628,Agaricostilbaceae,JGI,,,
+Gymnascella aurrantica,,Gymnascaceae,JGI,,,
+Heterogastridium pycnidioideum,ATCC MYA-4631,Heterogastridiaceae,JGI,,,
+Ilyonectria sp.,PMI-82,Nectriaceae,JGI,,,
+Omphalotus olearius,VT 653.13,Omphalotaceae,JGI,,22726691,
+Piloderma croceum,F 1598,Atheliaceae,JGI,,,
+Rhizopogon salebrosus,TDB-379,Rhizopogonaceae,JGI,,,
+Rhizopogon vinicolor,AM-OR11-026,Rhizopogonaceae,JGI,,,
+Stagonospora nodorum,SN15,Phaeosphaeriaceae,JGI,,,
+Thielavia terrestris,NRRL 8126,Chaetomiaceae,JGI,,,
+Trichoderma virens,Gv29-8,Hypocreaceae,JGI,,,
