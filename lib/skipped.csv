@@ -1,5 +1,6 @@
 #Species,Strain,Family,Source,Accession,PMID,Notes
 Acremonium alcalophilum,,Plectosphaerellaceae,JGI,,,
+Agaricostilbum haphaenes,CBS 175.79,Agaricostilbaceae,JGI,,,
 Agaricostilbum hyphaenes,ATCC MYA-4628,Agaricostilbaceae,JGI,,,Note=altstrain=CBS 175.79
 Alternaria brassicicola,ATCC 96836,Pleosporaceae,JGI,ACIW00000000,,WGS;Note=paper nearing submission
 Antrodia sinuosa,LB1,Polyporaceae,JGI,,,
@@ -36,6 +37,8 @@ Leucoagaricus gongylophorus,Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,WGS;No
 Lichtheimia ramosa,B5399,Lichtheimiaceae,GB-WGS,JNDO00000000,,
 Macrophomina phaseolina,MS6,Botryosphaeriaceae,GB,AHHD00000000,,WGS
 Martensiomyces pterosporus,CBS 209.56,Kickxellaceae,JGI,,,
+Mortierella alpina,ATCC 32222,Mortierellaceae,GB-WGS,ADAG01000001-ADAG01001099,22174787,WGS
+Mortierella alpina,B6842,Mortierellaceae,GB-WGS,AZCI01000001-AZCI01001183,24459263,WGS
 Mucor circinelloides f. circinelloides,1006PhL,Mucoraceae,SKIP,KE123896-KE124365,,WGS
 Mucor indicus,B7402,Mucoraceae,GB-WGS,JNEK00000000,,
 Mucor irregularis,B50,Mucoraceae,GB-WGS,AZYI00000000,,
@@ -47,7 +50,6 @@ Omphalotus olearius,,Omphalotaceae,GB,JH814812-JH815182,,WGS
 Ophiocordyceps sinensis,CO18,Ophiocordycipitaceae,GB,KE652172-KE662774,,WGS;Poor assembly
 Ophiostoma novo-ulmi subsp. novo-ulmi,H327,Ophiostomataceae,GB,CM001753;CM001753;KB209920-KB209927,,WGS;Poor assembly
 Passalora fulva,CBS 131901,Mycosphaerellaceae,GB,JH931634-JH932271,,WGS
-,,,,,,
 Piloderma croceum,F 1598,Atheliaceae,JGI,,,
 Pneumocystis murina,B123,Pneumocystidaceae,GB,AFWA01000001-AFWA01000017,,WGS
 Polyporus arcularius,HHB13444,Polyporaceae,JGI,,,
@@ -58,6 +60,8 @@ Rhizomucor miehei,CAU432,Lichtheimiaceae,GB-WGS,AGBC00000000,24746234,WGS
 Rhizomucor variabilis,B7584,Lichtheimiaceae,GB-WGS,JNES00000000,,
 Rhizopus oryzae,99-892,Rhizopodaceae,GB-WGS,JNEB00000000,,WGS
 Rhizopus stolonifer,B9770,Rhizopodaceae,GB-WGS,JNDS00000000,,WGS
+Rhizopus microsporus var. chinensis,CCTCC M201021,Rhizopodaceae,GB,ANKS01000001-ANKS01003431,23516228,WGS
+Rhizopus microsporus var. microsporus,,Rhizopodaceae,GB-WGS,JNEJ00000000,,Note=no annotation
 Rickenella mellea,CBS 579.87,Rickenellaceae,JGI,,,
 Saitoella complicata,NRRL Y-17804,Protomycetaceae,JGI,,,WGS;Note=use JGI assembly instead
 Saksenaea vasiformis,B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,
@@ -70,3 +74,4 @@ Trichaptum abietinum,L-15831 ss-1,Polyporaceae,JGI,,,
 Trichoderma reesei,QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
 Umbelopsis isabellina,B7317,Mucoraceae,GB-WGS,JNEQ00000000,24578268,
 Xylaria hypoxylon,,Xylariaceae,AFTOL,,,
+Trichoderma reesei,QM6a,Hypocreaceae,JGI,,18454138,
