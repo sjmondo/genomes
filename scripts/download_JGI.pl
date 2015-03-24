@@ -69,7 +69,7 @@ warn("types are: ", join(",", keys %$folder),"\n") if $debug;
 my %data;
 my $first = 1;
 while( my ($type,$d) = each %$folder ) {
-    if( $type eq 'Assembly' ) {
+    if( $type eq 'Assembly' ) { 
 	my $asm = $d->{folder};
 	while( my ($k,$n) = each %$asm ) {
 	    if( $k eq 'Assembled scaffolds (unmasked)') {
