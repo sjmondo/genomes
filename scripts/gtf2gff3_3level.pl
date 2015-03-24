@@ -241,8 +241,12 @@ for my $gid ( sort { $genes{$a}->{chrom} cmp $genes{$b}->{chrom} ||
 	}
 	@cds = @keepcds;
 
-	if($stop_codon ) {
+	if( $stop_codon ) {
 	    if( $strand_val > 0 ) {		
+		if( ! @cds ) {
+		 warn("no CDS to update?!\n");
+		 next;
+	        }
 		warn("stop codon is ", join("\t", @{$stop_codon}),
 		     " cds was ",$cds[-1]->[3], "..",$cds[-1]->[4],"\n") if $debug;
 		$cds[-1]->[4] = $stop_codon->[4];
@@ -283,7 +287,7 @@ for my $gid ( sort { $genes{$a}->{chrom} cmp $genes{$b}->{chrom} ||
 	  } else {
 	    $translation_start = ($strand_val > 0) ? $cds[0]->[3] : $cds[0]->[4];
 	  }
-	}
+
 	if ( $debug) {
 	  warn("CDS order is after :\n");
 	  for my $c ( @cds ) {
