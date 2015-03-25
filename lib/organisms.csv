@@ -25,7 +25,6 @@ Aulographum hederae,CBS 113979,Aulographaceae,JGI,,,
 Auricularia subglabra,TFB10046 SS-5,Auriculariaceae,JGI,,,
 Auriscalpium vulgare,FP105234-Sp,Auriscalpiaceae,JGI,,,
 Clavicorona pyxidata,HHB10654,Auriscalpiaceae,JGI,,,
-Allomyces macrogynus,ATCC 38327,Blastocladiaceae,Broad,,,RefSeq
 Boletus edulis,BED1,Boletaceae,JGI,,,
 Heterobasidion annosum,TC 32-1,Bondarzewiaceae,JGI,,22463738,
 Botryobasidium botryosum,FD-172 SS1,Botryobasidiaceae,JGI,KL198016-KL198349,24958869,WGS
@@ -45,12 +44,11 @@ Naiadella fluitans,ATCC 64713,Cintractiellaceae,JGI,,,
 Cladonia grayi,Cgr-DA2myc-ss,Cladoniaceae,JGI,,,
 Cladonia portentosa,,Cladoniaceae,manual,,,
 Claviceps purpurea,20.1,Clavicipitaceae,GB,CAGA01000001-CAGA01000191,23468653,WGS
-Epichloe festucae,Fl1,Clavicipitaceae,GB-WGS,AFRX00000000,,WGS;Note=no annotation
+Epichloe festucae,Fl1,Clavicipitaceae,GB,JH158803-JH158942,,WGS;Note=no annotation
 Metarhizium anisopliae,ARSEF 23,Clavicipitaceae,GB,NW_006916915-NW_006917090,21253567,RefSeq
 Clavulina sp.,PMI 390,Clavulinaceae,JGI,,,
 Coniophora puteana,RWD-64-598 SS2,Coniophoraceae,JGI,NW_006913053-NW_006913262,22745431,RefSeq
 Beauveria bassiana,ARSEF 2860,Cordycipitaceae,JGI,,,RefSeq
-Coniochaeta ligniaria,NRRL 30616,Coniochaetaceae,JGI,,,
 Coniochaeta ligniaria,CBS 111746,Coniochaetaceae,manual,,,
 Cordyceps militaris,CM01,Cordycipitaceae,JGI,NW_006271969-NW_006272000,,RefSeq
 Dendrothele bispora,CBS 962.96,Corticiaceae,JGI,,,
