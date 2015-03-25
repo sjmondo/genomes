@@ -48,9 +48,10 @@ Claviceps purpurea,20.1,Clavicipitaceae,GB,CAGA01000001-CAGA01000191,23468653,WG
 Epichloe festucae,Fl1,Clavicipitaceae,GB-WGS,AFRX00000000,,WGS;Note=no annotation
 Metarhizium anisopliae,ARSEF 23,Clavicipitaceae,GB,NW_006916915-NW_006917090,21253567,RefSeq
 Clavulina sp.,PMI 390,Clavulinaceae,JGI,,,
-Coniochaeta ligniaria,CBS 111746,Coniochaetaceae,JGI,,,
 Coniophora puteana,RWD-64-598 SS2,Coniophoraceae,JGI,NW_006913053-NW_006913262,22745431,RefSeq
 Beauveria bassiana,ARSEF 2860,Cordycipitaceae,JGI,,,RefSeq
+Coniochaeta ligniaria,NRRL 30616,Coniochaetaceae,JGI,,,
+Coniochaeta ligniaria,CBS 111746,Coniochaetaceae,manual,,,
 Cordyceps militaris,CM01,Cordycipitaceae,JGI,NW_006271969-NW_006272000,,RefSeq
 Dendrothele bispora,CBS 962.96,Corticiaceae,JGI,,,
 Cortinarius glaucopus,AT 2004 276,Cortinariaceae,JGI,,,
@@ -168,7 +169,7 @@ Fusarium graminearum,PH-1,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532
 Nectria haematococca,FGSC 9596,Nectriaceae,GB,NW_003315673-NW_003315881,19714214,mating population VI
 Orpinomyces sp.,C1A,Neocallimastigaceae,JGI,ASRE01000001-ASRE01032574,23709508,WGS
 Piromyces sp.,E2,Neocallimastigaceae,JGI,,,
-Neolecta irregularis,,Neolectaceae,UCR,,,
+Neolecta irregularis,,Neolectaceae,manual,,,
 Flagelloscypha sp.,PMI 526,Niaceae,JGI,,,
 Gymnopus luxurians,,Omphalotaceae,JGI,,,
 Coccidioides immitis,RS,Onygenaceae,GB,NW_001509356-NW_001509365,,RefSeq
@@ -215,7 +216,7 @@ Punctularia strigosozonata,HHB-11173 SS5,Punctulariaceae,GB,NW_006767433-NW_0067
 Pyronema confluens,CBS 100304,Pyronemataceae,JGI,CATG00000000,,
 Wilcoxina mikolae,CBS 423.85,Pyronemataceae,JGI,,,
 Ramaria rubella,UT-36052-T,Ramariaceae,JGI,,,R.acris
-Homoloaphlyctis polyrhiza,JEL 142,Rhizophydiales,GB,JH392917-JH393256,22072962,WGS
+Homoloaphlyctis polyrhiza,JEL142,Rhizophydiales,GB,JH392917-JH393256,22072962,WGS
 Rhizopus delemar,RA 99-880,Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,19578406,WGS
 Rozella allomycis,CSF55,Rozellaceae,GB,KE560349-KE561407,23932404,RefSeq
 Saccharata proteae,CBS 121410,Saccharataceae,JGI,,,
