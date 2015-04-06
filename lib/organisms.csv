@@ -36,7 +36,7 @@ Acidomyces richmondensis,BFW,Capnodiales,JGI,,,
 Catenaria anguillulae,PL171,Catenariaceae,JGI,,,
 Rhizoctonia solani,AG-1 IA,Ceratobasidiaceae,GB,KB317696-KB320343,,WGS
 Ceratocystis fimbriata,CBS 114723,Ceratocystidaceae,GB-WGS,APWK00000000,,WGS;Note=no annotation
-Chaetomium globosum,CBS 148.51,Chaetomiaceae,GB,NT_165976-NT_165989;NT_166001-NT_166004;NT_166006-NT_166024,,RefSeq
+Chaetomium globosum,CBS 148.51,Chaetomiaceae,GB,NT_165976-NT_165989;NT_166001-NT_166004;NT_166006-NT_166024,25720678,RefSeq
 Myceliophthora thermophila,ATCC 42464,Chaetomiaceae,GB,NC_016472-NC_016478,21964414,RefSeq
 Chaetosphaeria innumera,,Chaetosphaeriaceae,manual,,,
 Batrachochytrium dendrobatidis,JAM81,Chytridiomycota,JGI,NW_006281099-NW_006281225,,RefSeq
@@ -162,7 +162,6 @@ Myriangium duriaei,CBS 260.36,Myriangiaceae,JGI,,,
 Amorphotheca resinae,ATCC 22711,Myxotrichaceae,JGI,,,
 Oidiodendron maius,Zn,Myxotrichaceae,JGI,,,
 Fusarium fujikuroi,B14,Nectriaceae,GB,KB205952-KB206026,23472226,WGS
-Fusarium fujikuroi,IMI58289,Nectriaceae,GB,HF679023-HF679034,23825955,WGS
 Fusarium graminearum,PH-1,Nectriaceae,GB,NC_009493;NT_086521-NT_086522;NT_086532;NT_086543;NT_086552;NT_086557-NT_086561,17823352,RefSeq
 Nectria haematococca,FGSC 9596,Nectriaceae,GB,NW_003315673-NW_003315881,19714214,mating population VI
 Orpinomyces sp.,C1A,Neocallimastigaceae,JGI,ASRE01000001-ASRE01032574,23709508,WGS
