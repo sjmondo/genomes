@@ -44,7 +44,7 @@ Naiadella fluitans,ATCC 64713,Cintractiellaceae,JGI,,,
 Cladonia grayi,Cgr-DA2myc-ss,Cladoniaceae,JGI,,,
 Cladonia portentosa,,Cladoniaceae,manual,,,
 Claviceps purpurea,20.1,Clavicipitaceae,GB,CAGA01000001-CAGA01000191,23468653,WGS
-Epichloe festucae,Fl1,Clavicipitaceae,GB,JH158803-JH158942,,WGS;Note=no annotation
+Epichloe festucae,Fl1,Clavicipitaceae,manual,JH158803-JH158942,,WGS;Note=no annotation
 Metarhizium anisopliae,ARSEF 23,Clavicipitaceae,GB,NW_006916915-NW_006917090,21253567,RefSeq
 Clavulina sp.,PMI 390,Clavulinaceae,JGI,,,
 Coniophora puteana,RWD-64-598 SS2,Coniophoraceae,JGI,NW_006913053-NW_006913262,22745431,RefSeq
@@ -78,7 +78,7 @@ Yarrowia lipolytica,CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229
 Aureobasidium pullulans var. pullulans,EXF-150,Dothioraceae,JGI,,24984952,Note=no annotation in genbank
 Blumeria graminis f. sp. hordei,DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
 Erysiphe pisi,,Erysiphaceae,GB-WGS,CACM00000000,,WGS;Note=no annotation
-Rhodotorula minuta,MCA 4210,Erythrobasidiaceae,JGI,,,
+Rhodotorula minuta,MCA 4210,Erythrobasidiaceae,JGI,,,Note=family could be Cystobasidiales;other name Cystobasidium minutum
 Thermomyces lanuginosus,SSBP,Eurotiales,GB-WGS,ANHP00000000,23788551,Note=no annotation;WGS
 Exidia glandulosa,HHB12029,Exidiaceae,JGI,,,
 Exobasidium vaccinii,MPITM,Exobasidiaceae,JGI,,,
@@ -154,7 +154,7 @@ Umbelopsis ramanniana,NRRL 5844,Mucoraceae,JGI,,,
 Dothistroma septosporum,NZE10,Mycosphaerellaceae,GB,KB446535-KB446554,23236275,WGS
 Mycosphaerella fijiensis,,Mycosphaerellaceae,GB,NW_006921532-NW_006921587,23236275,RefSeq
 Mycosphaerella graminicola,IPO323,Mycosphaerellaceae,GB,NC_010222;NC_018198-NC_018218,21695235,RefSeq
-Cladosporium fulvum,CBS 131901,Mycosphaerellaceae,JGI,JH931634-JH932271,,"WGS;Note=Passalora fulva"
+Cladosporium fulvum,CBS 131901,Mycosphaerellaceae,JGI,JH931634-JH932271,23209441,"WGS;Note=Passalora fulva"
 Sphaerulina musiva,SO2202,Mycosphaerellaceae,GB,KB456260-KB456331,,WGS
 Zasmidium cellare,ATCC 36951,Mycosphaerellaceae,JGI,,,
 Zymoseptoria pseudotritici,STIR04_4.3.1,Mycosphaerellaceae,JGI,AFIR01000001-AFIR01001069,,WGS
@@ -210,8 +210,8 @@ Pseudogymnoascus destructans,20631-21,Pseudeurotiaceae,GB,CM001060;GL573169-GL57
 Puccinia graminis f. sp. tritici,CRL 75-36-700-3,Pucciniaceae,GB,NW_003526549-NW_003526939;NW_003533879-NW_003533880,21536894,RefSeq
 Puccinia striiformis f. sp. tritici,PST-130,Pucciniaceae,JGI,,,
 Punctularia strigosozonata,HHB-11173 SS5,Punctulariaceae,GB,NW_006767433-NW_006767627,22745431,RefSeq
-Pyronema confluens,CBS 100304,Pyronemataceae,JGI,CATG00000000,,
 Wilcoxina mikolae,CBS 423.85,Pyronemataceae,JGI,,,
+Pyronema confluens,CBS 100304,Pyronemataceae,JGI,HF935090-HF936677,24068976,
 Ramaria rubella,UT-36052-T,Ramariaceae,JGI,,,R.acris
 Homoloaphlyctis polyrhiza,JEL142,Rhizophydiales,GB,JH392917-JH393256,22072962,WGS
 Rhizopus delemar,RA 99-880,Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,19578406,WGS
