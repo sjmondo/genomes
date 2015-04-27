@@ -84,7 +84,6 @@
 "Yarrowia lipolytica",CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
 "Aureobasidium pullulans var. pullulans",EXF-150,Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
 "Blumeria graminis f. sp. hordei",DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
-"Erysiphe pisi",,Erysiphaceae,GB-WGS,CACM00000000,,"WGS;Note=no annotation"
 "Rhodotorula minuta","MCA 4210",Erythrobasidiaceae,JGI,,,"Note=family could be Cystobasidiales;other name Cystobasidium minutum"
 "Thermomyces lanuginosus",SSBP,Eurotiales,GB-WGS,ANHP00000000,23788551,"Note=no annotation;WGS"
 "Exidia glandulosa",HHB12029,Exidiaceae,JGI,,,

@@ -68,7 +68,7 @@ Saksenaea vasiformis,B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,
 Setosphaeria turcica,Et28A,Pleosporaceae,GB,NW_007359914-NW_007360320,23357949;23236275,RefSeq
 Syncephalastrum monosporum,B8922,Syncephalastraceae,GB-WGS,JNEN00000000,,
 Syncephalastrum racemosum,B6101,Syncephalastraceae,GB-WGS,JNDN00000000,,
-Thielavia terrestris,NRRL 8126,Chaetomiaceae,GB,NC_016457-NC_016462,21964414,RefSeq
+Thielavia terrestris,NRRL 8126,Chaetomiaceae,GB,NC_016457-NC_016462,21964414,RefSeq;Use JGI
 Tothia fuscella,CBS 130266,Venturiaceae,JGI,,,
 Trichaptum abietinum,L-15831 ss-1,Polyporaceae,JGI,,,
 Trichoderma reesei,QM6a,Hypocreaceae,GB,NW_006711148-NW_006711224;NC_003388,18454138,RefSeq;skip
@@ -76,3 +76,9 @@ Umbelopsis isabellina,B7317,Mucoraceae,GB-WGS,JNEQ00000000,24578268,
 Xylaria hypoxylon,,Xylariaceae,AFTOL,,,
 Trichoderma reesei,QM6a,Hypocreaceae,JGI,,18454138,
 Coniochaeta ligniaria,NRRL 30616,Coniochaetaceae,JGI,,,
+Ophiognomonia clavigignenti-juglandacearum,,Gnomoniaceae,GB,AEGN01000001-AEGN01028868,21676199,WGS;Note=This is a pooled library of multiple strains
+Saksenaea vasiformis,B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,not annotated
+Coprinellus micaceus,FP101781,Psathyrellaceae,JGI,,,not yet available on JGI
+Flagelloscypha sp.,PMI 526,Niaceae,JGI,,,not yet available on JGI
+"Alternaria arborescens","EGS 39-128",Pleosporaceae,GB,AIIC00000000,22559316,WGS
+"Erysiphe pisi",,Erysiphaceae,GB-WGS,CACM00000000,,"WGS;Note=no annotation"
