@@ -35,7 +35,7 @@ Polychaeton citri,CBS 116435,Capnodiaceae,JGI,,,
 Acidomyces richmondensis,BFW,Capnodiales,JGI,,,
 Catenaria anguillulae,PL171,Catenariaceae,JGI,,,
 Rhizoctonia solani,AG-1 IA,Ceratobasidiaceae,GB,KB317696-KB320343,,WGS
-Ceratocystis fimbriata,CBS 114723,Ceratocystidaceae,GB-WGS,APWK00000000,,WGS;Note=no annotation
+Ceratocystis fimbriata,CBS 114723,Ceratocystidaceae,GB,APWK02000001-APWK02001185,,WGS;Note=no annotation
 Chaetomium globosum,CBS 148.51,Chaetomiaceae,GB,NT_165976-NT_165989;NT_166001-NT_166004;NT_166006-NT_166024,25720678,RefSeq
 Myceliophthora thermophila,ATCC 42464,Chaetomiaceae,GB,NC_016472-NC_016478,21964414,RefSeq
 Chaetosphaeria innumera,,Chaetosphaeriaceae,manual,,,
@@ -93,7 +93,6 @@ Colletotrichum graminicola,M1.001,Glomerellaceae,GB,GG697331-GG697984;CM001021,,
 Glomerella cingulata,23,Glomerellaceae,JGI,,,Colletotrichum gloeosporoides
 Cenococcum geophilum,1.58,Gloniaceae,JGI,,,
 Glonium stellatum,,Gloniaceae,manual,,,
-Ophiognomonia clavigignenti-juglandacearum,,Gnomoniaceae,GB-WGS,AEGN00000000,21676199,WGS;Note=This is a pooled library of multiple strains
 Gonapodya prolifera,JEL478,Gonapodyaceae,JGI,,,
 Gymnascella citrina,NRRL 5970,Gymnascaceae,JGI,,,
 Ascocoryne sarcoides,NRRL 50072,Helotiaceae,JGI,KB205939-KB205951,22396667,WGS
@@ -167,7 +166,6 @@ Nectria haematococca,FGSC 9596,Nectriaceae,GB,NW_003315673-NW_003315881,19714214
 Orpinomyces sp.,C1A,Neocallimastigaceae,JGI,ASRE01000001-ASRE01032574,23709508,WGS
 Piromyces sp.,E2,Neocallimastigaceae,JGI,,,
 Neolecta irregularis,,Neolectaceae,manual,,,
-Flagelloscypha sp.,PMI 526,Niaceae,JGI,,,
 Gymnopus luxurians,,Omphalotaceae,JGI,,,
 Coccidioides immitis,RS,Onygenaceae,GB,NW_001509356-NW_001509365,,RefSeq
 Uncinocarpus reesii,1704,Onygenaceae,GB,NW_003052457-NW_003052500,,RefSeq
@@ -188,7 +186,7 @@ Phlebiopsis gigantea,11061_1 CR5-6,Phanerochaetaceae,JGI,,,
 Phycomyces blakesleeanus,NRRL 1555,Phycomycetaceae,JGI,,,
 Armillaria mellea,DSM 3731,Physalacriaceae,JGI,,,
 Cylindrobasidium torrendii,FP15055 ss-10,Physalacriaceae,JGI,,,
-Pichia kudriavzevii,M12,Pichiaceae,GB-WGS,JQFK01000000,23027839,WGS
+Pichia kudriavzevii,SD108,Pichiaceae,GB,JQFK01000000,23027839,WGS
 Piedraia hortae,CBS 480.64,Piedraiaceae,JGI,,,
 Pisolithus tinctorius,Marx 270,Pisolithaceae,JGI,,,
 Verticillium dahliae,JR2,Plectosphaerellaceae,JGI,CM001863-CM001870;KE108823-KE108829,23685541,RefSeq
@@ -204,7 +202,6 @@ Fibroporia radiculosa,TFFH 294,Polyporaceae,GB,HE796866-HE797726,22247176,WGS
 Trametes versicolor,FP-101664 SS1,Polyporaceae,GB,NW_007360321-NW_007360603,22745431,RefSeq
 Wolfiporia cocos,MD-104 SS10,Polyporaceae,JGI,KB467831-KB468178,22745431,WGS
 Protomyces inouyei,,Protomycetaceae,manual,,,
-Coprinellus micaceus,FP101781,Psathyrellaceae,JGI,,,not yet available on JGI
 Coprinopsis cinerea,okayama7#130,Psathyrellaceae,GB,NW_003307477-NW_003307544,20547848,RefSeq
 Pseudogymnoascus destructans,20631-21,Pseudeurotiaceae,GB,CM001060;GL573169-GL575015;CM001060,,WGS
 Puccinia graminis f. sp. tritici,CRL 75-36-700-3,Pucciniaceae,GB,NW_003526549-NW_003526939;NW_003533879-NW_003533880,21536894,RefSeq
@@ -218,7 +215,7 @@ Rhizopus delemar,RA 99-880,Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,
 Rozella allomycis,CSF55,Rozellaceae,GB,KE560349-KE561407,23932404,RefSeq
 Saccharata proteae,CBS 121410,Saccharataceae,JGI,,,
 Ashbya gossypii,FDAG1,Saccharomycetaceae,GB,NC_016756;NC_005785;NC_005788;NC_005787;NC_005786;NC_005784;NC_005783;NC_005782;NC_005789,15001715,RefSeq
-Dekkera bruxellensis,CBS 2499,Saccharomycetaceae,JGI,KB454452-KB454483,22663979,RefSeq
+Dekkera bruxellensis,CBS 2499,Pichiaceae,JGI,KB454452-KB454483,22663979,RefSeq
 Kazachstania africana,CBS 2517,Saccharomycetaceae,GB,NC_018951;NC_018950;NC_018949;NC_018948;NC_018947;NC_018946;NC_018945;NC_018944;NC_018943;NC_018942;NC_018941;NC_018940,,RefSeq
 Kluyveromyces lactis,NRRL Y-1140,Saccharomycetaceae,GB,NC_006037-NC_006042,15229592,RefSeq
 Komagataella pastoris,GS115,Saccharomycetaceae,GB,NC_012963-NC_012966,21575661,RefSeq
@@ -230,7 +227,6 @@ Candida albicans,SC5314,Saccharomycetales,GB,NC_002653;NW_139421-NW_139833,15123
 Ogataea parapolymorpha,DL-1,Saccharomycetales,GB,CM002300-CM002306,24279325,WGS
 Nakaseomyces bacillisporus,,Saccharomycodaceae,Genoscope,,,
 Nakaseomyces delphensis,,Saccharomycodaceae,Genoscope,,,
-Saksenaea vasiformis,B4078,Saksenaeaceae,GB-WGS,JNDT00000000,,
 Schizophyllum commune,H4-8,Schizophyllaceae,GB,NW_003315637-NW_003315672,,RefSeq
 Schizopora paradoxa,KUC8140,Schizoporaceae,JGI,,,
 Schizosaccharomyces octosporus,yFS286,Schizosaccharomycetaceae,GB,KE503206-KE503210,21511999,RefSeq
@@ -306,3 +302,4 @@ Rhizopogon vinicolor,AM-OR11-026,Rhizopogonaceae,JGI,,,
 Stagonospora nodorum,SN15,Phaeosphaeriaceae,JGI,,,
 Thielavia terrestris,NRRL 8126,Chaetomiaceae,JGI,,,
 Trichoderma virens,Gv29-8,Hypocreaceae,JGI,,,
+Hesseltinella vesiculosa,NRRL 3301,Cunninghamellaceae,JGI,,,
