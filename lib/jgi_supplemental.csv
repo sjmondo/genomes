@@ -1,0 +1,43 @@
+#Species,Strain,Family,Source,Accession,PMID,Notes
+Amniculicola lignicola,CBS 123094,Amniculicolaceae,JGI,,,PI=Pedro Crous
+Aporpium caryae,L-13461,Aporpiaceae,JGI,,,PI=Dan Linder
+Artolenzites elegans,CIRM 1663,Coriolaceae,JGI,,,PI=Eric Record
+Ascodesmis nigricans,CBS 389.68,Ascodesmidaceae,JGI,,,PI=Minou Nowrousian
+Bimuria novae-zelandiae,CBS 107.79,Didymosphaeriaceae,JGI,,,PI=Pedro Crous
+Byssothecium circinans, CBS 675.92,Massarinaceae,JGI,,,PI=Pedro Crous
+Candida caseinolytica,NRRL Y-17796,Trigonopsidaceae,JGI,,,PI=Tom Jeffries
+Cephaloascus albidus,ATCC 66658,Cephaloascaceae,JGI,,,PI=Jon Magnuson
+Chionosphaera apobasidialis,52639,Chionosphaeraceae,JGI,,,PI=Jon Magnuson
+Clathrospora elynae,CBS 161.51,Diademaceae,JGI,,,PI=Pedro Crous
+Corynespora cassiicola,CCP,Corynesporascaceae,JGI,,,PI=Francis Martin
+Delitschia confertaspora,ATCC 74209,Delitschiaceae,JGI,,,PI=Gerald Bills
+Dissoconium aciculare,CBS 342.82,Dissoconiaceae,JGI,,,PI=Pedro Crous
+Dothidotthia symphoricarpi,CBS 119687,Dothidotthiaceae,JGI,,,PI=Pedro Crous
+Eremomyces bilateralis,CBS 781.70,Eremomycetaceae,JGI,,,PI=Pedro Crous
+Gyrodon lividus,BX,Gyrodontaceae,JGI,,,PI=Francis Martin
+Hesseltinella vesiculosa,NRRL 3301,Cunninghamellaceae,JGI,,,PI=Tim James
+Lentinus tigrinus,ALCF2SS1-6,Lentinaceae,JGI,,,PI=David Hibbett
+Lipomyces starkeyi,NRRL Y-11557,Lipomycetaceae,JGI,,,PI=Tom Jeffries
+Lophium mytilinum,CBS 269.34,Mytilinidiaceae,JGI,,,PI=Pedro Crous
+Loramyces juncicola,46458,Loramycetaceae,JGI,,,PI=Jon Magnuson
+Microascus trigonosporus,CBS 218.31,Microascaceae,JGI,,,PI=Kathyrn Bushley;Derek Johnson
+Morchella conica,CCBAS932,Morchellaceae,JGI,,,PI=Francis Martin;Joey Spatafora
+Niesslia exilis,CBS 358.70,Niessliaceae,JGI,,,PI=Kathyrn Bushley;Derek Johnson
+Periconia macrospinosa,DSE2036,mitosporic_Halosphaeriaceae,JGI,,,PI=Gabor Kovacs 
+Polyplosphaeria fusca,CBS 125425,Tetraplosphaeriaceae,JGI,,,PI=Pedro Crous
+Rhodotorula minuta,MCA 4210,Cystobasidiaceae,JGI,,,PI=Cathie Aime
+Terfezia boudieri,ATCC MYA-4762,Pezizaceae,JGI,,,PI=Francis Martin
+Testicularia cyperi,MCA 3645,Anthracoideaceae,JGI,,,PI=Cathie Aime
+Thozetella sp.,PMI_491,mitosporic_Chaetosphaeriaceae,JGI,,,PI=Greg Bonito
+Tothia fuscella,CBS 130266,Venturiaceae,JGI,,,PI=Pedro Crous
+Trichodelitschia bisporula,CBS 262.69,Phaeotrichaceae,JGI,,,PI=Greg Bonito
+Trinosporium guianense,CBS 132537,Xylonomycetaceae,JGI,,,PI=Romina Gazis
+Cylindrobasidium torrendii,FP15055 ss-10,Corticiaceae,JGI,,25683379,
+Monacrosporium haptotylum,CBS 200.50,mitosporic_Orbiliaceae,JGI,,24244185;23770896,
+Basidioascus undulatus,,Geminibasidiaceae,JGI,,,PI=Unknown
+Clonostachys rosea,CBS 125111,Bionectriaceae,JGI,,,PI=Kathryn Bushley
+Coccodinium bartschii,CBS 121709,Coccodiniaceae,JGI,,,PI=Pedro Crous
+Corollospora maritima,CBS 119819,Halosphaeriaceae,JGI,,,PI=Joey Spatafora
+Mutinus elegans,ME.BST,Phallaceae,JGI,,,PI=Jon Magnuson
+Piptocephalis cylindrospora,,Piptocephalidaceae,JGI,,,PI=Tim James
+Sarcoscypha coccinea,ATCC 58028,Sarcoscyphaceae,JGI,,,PI=Jon Magnuson
