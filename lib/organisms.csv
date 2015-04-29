@@ -97,7 +97,7 @@
 "Aureobasidium pullulans var. pullulans",EXF-150,Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
 "Eremomyces bilateralis","CBS 781.70",Eremomycetaceae,JGI,,,
 "Blumeria graminis f. sp. hordei",DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
-"Rhodotorula minuta","MCA 4210",Erythrobasidiaceae,JGI,,,"Note=family could be Cystobasidiales;other name Cystobasidium minutum"
+"Rhodotorula minuta","MCA 4210",Erythrobasidiaceae,JGI,,,
 "Thermomyces lanuginosus",SSBP,Eurotiales,GB-WGS,ANHP00000000,23788551,"Note=no annotation;WGS"
 "Exidia glandulosa",HHB12029,Exidiaceae,JGI,,,
 "Exobasidium vaccinii",MPITM,Exobasidiaceae,JGI,,,
