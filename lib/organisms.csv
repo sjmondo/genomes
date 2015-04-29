@@ -51,7 +51,6 @@
 "Thielavia terrestris","NRRL 8126",Chaetomiaceae,JGI,,,
 "Chaetosphaeria innumera",,Chaetosphaeriaceae,manual,,,
 "Chionosphaera apobasidialis",52639,Chionosphaeraceae,JGI,,,
-"Batrachochytrium dendrobatidis",JAM81,Chytridiomycota,JGI,NW_006281099-NW_006281225,,RefSeq
 "Naiadella fluitans","ATCC 64713",Cintractiellaceae,JGI,,,
 "Cladonia grayi",Cgr-DA2myc-ss,Cladoniaceae,JGI,,,
 "Cladonia portentosa",,Cladoniaceae,manual,,,
@@ -74,9 +73,7 @@
 "Spathularia flavida",,Cudoniaceae,manual,,,
 "Fellomyces polyborus",,Cuniculitremaceae,Dikaryome,,,"May not be available"
 "Hesseltinella vesiculosa","NRRL 3301",Cunninghamellaceae,JGI,,,
-"Hesseltinella vesiculosa","NRRL 3301",Cunninghamellaceae,JGI,,,
 "Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS
-"Rhodotorula minuta","MCA 4210",Cystobasidiaceae,JGI,,,
 "Calocera cornea",HHB12733,Dacrymycetaceae,JGI,,,
 "Dacryopinax sp.","DJM-731 SS1",Dacrymycetaceae,GB,JH795855-JH795953,22745431,WGS
 "Cladosporium sphaerospermum","UM 843",Davidiellaceae,GB,KL650041-KL650157,22544899,WGS
@@ -251,6 +248,7 @@
 "Wilcoxina mikolae","CBS 423.85",Pyronemataceae,JGI,,,
 "Pyronema confluens","CBS 100304",Pyronemataceae,JGI,HF935090-HF936677,24068976,
 "Ramaria rubella",UT-36052-T,Ramariaceae,JGI,,,R.acris
+"Batrachochytrium dendrobatidis",JAM81,Rhizophydiales,JGI,NW_006281099-NW_006281225,,RefSeq
 "Homoloaphlyctis polyrhiza",JEL142,Rhizophydiales,GB,JH392917-JH393256,22072962,WGS
 "Rhizopus delemar","RA 99-880",Rhizopodaceae,GB,CH476732-CH476759;GG669511-GG669565,19578406,WGS
 "Rhizopogon salebrosus",TDB-379,Rhizopogonaceae,JGI,,,
