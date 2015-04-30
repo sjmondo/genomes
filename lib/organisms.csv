@@ -229,10 +229,10 @@
 "Verticillium dahliae",JR2,Plectosphaerellaceae,JGI,CM001863-CM001870;KE108823-KE108829,23685541,RefSeq
 "Acremonium alcalophilum",,Plectosphaerellaceae,JGI,,,
 "Pleomassaria siparia","CBS 279.74",Pleomassariaceae,JGI,,,
-"Cochliobolus heterostrophus",C5,Pleosporaceae,GB,KB445569-KB445636,23236275,WGS
+"Cochliobolus heterostrophus",C5,Pleosporaceae,GB,KB445569-KB445636,23236275,
 "Pyrenophora tritici-repentis",,Pleosporaceae,GB,NW_001939244-NW_001939290;NW_002475730,23316438,RefSeq
 "Pleurotus ostreatus",PC15,Pleurotaceae,GB,KL198004-KL198015,24958869,RefSeq
-"Volvariella volvacea",V23,Pluteaceae,JGI,KB722736-KB722788,23526973,WGS
+"Volvariella volvacea",V23,Pluteaceae,JGI,KB722736-KB722788,23526973,
 "Pneumocystis jirovecii",SE8,Pneumocystidaceae,GB,NC_020331;CAKM01000001-CAKM01000355,23269827,"WGS;Note=annotation truncated. To obtain from author."
 "Dichomitus squalens","LYAD-421 SS1",Polyporaceae,GB,NW_006766883-NW_006767424,22745431,RefSeq
 "Fibroporia radiculosa","TFFH 294",Polyporaceae,GB,HE796866-HE797726,22247176,WGS
