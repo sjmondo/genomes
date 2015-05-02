@@ -44,6 +44,7 @@ Boled1	Boletus_edulis_BED1
 Botbo1	Botryobasidium_botryosum_FD-172_SS1
 Botdo1_1	Botryosphaeria_dothidea_CBS_115476
 Bcin	Botrytis_cinerea_B05
+Bcir	Byssothecium_circinans_CBS_675
 Cadsp1	Cadophora_sp_DSE1049
 Cori	Caliciopsis_orientalis_CBS_138_64
 Calco1	Calocera_cornea_HHB12733
@@ -142,6 +143,7 @@ Hypsu1	Hypholoma_sublateritium
 Hyspu1_1	Hysterium_pulicare_CBS_123377
 Ilysp1	Ilyonectria_sp_PMI-82
 Jaaar1	Jaapia_argillacea_MUCL_33604
+Jamsp1	Jaminaea_sp_MCA_5214
 Krho	Karstenula_rhodostoma_CBS_690
 Kafr	Kazachstania_africana_CBS_2517
 Klac	Kluyveromyces_lactis_NRRL_Y-1140
@@ -253,6 +255,7 @@ Rruf	Rhytidhysteron_rufulum_CBS_306
 Rall	Rozella_allomycis_CSF55
 Sacpr1	Saccharata_proteae_CBS_121410
 vR64-2-1	Saccharomyces_cerevisiae_S288C
+Svas	Saksenaea_vasiformis_B4078
 Sarco1	Sarcoscypha_coccinea_ATCC_58028
 Scom	Schizophyllum_commune_H4-8
 Schpa1	Schizopora_paradoxa_KUC8140
@@ -306,7 +309,7 @@ Triol1	Trichosporon_oleaginosus_IBC0246
 Trigu1	Trinosporium_guianense_CBS_132537
 Tsp	Tritirachium_sp_CBS_265
 Tryvi1	Trypethelium_eluteriae
-Tmel	Tuber_melanosporum
+Tubme1	Tuber_melanosporum
 Tulca1	Tulasnella_calospora_AL13-4D
 Umbra1	Umbelopsis_ramanniana_NRRL_5844
 Uree	Uncinocarpus_reesii_1704
