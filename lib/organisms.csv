@@ -150,7 +150,7 @@
 "Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,15846337,RefSeq
 "Malassezia globosa",,Malasseziaceae,GB,NW_001849832-NW_001849898,18000048,RefSeq
 "Moniliophthora perniciosa",FA553,Marasmiaceae,JGI,NW_002479998-NW_002505053,,RefSeq
-"Byssothecium circinans"," CBS 675.92",Massarinaceae,JGI,,,
+"Byssothecium circinans","CBS 675.92",Massarinaceae,JGI,,,
 "Melampsora laricis-populina",98AG31,Melampsoraceae,JGI,NW_006768765-NW_006769226,21536894,RefSeq
 "Melanconium sp.","NRRL 54901",Melanconidaceae,JGI,,,
 "Melanomma pulvis-pyrius","CBS 109.77",Melanommataceae,JGI,,,
@@ -168,6 +168,7 @@
 "Enterocytozoon bieneusi",H348,Microsporidia,JGI,,,
 "Nematocida parisii",ERTm1,Microsporidia,JGI,,,
 "Nosema ceranae",BRL01,Microsporidia,JGI,,,
+"Jaminaea sp.","MCA 5214",Microstromatales,JGI,,,
 "Rhodotorula phylloplana",,Microstromatales,Dikaryome,,,
 "Meira geulakonigae",,Mikronegeriaceae,Dikaryome,,,
 "Meira miltonrushii","CBS 12591",Mikronegeriaceae,JGI,,,
@@ -270,7 +271,7 @@
 "Schizophyllum commune",H4-8,Schizophyllaceae,GB,NW_003315637-NW_003315672,,RefSeq
 "Schizopora paradoxa",KUC8140,Schizoporaceae,JGI,,,
 "Schizosaccharomyces octosporus",yFS286,Schizosaccharomycetaceae,GB,KE503206-KE503210,21511999,RefSeq
-"Schizosaccharomyces pombe",,Schizosaccharomycetaceae,GB,NC_003421-NC_001326,11859360,RefSeq
+"Schizosaccharomyces pombe",972h-,Schizosaccharomycetaceae,GB,NC_003421-NC_001326,11859360,RefSeq
 "Scleroderma citrinum","Foug A",Sclerodermataceae,JGI,,,
 "Botrytis cinerea",B05.10,Sclerotiniaceae,GB,NW_001813983-NW_001814571,,RefSeq
 "Sclerotinia sclerotiorum","1980 UF-70",Sclerotiniaceae,GB,NW_001820797-NW_001820835,,RefSeq
@@ -314,7 +315,7 @@
 "Tritirachium sp.","CBS 265.96",Tritirachiaceae,JGI,,,
 "Trypethelium eluteriae",,Trypetheliaceae,JGI,,,
 "Choiromyces venosus",120613-1,Tuberaceae,JGI,,,
-"Tuber melanosporum",,Tuberaceae,GB,NW_003298755-NW_003299152,20348908,RefSeq;RefSeq=NZ_CABJ00000000
+"Tuber melanosporum",,Tuberaceae,JGI,NW_003298755-NW_003299152,20348908,RefSeq;RefSeq=NZ_CABJ00000000
 "Tulasnella calospora",AL13-4D,Tulasnellaceae,JGI,,,
 "Pseudozyma antarctica",T-34,Ustilaginaceae,GB,DF196767-DF196793,23558529,WGS
 "Sporisorium reilianum",SRZ2,Ustilaginaceae,GB,FQ311430-FQ311474,21148393,WGS
