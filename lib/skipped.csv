@@ -1,6 +1,5 @@
 #Species,Strain,Family,Source,Accession,PMID,Notes
-"Leucoagaricus gongylophorus",Ac12,Agaricaceae,JGI,,23584789,"WGS;Note=no annotation;skip"
-"Leucoagaricus gongylophorus",Ac12,Agaricaceae,GB-WGS,ANIS00000000,23584789,"WGS;Note=no annotation;skip"
+"Leucoagaricus gongylophorus",Ac12,Agaricaceae,JGI,ANIS00000000,23584789,"WGS;Note=no annotation"
 "Agaricostilbum haphaenes","CBS 175.79",Agaricostilbaceae,JGI,,,
 "Agaricostilbum hyphaenes","ATCC MYA-4628",Agaricostilbaceae,JGI,,,"Note=altstrain=CBS 175.79"
 "Conidiobolus incongruus",B7586,Ancylistaceae,GB-WGS,JNEM00000000,,
