@@ -1,11 +1,11 @@
 #Species,Strain,Family,Source,Accession,PMID,Notes
-"Acarospora strigata","CBS 132363",Acarosporaceae,manual,,23557360,
+"Acarospora strigata","CBS 132363",Acarosporaceae,manual_MAKER,,23557360,
 "Agaricus bisporus var. bisporus",H97,Agaricaceae,JGI,NW_006267344-NW_006267372,23045686,RefSeq
 "Macrolepiota fuliginosa",,Agaricaceae,JGI,,,
 "Agaricostilbum hyphaenes","ATCC MYA-4628",Agaricostilbaceae,JGI,,,
 "Sporobolomyces linderae","CBS 7893",Agaricostilbomycetes,JGI,,,
-"Ajellomyces capsulatus",NAm1,Ajellomycetaceae,GB,NW_001813703-NW_001813982,19717792,
-"Paracoccidioides brasiliensis",Pb18,Ajellomycetaceae,GB,KN275957-KN276013,22046142,RefSeq
+"Histoplasma capsulatum",NAm1,Ajellomycetaceae,JGI,NW_001813703-NW_001813982,19717792,
+"Paracoccidioides brasiliensis",Pb03,Ajellomycetaceae,JGI,KN275957-KN276013,22046142,RefSeq
 "Amanita muscaria",Koide,Amanitaceae,JGI,,25706625,
 "Amanita thiersii",Skay4041,Amanitaceae,JGI,,,
 "Amniculicola lignicola","CBS 123094",Amniculicolaceae,JGI,,,
@@ -18,14 +18,14 @@
 "Archaeorhizomyces finlayi","CBS 128710",Archaeorhizomycetaceae,manual,,,
 "Lepidopterella palustris",,Argynnaceae,JGI,,,
 "Arthonia rubrocincta",Arru_GBP0182,Arthoniaceae,manual,,23557360,
-"Arthroderma benhamiae","CBS 112371",Arthrodermataceae,GB,NW_003315046-NW_003315113,21247460,RefSeq
-"Trichophyton rubrum","CBS 118892",Arthrodermataceae,GB,NW_003456394-NW_003456429,19457268,RefSeq
+"Arthroderma benhamiae","CBS 112371",Arthrodermataceae,JGI,NW_003315046-NW_003315113,21247460,RefSeq
+"Trichophyton rubrum","CBS 118892",Arthrodermataceae,JGI,NW_003456394-NW_003456429,19457268,RefSeq
 "Ascobolus immersus",RN42,Ascobolaceae,JGI,,,
 "Ascodesmis nigricans","CBS 389.68",Ascodesmidaceae,JGI,,,
 "Ascosphaera apis","ARSEF 7405",Ascosphaeraceae,manual,CH980625-CH981371,17069642;22747707,http://hymenopteragenome.org/beebase/?q=Aapis_data
-"Aspergillus fumigatus",Af293,Aspergillaceae,GB,NC_007194-NC_007201,16372009,RefSeq
+"Aspergillus fumigatus",Af293,Aspergillaceae,JGI,NC_007194-NC_007201,16372009,RefSeq;Should get from AspGD?
 "Aspergillus niger","ATCC 1015",Aspergillaceae,JGI,,21543515,
-"Penicillium chrysogenum","Wisconsin 54-1255",Aspergillaceae,GB,AM920416-AM920464,18820685,
+"Penicillium chrysogenum","Wisconsin 54-1255",Aspergillaceae,JGI,AM920416-AM920464,18820685,
 "Fibulorhizoctonia sp.","CBS 109695",Atheliaceae,JGI,,,
 "Piloderma croceum","F 1598",Atheliaceae,JGI,,,
 "Atractiellales sp.","PMI 95",Atractiellaceae,JGI,,,
@@ -40,14 +40,14 @@
 "Botryobasidium botryosum","FD-172 SS1",Botryobasidiaceae,JGI,KL198016-KL198349,24958869,WGS
 "Botryosphaeria dothidea","CBS 115476",Botryosphaeriaceae,JGI,,,
 "Calosphaeria pulchella",,Calosphaeriaceae,manual,,,
-"Togninia minima",UCRPA7,Calosphaeriaceae,GB,NW_006920908-NW_006921531,,RefSeq
 "Polychaeton citri","CBS 116435",Capnodiaceae,JGI,,,
 "Acidomyces richmondensis",BFW,Capnodiales,JGI,,,
 "Catenaria anguillulae",PL171,Catenariaceae,JGI,,,
 "Cephaloascus albidus","ATCC 66658",Cephaloascaceae,JGI,,,
 "Rhizoctonia solani","AG-1 IA",Ceratobasidiaceae,GB,KB317696-KB320343,,WGS
-"Chaetomium globosum","CBS 148.51",Chaetomiaceae,GB,NT_165976-NT_165989;NT_166001-NT_166004;NT_166006-NT_166024,25720678,RefSeq
-"Myceliophthora thermophila","ATCC 42464",Chaetomiaceae,GB,NC_016472-NC_016478,21964414,RefSeq
+"Rhizoctonia solani","AG-1 IB",Ceratobasidiaceae,JGI,,,
+"Chaetomium globosum","CBS 148.51",Chaetomiaceae,JGI,NT_165976-NT_165989;NT_166001-NT_166004;NT_166006-NT_166024,25720678,
+"Myceliophthora thermophila","ATCC 42464",Chaetomiaceae,JGI,NC_016472-NC_016478,21964414,
 "Thielavia terrestris","NRRL 8126",Chaetomiaceae,JGI,,21964414,
 "Chaetosphaeria innumera",,Chaetosphaeriaceae,manual,,,
 "Chionosphaera apobasidialis",52639,Chionosphaeraceae,JGI,,,
@@ -56,7 +56,8 @@
 "Cladonia portentosa",,Cladoniaceae,manual,,,
 "Claviceps purpurea",20.1,Clavicipitaceae,GB,CAGA01000001-CAGA01000191,23468653,WGS
 "Epichloe festucae",Fl1,Clavicipitaceae,manual,JH158803-JH158942,,"WGS;Note=no annotation"
-"Metarhizium anisopliae","ARSEF 23",Clavicipitaceae,GB,NW_006916915-NW_006917090,21253567,RefSeq
+"Metarhizium robertsii","ARSEF 23",Clavicipitaceae,JGI,NW_006916915-NW_006917090,21253567,
+"Metarhizium acridum","CQMa 102",Clavicipitaceae,JGI,,,
 "Clavulina sp.","PMI 390",Clavulinaceae,JGI,,,
 "Coniochaeta ligniaria","CBS 111746",Coniochaetaceae,manual,,,
 "Coniophora puteana","RWD-64-598 SS2",Coniophoraceae,JGI,NW_006913053-NW_006913262,22745431,RefSeq
@@ -72,45 +73,45 @@
 "Spathularia flavida",,Cudoniaceae,manual,,,
 "Fellomyces polyborus",,Cuniculitremaceae,Dikaryome,,,"May not be available"
 "Hesseltinella vesiculosa","NRRL 3301",Cunninghamellaceae,JGI,,,
-"Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS
+"Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,WGS;Anamorph=Phialophora europaea
 "Calocera cornea",HHB12733,Dacrymycetaceae,JGI,,,
-"Dacryopinax sp.","DJM-731 SS1",Dacrymycetaceae,GB,JH795855-JH795953,22745431,WGS
+"Dacryopinax sp.","DJM-731 SSP1",Dacrymycetaceae,JGI,JH795855-JH795953,22745431,"Note=strain name is actually DJM-731 SS1" 
 "Cladosporium sphaerospermum","UM 843",Davidiellaceae,GB,KL650041-KL650157,22544899,WGS
-"Debaryomyces hansenii","CBS 767",Debaryomycetaceae,GB,NC_006043-NC_006049;NC_010166,15229592,RefSeq
+"Debaryomyces hansenii","CBS 767",Debaryomycetaceae,JGI,NC_006043-NC_006049;NC_010166,15229592,
 "Lodderomyces elongisporus","NRRL YB-4239",Debaryomycetaceae,GB,NW_001813675-NW_001813702,19465905,RefSeq
 "Meyerozyma guilliermondii","ATCC 6260",Debaryomycetaceae,GB,NW_001809792-NW_001809800,19465905,RefSeq
 "Millerozyma farinosa","CBS 7064",Debaryomycetaceae,GB,NC_020213-NC_020226,22384408,RefSeq
 "Pichia stipitis","CBS 6054",Debaryomycetaceae,JGI,NC_009068;NC_009042-NC_009048,17334359,RefSeq
-"Spathaspora passalidarum","NRRL Y-27907",Debaryomycetaceae,GB,NW_006767425-NW_006767432,21788494,RefSeq
+"Spathaspora passalidarum","NRRL Y-27907",Debaryomycetaceae,JGI,NW_006767425-NW_006767432,21788494,RefSeq
 "Delitschia confertaspora","ATCC 74209",Delitschiaceae,JGI,,,
-"Marssonina brunnea f. sp. multigermtubi",MB_m1,Dermateaceae,GB,NW_006763039-NW_006763127,22876864,RefSeq
+"Marssonina brunnea f. sp. multigermtubi",MB_m1,Dermateaceae,JGI,NW_006763039-NW_006763127,22876864,RefSeq
 "Clathrospora elynae","CBS 161.51",Diademaceae,JGI,,,
 "Anthostoma avocetta","NRRL 3190",Diatrypaceae,JGI,,,
-"Eutypa lata",UCREL1,Diatrypaceae,GB,NW_006913660-NW_006915993,23723393,RefSeq
+"Eutypa lata",UCREL1,Diatrypaceae,JGI,NW_006913660-NW_006915993,23723393,
 "Didymella exigua","CBS 183.55",Didymellaceae,JGI,,,
 "Bimuria novae-zelandiae","CBS 107.79",Didymosphaeriaceae,JGI,,,
 "Galactomyces geotrichum","CLIB 918",Dipodascaceae,CRG,,,
-"Yarrowia lipolytica",CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
+"Yarrowia lipolytica",CLIB122,Dipodascaceae,JGI,NC_006067-NC_006072;NC_002659,15229592,
 "Dissoconium aciculare","CBS 342.82",Dissoconiaceae,JGI,,,
 "Dothidotthia symphoricarpi","CBS 119687",Dothidotthiaceae,JGI,,,
 "Aureobasidium pullulans var. pullulans",EXF-150,Dothioraceae,JGI,,24984952,"Note=no annotation in genbank"
 "Eremomyces bilateralis","CBS 781.70",Eremomycetaceae,JGI,,,
 "Blumeria graminis f. sp. hordei",DH14,Erysiphaceae,JGI,HF938118-HF944960,21148392,RefSeq
 "Rhodotorula minuta","MCA 4210",Erythrobasidiaceae,JGI,,,
-"Thermomyces lanuginosus",SSBP,Eurotiales,GB-WGS,ANHP00000000,23788551,"Note=no annotation;WGS"
+"Thermomyces lanuginosus",SSBP,Eurotiales,manual_MAKER,ANHP00000000,23788551,"Note=no annotation;WGS"
 "Exidia glandulosa",HHB12029,Exidiaceae,JGI,,,
 "Exobasidium vaccinii",MPITM,Exobasidiaceae,JGI,,,
 "Fistulina hepatica","ATCC 64428",Fistulinaceae,JGI,,,
-"Fomitopsis pinicola","FP-58527 SS1",Fomitopsidaceae,GB,KE504122-KE504625,22745431,WGS
+"Fomitopsis pinicola","FP-58527 SS1",Fomitopsidaceae,JGI,KE504122-KE504625,22745431,WGS
 "Postia placenta","MAD 698-R",Fomitopsidaceae,JGI,,,RefSeq
 "Ganoderma sp.","10597 SS1",Ganodermataceae,JGI,,,
 "Gloeophyllum trabeum","ATCC 11539",Gloeophyllaceae,JGI,NW_006920410-NW_006920851,22745431,RefSeq
 "Neolentinus lepideus","HHB14362 ss-1",Gloeophyllaceae,JGI,,,
 "Rhizophagus irregularis","DAOM 181602",Glomeraceae,JGI,KE392238-KE392345;KI274019-KI301949,24277808,RefSeq
-"Colletotrichum graminicola",M1.001,Glomerellaceae,GB,GG697331-GG697984;CM001021,,WGS
+"Colletotrichum graminicola",M1.001,Glomerellaceae,JGI,GG697331-GG697984;CM001021,,
 "Glomerella cingulata",23,Glomerellaceae,JGI,,,"Colletotrichum gloeosporoides"
 "Cenococcum geophilum",1.58,Gloniaceae,JGI,,,
-"Glonium stellatum",,Gloniaceae,manual,,,
+"Glonium stellatum","CBS 207.34",Gloniaceae,JGI,,,"Note=make sure this v2.0"
 "Gonapodya prolifera",JEL478,Gonapodyaceae,JGI,,,
 "Graphis scripta","CBS 132367",Graphidaceae,manual,,23557360,
 "Gymnascella citrina","NRRL 5970",Gymnascaceae,JGI,,,
@@ -119,6 +120,7 @@
 "Ascocoryne sarcoides","NRRL 50072",Helotiaceae,JGI,KB205939-KB205951,22396667,WGS
 "Cadophora sp.",DSE1049,Helotiaceae,JGI,,,
 "Glarea lozoyensis",74030,Helotiaceae,GB,NW_007360983-NW_007361004,22302591,RefSeq
+"Glarea lozoyensis",ATCC 20868,Helotiaceae,JGI,,,
 "Meliniomyces bicolor",E,Helotiaceae,JGI,,,
 "Chalara longipes",BDJ,Helotiales,JGI,,,
 "Hymenoscyphus fraxineus",KW1,"Helotiales incertae sedis",manual,,,
@@ -142,13 +144,14 @@
 "Lentinus tigrinus",ALCF2SS1-6,Lentinaceae,JGI,,,
 "Lentithecium fluviatile","CBS 122367",Lentitheciaceae,JGI,,,
 "Meliniomyces variabilis",F,Leotiomycetes,JGI,,,
-"Leptosphaeria maculans",JN3,Leptosphaeriaceae,GB,NW_003533803-NW_003533878,21326234,
+"Leptosphaeria maculans",JN3,Leptosphaeriaceae,JGI,NW_003533803-NW_003533878,21326234,
 "Lichtheimia corymbifera","FSU 9682",Lichtheimiaceae,GB,CBTN010000001-CBTN010000209,25121733,WGS
 "Lichtheimia hyalospora","FSU 10163",Lichtheimiaceae,JGI,,,
 "Lophiostoma macrostomum","CBS 122681",Lophiostomataceae,JGI,,,
 "Loramyces juncicola",46458,Loramycetaceae,JGI,,,
 "Magnaporthe oryzae",70-15,Magnaporthaceae,GB,NC_017844;NC_017849-NC_017854;NW_003803315-NW_003803360;NC_017854;NC_017853;NC_017852;NC_017851;NC_017850;NC_017849;NC_017844,15846337,RefSeq
 "Malassezia globosa",,Malasseziaceae,GB,NW_001849832-NW_001849898,18000048,RefSeq
+"Malassezia sympodialis","ATCC 42132",Malasseziaceae,JGI,,23341551,
 "Moniliophthora perniciosa",FA553,Marasmiaceae,JGI,NW_002479998-NW_002505053,,RefSeq
 "Byssothecium circinans","CBS 675.92",Massarinaceae,JGI,,,
 "Melampsora laricis-populina",98AG31,Melampsoraceae,JGI,NW_006768765-NW_006769226,21536894,RefSeq
