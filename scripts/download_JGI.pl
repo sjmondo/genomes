@@ -87,27 +87,11 @@ while( my ($type,$d) = each %$folder ) {
 		    my ($prefix,$file) = @$file_obj;
 		    my $fullurl = sprintf("%s%s",$url_base,
 					   $file->{url});
-	 	    $file->{label} =~ s/f\.sp\./f. sp./;
-		    $file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
-	            $file->{label} =~ s/\s+$//;
-		    # special case
-		    $file->{label} =~ s/ \(Arxula\)//;
 		    my $filename = $file->{filename};
-		    my @label_spl = split(/\s+/,$file->{label});
-		    my $version = $label_spl[-1];
-		    my $name;
-		    if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
-			$name = join(" ", $label_spl[0],$label_spl[1],
-				     "var.",$label_spl[3]);
-		    } elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
-			$name = join(" ", $label_spl[0],$label_spl[1],"f. sp.",
-				     $label_spl[4]);
-			warn ">>>>$name\n";
-			#$label_spl[4]); # we don't put strain in there
-			#warn("DNA fsp -> $name\n") if $debug; 
-		    } else {
-			$name = join(" ", $label_spl[0],$label_spl[1]);
-		    }		    
+		    warn("prefix is $prefix and filename is $filename\n") if $debug;
+
+		    my ($name,$version) = &standardize_name($file->{label});
+	 	    
 		    if( ! exists $orgs{$name} ) {
 			warn("cannot find '$name' in the query file\n") if $debug;
 			next;
@@ -157,34 +141,17 @@ while( my ($type,$d) = each %$folder ) {
 			map {[(split(/\//,$_->{url}))[1],$_]  } 
 			@{$f->{file}} ) {
 			my ($prefix,$file) = @$file_obj;			
-			my $fullurl = sprintf("%s%s",$url_base,
-					      $file->{url});
-			$file->{label} =~ s/f\.sp\./f. sp./;
-			$file->{label} =~ s/(\s+var)(\s+)/$1.$2/;
-			$file->{label} =~ s/\s+$//;
-			$file->{label} =~ s/ \(Arxula\)//;
-
 			my $filename = $file->{filename};
-
+			
 # skip the compiled set of all gene modules (tar.gz) or the EST fastas
 			next if( $filename =~ /\.tar.gz$/ || 
 				 $filename =~ /ESTs|unsupported_short/ ||
 				 $filename =~ /\.nt\.fasta/ );
-
-                        warn("Unfiltered filename is $filename\n");
 			
-			my @label_spl = split(/\s+/,$file->{label});
-			my $version = $label_spl[-1];
-			my $name;
-			if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
-			    $name = join(" ", $label_spl[0],$label_spl[1],"var",
-					 $label_spl[3]);
-			} elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
-			    $name = join(" ", $label_spl[0],$label_spl[1], "f sp",
-					 $label_spl[4]);
-			} else {
-			    $name = join(" ", $label_spl[0],$label_spl[1]);
-			}
+			my $fullurl = sprintf("%s%s",$url_base,
+					      $file->{url});
+			my ($name,$version) = &standardize_name($file->{label});
+                        warn("Unfiltered filename is $filename\n");
 			warn("name is $name ftype is $ftype url is $fullurl\n") if $debug;
 			if( ! exists $orgs{$name} ) {
 			    warn("cannot find '$name' in the query organisms file\n") if $debug;
@@ -274,4 +241,31 @@ for my $name ( sort keys %jgi_targets ) {
 }
 if( @missing ) {
     warn("Missing the following JGI targets: \n", join("\n", @missing),"\n");
+}
+
+# how to fix the names for each species with some inconsistencies
+sub standardize_name {
+    my $label = shift;
+    $label =~ s/f\.sp\./f. sp./;
+    $label =~ s/(\s+var)(\s+)/$1.$2/;
+    $label =~ s/\s+$//;
+    # special case
+    $label =~ s/ \([^\)]+\)//;
+    
+    my @label_spl = split(/\s+/,$label);      
+    my $version = $label_spl[-1];
+    my $name;
+    if( $label =~ /\s+var(\.)?\s+/ ) {
+	$name = join(" ", $label_spl[0],$label_spl[1],
+		     "var.",$label_spl[3]);
+    } elsif ($label =~ /\s+f\.\s*sp\.\s+/ ) {
+	$name = join(" ", $label_spl[0],$label_spl[1],"f. sp.",
+		     $label_spl[4]);
+	warn ">>>>$name\n";
+	#$label_spl[4]); # we don't put strain in there
+	#warn("DNA fsp -> $name\n") if $debug; 
+    } else {
+	$name = join(" ", $label_spl[0],$label_spl[1]);
+    }
+    ($name,$version);
 }
