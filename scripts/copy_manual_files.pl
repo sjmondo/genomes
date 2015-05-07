@@ -36,7 +36,7 @@ while (my $row = $csv->getline ($fh)) {
     }
     my $stem = $row->[0];
     $stem .= "_".$row->[1] if $row->[1];
-    $stem =~ s/ /_/g;;
+    $stem =~ s/ /_/g;
     $orgs{$stem} = { 
 	'name'   => $row->[0],
 	'strain' => $row->[1],
