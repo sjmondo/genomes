@@ -46,7 +46,7 @@ my $folder = $parsed->{folder}->{folder};
 my %orgs;
 my %jgi_targets;
 while (my $row = $csv->getline ($fh)) {
-    next unless( $row->[3] eq 'JGI' );
+    next unless( $row->[3] =~ /JGI/ );
     warn("name is ",$row->[0], "\n");
     next if( $row->[0] =~ /^\#/);
     if ( ! defined $row->[3] ) {
@@ -55,7 +55,7 @@ while (my $row = $csv->getline ($fh)) {
     $orgs{$row->[0]} = { 'strain' => $row->[1],
 			 'family' => $row->[2],
 			 'source' => $row->[3] };
-    if( $row->[3] eq 'JGI' ) {
+    if( $row->[3] =~ /JGI/ ) {
 	# keep track of the species which we would like to get from JGI 
 	$jgi_targets{$row->[0]} = 1;
     }
@@ -135,7 +135,7 @@ while( my ($type,$d) = each %$folder ) {
 			print join("\t", "Genome",$prefix,
 				   $outfile,
 				   map { $file->{$_} || ''} @data_fields),"\n";
-			push @{$sanity{$outfile}}, $filename;
+			$sanity{$outfile}->{ $filename }++;
 			if( ! -f $outfile ) {
 			    print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
 			}
@@ -150,6 +150,7 @@ while( my ($type,$d) = each %$folder ) {
 	    warn("keys are $k\n");
 	    if( $k eq 'Filtered Models ("best")' ) {
 		for my $ftype ( qw(Proteins CDS Transcripts Genes) ) {
+		    my $oftype = $ftype;
 		    my $f = $n->{'folder'}->{$ftype};
 		    for my $file_obj ( 
 			sort { $a->[0] cmp $b->[0] }
@@ -164,20 +165,22 @@ while( my ($type,$d) = each %$folder ) {
 			$file->{label} =~ s/ \(Arxula\)//;
 
 			my $filename = $file->{filename};
-                        warn("Unfiltered filename is $filename\n");
+
+# skip the compiled set of all gene modules (tar.gz) or the EST fastas
 			next if( $filename =~ /\.tar.gz$/ || 
 				 $filename =~ /ESTs|unsupported_short/ ||
 				 $filename =~ /\.nt\.fasta/ );
-# skip the compiled set of all gene modules (tar.gz) or the EST fastas
+
+                        warn("Unfiltered filename is $filename\n");
 			
 			my @label_spl = split(/\s+/,$file->{label});
 			my $version = $label_spl[-1];
 			my $name;
 			if( $file->{label} =~ /\s+var(\.)?\s+/ ) {
-			    $name = join(" ", $label_spl[0],$label_spl[1],"var.",
+			    $name = join(" ", $label_spl[0],$label_spl[1],"var",
 					 $label_spl[3]);
 			} elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
-			    $name = join(" ", $label_spl[0],$label_spl[1], "f. sp.",
+			    $name = join(" ", $label_spl[0],$label_spl[1], "f sp",
 					 $label_spl[4]);
 			} else {
 			    $name = join(" ", $label_spl[0],$label_spl[1]);
@@ -211,21 +214,27 @@ while( my ($type,$d) = each %$folder ) {
 				next;
 			    } elsif( $filename =~ /\.gff/ ) {
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.gff3.gz");
-				warn("GFF outfile is $outfile\n");
+				warn("GFF outfile $outfile for $filename\n");
+				if( $ftype ne 'Genes') {
+				    warn("misclassified file as $ftype not 'Genes'\n");
+				    $oftype = 'Genes';
+				}
 			    } elsif( $filename =~ /\.aa\./ || 
 				     $filename =~ /FilteredModels\d*\.(aa|proteins)|best_proteins|filtered_proteins|GeneCatalog\_?\d+\.proteins|_proteins/) 
 			    {
-				warn "$filename is proteins" if $debug;
+				warn("AA outfile $outfile for $filename\n");
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.aa.fasta.gz");
+				$oftype = 'Proteins';
 				if ( exists $sanity{$outfile} ) { 
-				    warn("(AA) $filename second time around for $outfile (previous @{$sanity{$outfile}})\n");
+				    warn("(AA) $filename second time around for $outfile (previous ",join(",",keys %{$sanity{$outfile}}),")\n");
 				    next;
 				}
 			    } elsif( $filename =~ /[_\.](CDS|transcripts)/i ||
 				     $filename =~ /best_transcripts|filtered_transcripts|_transcripts|FilteredModels\d*\.na|geneCatalog_CDS_\d+/){ 
 				$outfile = File::Spec->catfile($outfile,"$oname_labeled.CDS.fasta.gz");
+				$oftype = 'Transcripts';
 				if (exists $sanity{$outfile} ) {
-				    warn("(CDS) $filename second time around for $outfile (previous @{$sanity{$outfile}}\n");
+				    warn("(CDS) $filename second time around for $outfile (previous ",join(",",keys %{$sanity{$outfile}}),")\n");
 				    # deal with mis-placed or missing CDS sections that are listed as transcript sections
 				    next;
 				}
@@ -233,14 +242,13 @@ while( my ($type,$d) = each %$folder ) {
 				warn("WARNING: unmatched filename is $filename\n");
 				next;
 			    }
-			    
-			    print join("\t",  $ftype,$prefix,$outfile,
-				       map { $file->{$_} || ''} 
-				       @data_fields),"\n";
-			
-			    push @{$sanity{$outfile}}, $filename;
+			    if( ! $sanity{$outfile}->{$filename}++ ) {
+				print join("\t",  $oftype,$prefix,$outfile,
+					   map { $file->{$_} || ''} 
+					   @data_fields),"\n";
+			    }
 			    if( ! -f $outfile ) {
-				print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";
+				print $curl_cmds "curl $fullurl -b $cookie_file -o $outfile --create-dirs\n";			    
 			    }
 			    $jgi_targets{$name} = 2;
 			} else {
@@ -254,8 +262,8 @@ while( my ($type,$d) = each %$folder ) {
 }
 
 for my $outfile ( keys %sanity ) {
-    if( scalar @{$sanity{$outfile}} > 1) {
-	warn("$outfile seen more than once, will be overwritten\n");
+    if( scalar keys %{$sanity{$outfile}} > 1) {
+	warn("$outfile seen more than once, will be overwritten ",join(" ",keys %{$sanity{$outfile}}),"\n");
     }
 }
 my @missing;
