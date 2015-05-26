@@ -72,7 +72,7 @@
 "Cryphonectria parasitica",EP155,Cryphonectriaceae,JGI,,,
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,manual,,,
-"Fellomyces polyborus",,Cuniculitremaceae,manual_Dikaryome,,,"May not be available"
+"Fellomyces polyborus",,Cuniculitremaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Hesseltinella vesiculosa","NRRL 3301",Cunninghamellaceae,JGI,,,
 "Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,
 "Calocera cornea",HHB12733,Dacrymycetaceae,JGI,,,
@@ -91,7 +91,6 @@
 "Eutypa lata",UCREL1,Diatrypaceae,GB,NW_006913660-NW_006915993,23723393,RefSeq
 "Didymella exigua","CBS 183.55",Didymellaceae,JGI,,,
 "Bimuria novae-zelandiae","CBS 107.79",Didymosphaeriaceae,JGI,,,
-"Galactomyces geotrichum","CLIB 918",Dipodascaceae,CRG,,,
 "Yarrowia lipolytica",CLIB122,Dipodascaceae,GB,NC_006067-NC_006072;NC_002659,15229592,RefSeq
 "Dissoconium aciculare","CBS 342.82",Dissoconiaceae,JGI,,,
 "Dothidotthia symphoricarpi","CBS 119687",Dothidotthiaceae,JGI,,,
@@ -129,8 +128,8 @@
 "Capronia coronata","CBS 617.96",Herpotrichiellaceae,GB,NW_006912893-NW_006912903,,RefSeq
 "Exophiala dermatitidis",NIH-UT8656,Herpotrichiellaceae,GB,JH226130-JH226139;CM001238,24496724,WGS
 "Heterogastridium pycnidioideum","ATCC MYA-4631",Heterogastridiaceae,JGI,,,
-"Holtermanniella mycelialis",,Holtermanniales,manual_Dikaryome,,,
-"Holtermanniella takashimae",,Holtermanniales,manual_Dikaryome,,,
+"Holtermanniella mycelialis",,Holtermanniales,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Holtermanniella takashimae",,Holtermanniales,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Laccaria amethystina",LaAM-08-1,Hydnangiaceae,JGI,,,
 "Laccaria bicolor",S238N-H82,Hydnangiaceae,JGI,,18322534,RefSeq
 "Leucogyrophana mollusca",KUC20120723A-06,Hygrophoropsidaceae,JGI,,,
@@ -172,8 +171,8 @@
 "Nematocida parisii",ERTm1,Microsporidia,JGI,,,
 "Nosema ceranae",BRL01,Microsporidia,JGI,,,
 "Jaminaea sp.","MCA 5214",Microstromatales,JGI,,,
-"Rhodotorula phylloplana",,Microstromatales,Dikaryome,,,
-"Meira geulakonigii",,Mikronegeriaceae,manual_Dikaryome,,,
+"Rhodotorula phylloplana",,Microstromatales,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Meira geulakonigii",,Mikronegeriaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Meira miltonrushii","CBS 12591",Mikronegeriaceae,JGI,,,
 "Mixia osmundae","IAM 14324",Mixiaceae,JGI,KL411542-KL411697,24372469,"WGS;Note=another group seq same strain"
 "Monascus purpureus","NRRL 1596",Monascaceae,JGI,,,
@@ -207,7 +206,7 @@
 "Omphalotus olearius","VT 653.13",Omphalotaceae,JGI,,22726691,
 "Coccidioides immitis",RS,Onygenaceae,GB,NW_001509356-NW_001509365,,RefSeq
 "Uncinocarpus reesii",1704,Onygenaceae,GB,NW_003052457-NW_003052500,,RefSeq
-"Tolypocladium inflatum","NRRL 8044",Ophiocordycipitaceae,manual_OSU,AOHE01000001-AOHE01000194,23818858,
+"Tolypocladium inflatum","NRRL 8044",Ophiocordycipitaceae,manual_OSU,AOH01000001-AOHE01000194,23818858,
 "Grosmannia clavigera",kw1407,Ophiostomataceae,GB,GL629720-GL630008;GG742440-GG743882,21262841,WGS
 "Ophiostoma piceae","UAMH 11346",Ophiostomataceae,GB,KE148146-KE148190,23725015,WGS
 "Ophiostoma piliferum",,Ophiostomataceae,manual,,,
@@ -221,7 +220,7 @@
 "Stagonospora nodorum",SN15,Phaeosphaeriaceae,JGI,,,
 "Trichodelitschia bisporula","CBS 262.69",Phaeotrichaceae,JGI,,,
 "Cyberlindnera jadinii","NRRL Y-1542",Phaffomycetaceae,JGI,,,RefSeq
-"Starmera amethionina",,Phaffomycetaceae,manual_Dikaryome,,,
+"Starmera amethionina",,Phaffomycetaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Mutinus elegans",ME.BST,Phallaceae,JGI,,,
 "Phanerochaete chrysosporium",,Phanerochaetaceae,JGI,,15122302,
 "Phlebiopsis gigantea","11061_1 CR5-6",Phanerochaetaceae,JGI,,,
@@ -286,7 +285,7 @@
 "Sclerotinia sclerotiorum","1980 UF-70",Sclerotiniaceae,GB,NW_001820797-NW_001820835,,RefSeq
 "Piriformospora indica","DSM 11827",Sebacinaceae,JGI,CAFZ00000000,,"WGS;Note=no annotation, check MPI"
 "Sebacina vermifera","MAFF 305830",Sebacinaceae,JGI,,,
-"Serpula lacrymans",S7.3,Serpulaceae,JGI,NW_006763290-NW_006763335,21764756,RefSeq
+"Serpula lacrymans",S7.9,Serpulaceae,JGI,NW_006763290-NW_006763335,21764756,RefSeq
 "Neurospora crassa",OR74A,Sordariaceae,GB,NW_001849581-NW_001849831,12712197,RefSeq
 "Sordaria macrospora",k-hell,Sordariaceae,GB,NW_003541459-NW_003546241,20386741,RefSeq
 "Sphaerobolus stellatus",SS14,Sphaerobolaceae,JGI,,,
