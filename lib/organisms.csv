@@ -71,7 +71,7 @@
 "Cryphonectria parasitica",EP155,Cryphonectriaceae,JGI,,,
 "Cucurbitaria berberidis","CBS 394.84",Cucurbitariaceae,JGI,,,
 "Spathularia flavida",,Cudoniaceae,manual_OSU_MAKER,,,
-"Fellomyces polyborus",,Cuniculitremaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Fellomyces polyborus","CBS 6072",Cuniculitremaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Hesseltinella vesiculosa","NRRL 3301",Cunninghamellaceae,JGI,,,
 "Cyphellophora europaea","CBS 101466",Cyphellophoraceae,GB,KB822711-KB822725;KI635846-KI635849,,
 "Calocera cornea",HHB12733,Dacrymycetaceae,JGI,,,
@@ -127,8 +127,8 @@
 "Capronia coronata","CBS 617.96",Herpotrichiellaceae,GB,NW_006912893-NW_006912903,,RefSeq
 "Exophiala dermatitidis",NIH-UT8656,Herpotrichiellaceae,GB,JH226130-JH226139;CM001238,24496724,WGS
 "Heterogastridium pycnidioideum","ATCC MYA-4631",Heterogastridiaceae,JGI,,,
-"Holtermanniella mycelialis",,Holtermanniales,manual_Dikaryome,,,"Note=GFF and DNA not available"
-"Holtermanniella takashimae",,Holtermanniales,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Holtermanniella mycelialis","CBS 7712",Holtermanniales,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Holtermanniella takashimae","CBS 11174",Holtermanniales,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Laccaria amethystina",LaAM-08-1,Hydnangiaceae,JGI,,,
 "Laccaria bicolor",S238N-H82,Hydnangiaceae,JGI,,18322534,RefSeq
 "Leucogyrophana mollusca",KUC20120723A-06,Hygrophoropsidaceae,JGI,,,
@@ -170,8 +170,8 @@
 "Nematocida parisii",ERTm1,Microsporidia,JGI,,,
 "Nosema ceranae",BRL01,Microsporidia,JGI,,,
 "Jaminaea sp.","MCA 5214",Microstromatales,JGI,,,
-"Rhodotorula phylloplana",,Microstromatales,manual_Dikaryome,,,"Note=GFF and DNA not available"
-"Meira geulakonigii",,Mikronegeriaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Rhodotorula phylloplana","CBS 8073",Microstromatales,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Meira geulakonigii","CBS 110052",Mikronegeriaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Meira miltonrushii","CBS 12591",Mikronegeriaceae,JGI,,,
 "Mixia osmundae","IAM 14324",Mixiaceae,JGI,KL411542-KL411697,24372469,"WGS;Note=another group seq same strain"
 "Monascus purpureus","NRRL 1596",Monascaceae,JGI,,,
@@ -219,7 +219,7 @@
 "Stagonospora nodorum",SN15,Phaeosphaeriaceae,JGI,,,
 "Trichodelitschia bisporula","CBS 262.69",Phaeotrichaceae,JGI,,,
 "Cyberlindnera jadinii","NRRL Y-1542",Phaffomycetaceae,JGI,,,RefSeq
-"Starmera amethionina",,Phaffomycetaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
+"Starmera amethionina","CBS 6942",Phaffomycetaceae,manual_Dikaryome,,,"Note=GFF and DNA not available"
 "Mutinus elegans",ME.BST,Phallaceae,JGI,,,
 "Phanerochaete chrysosporium",,Phanerochaetaceae,JGI,,15122302,
 "Phlebiopsis gigantea","11061_1 CR5-6",Phanerochaetaceae,JGI,,,
