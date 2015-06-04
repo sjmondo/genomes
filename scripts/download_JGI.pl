@@ -102,12 +102,18 @@ while( my ($type,$d) = each %$folder ) {
 		    } elsif ($file->{label} =~ /\s+f\.\s*sp\.\s+/ ) {
 			$name = join(" ", $label_spl[0],$label_spl[1],"f. sp.",
 				     $label_spl[4]);
+			my @rest = splice(@label_spl,0,5);
+#			warn("label is @label_spl -> @rest\n");
 			warn ">>>>$name\n";
 			#$label_spl[4]); # we don't put strain in there
 			#warn("DNA fsp -> $name\n") if $debug; 
 		    } else {
 			$name = join(" ", $label_spl[0],$label_spl[1]);
-		    }		    
+			splice(@label_spl,2);
+		    }
+		    my $strain = join(" ", @label_spl);
+#HEREHERE try to figure out how to test for strain
+		    warn("strain is '$strain'\n");
 		    if( ! exists $orgs{$name} ) {
 			warn("cannot find '$name' in the query file\n") if $debug;
 			next;
@@ -125,7 +131,7 @@ while( my ($type,$d) = each %$folder ) {
 			}
 #			$oname =~ s/\.$//g; # remove trailing periods for things that are like XX sp. 				
 			my $oname_labeled;
-			if( $version =~ s/(v\d+)(\.0)?/$1/ ) {
+			if( $version =~ s/(v\d+)(\.\d+)?/$1/ ) {
 			    $oname_labeled = "$oname.$prefix.$version.assembly.fasta.gz";
 			} else {
 			    $oname_labeled = "$oname.$prefix.assembly.fasta.gz";
