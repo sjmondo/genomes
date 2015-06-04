@@ -25,7 +25,7 @@
 "Ascosphaera apis","ARSEF 7405",Ascosphaeraceae,manual,CH980625-CH981371,17069642;22747707,http://hymenopteragenome.org/beebase/?q=Aapis_data
 "Aspergillus fumigatus",Af293,Aspergillaceae,JGI,NC_007194-NC_007201,16372009,RefSeq;Should get from AspGD?
 "Aspergillus niger","ATCC 1015",Aspergillaceae,JGI,,21543515,
-"Penicillium chrysogenum","Wisconsin 54-1255",Aspergillaceae,JGI,AM920416-AM920464,18820685,
+"Penicillium chrysogenum","Wisconsin 54-1255",Aspergillaceae,GB,AM920416-AM920464,18820685,
 "Fibulorhizoctonia sp.","CBS 109695",Atheliaceae,JGI,,,
 "Piloderma croceum","F 1598",Atheliaceae,JGI,,,
 "Atractiellales sp.","PMI 95",Atractiellaceae,JGI,,,
@@ -320,8 +320,8 @@
 "Choiromyces venosus",120613-1,Tuberaceae,JGI,,,
 "Tuber melanosporum",,Tuberaceae,JGI,NW_003298755-NW_003299152,20348908,RefSeq;RefSeq=NZ_CABJ00000000
 "Tulasnella calospora",AL13-4D,Tulasnellaceae,JGI,,25706625,
-"Pseudozyma antarctica",T-34,Ustilaginaceae,GB,DF196767-DF196793,23558529,WGS
-"Sporisorium reilianum",SRZ2,Ustilaginaceae,GB,FQ311430-FQ311474,21148393,WGS
+"Pseudozyma antarctica",T-34,Ustilaginaceae,JGI,DF196767-DF196793,23558529,
+"Sporisorium reilianum",SRZ2,Ustilaginaceae,JGI,FQ311430-FQ311474,21148393,
 "Ustilago maydis",521,Ustilaginaceae,MIPS,NW_100966-NW_101210;NW_101212-NW_101215;NW_101217-NW_101241;NC_008368,17080091,"RefSeq;Note=update annotation may be at MIPS"
 "Tothia fuscella","CBS 130266",Venturiaceae,JGI,,,
 "Endocarpon pallidulum",Enpa,Verrucariaceae,manual,,23557360,
