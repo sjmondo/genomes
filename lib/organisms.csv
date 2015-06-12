@@ -311,8 +311,8 @@
 "Cryptococcus neoformans var. neoformans",JEC21,Tremellaceae,GB,NC_006670;NC_006679-NC_006687;NC_006691-NC_006694,15653466,RefSeq
 "Tremella mesenterica",Fries,Tremellaceae,JGI,NW_006711225-NW_006711269,22745431,RefSeq
 "Pseudographis elatina",,Triblidiaceae,manual_OSU_MAKER,,,
-"Talaromyces marneffei","ATCC 18224",Trichocomaceae,GB,NC_005256;NW_002196661-NW_002197112,,RefSeq
-"Talaromyces stipitatus","ATCC 10500",Trichocomaceae,GB,NW_002990113-NW_002990932,,RefSeq
+"Talaromyces marneffei","ATCC 18224",Trichocomaceae,GB,NC_005256;NW_002196661-NW_002197112,25676766,RefSeq
+"Talaromyces stipitatus","ATCC 10500",Trichocomaceae,GB,NW_002990113-NW_002990932,25676766,RefSeq
 "Thermoascus aurantiacus",ATCC26904,Trichocomaceae,JGI,,,
 "Tricholoma matsutake",945,Tricholomataceae,JGI,,,
 "Blastobotrys adeninivorans",LS3,Trichomonascaceae,JGI,CBZY000000000,24834124,
