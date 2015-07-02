@@ -10,7 +10,7 @@
 "Amanita thiersii",Skay4041,Amanitaceae,JGI,,,
 "Amniculicola lignicola","CBS 123094",Amniculicolaceae,JGI,,,
 "Plicaturopsis crispa","CBS 459.81",Amylocorticiaceae,JGI,,,
-"Conidiobolus coronatus","NRRL 28638",Ancylistaceae,JGI,,,
+"Conidiobolus coronatus","NRRL 28638",Ancylistaceae,JGI,,25977457,
 "Testicularia cyperi","MCA 3645",Anthracoideaceae,JGI,,,
 "Apiospora montagnei","NRRL 25634",Apiosporaceae,JGI,,,
 "Aplosporella prunicola","CBS 121.167",Aplosporellaceae,JGI,,,
@@ -112,7 +112,7 @@
 "Glomerella cingulata",23,Glomerellaceae,JGI,,,"Colletotrichum gloeosporoides"
 "Cenococcum geophilum",1.58,Gloniaceae,JGI,,,
 "Glonium stellatum",,Gloniaceae,JGI,,,
-"Gonapodya prolifera",JEL478,Gonapodyaceae,JGI,,,
+"Gonapodya prolifera",JEL478,Gonapodyaceae,JGI,,25977457,
 "Graphis scripta","CBS 132367",Graphidaceae,manual_Duke,,23557360,
 "Gymnascella citrina","NRRL 5970",Gymnascaceae,JGI,,,
 "Gymnascella aurantiaca",,Gymnascaceae,JGI,,,
@@ -139,7 +139,7 @@
 "Rhytidhysteron rufulum","CBS 306.38",Hysteriaceae,JGI,AJFL00000000,,WGS
 "Dibaeis baeomyces",,Icmadophilaceae,manual_Duke,,23557360,
 "Jaapia argillacea","MUCL 33604",Jaapiaceae,JGI,KL197709-KL198003,24958869,WGS
-"Coemansia reversa","NRRL 1564",Kickxellaceae,JGI,,,
+"Coemansia reversa","NRRL 1564",Kickxellaceae,JGI,,25977457,
 "Podospora anserina","S mat+",Lasiosphaeriaceae,JGI,,,
 "Lentinus tigrinus",ALCF2SS1-6,Lentinaceae,JGI,,,
 "Lentithecium fluviatile","CBS 122367",Lentitheciaceae,JGI,,,
